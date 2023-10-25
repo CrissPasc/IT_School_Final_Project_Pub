@@ -2,9 +2,11 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const Logo = styled.img`
+  
   height: 100%;
   border-radius: 50%;
   margin-left: 24px;
+  background: black;
 `;
 
 export const Title = styled.h1`
