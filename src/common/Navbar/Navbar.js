@@ -26,17 +26,13 @@ function NavbarBootstrap() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">Link</Nav.Link>
-            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
+            <Nav.Link href="#link">About</Nav.Link>
+            <Nav.Link href="#link">Menu</Nav.Link>
+            <Nav.Link href="#link">Order online</Nav.Link>
+            <Nav.Link href="#link">Book a table</Nav.Link>
+            <NavDropdown title="User info" id="basic-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">Sign in</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">Register</NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
