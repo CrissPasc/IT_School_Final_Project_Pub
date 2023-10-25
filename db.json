@@ -1,0 +1,125 @@
+{
+  "meniu": [
+    {
+      "id": 1,
+      "name": "Beef burger",
+      "section": "Burgers",
+      "image": "",
+      "description": "The cosmopolitan cocktail, typically referred to as the 'cosmo', gained popularity during the 1990s when it was frequently mentioned on the television show Sex and the City. The combination of vodka, orange liqueur, lime juice, and cranberry juice have made it a timeless classic."
+    },
+    {
+      "id": 2,
+      "name": "Chichen burger",
+      "section": "Burgers",
+      "image": "",
+      "description": ""
+    },
+    {
+      "id": 3,
+      "name": "Vegan burger",
+      "section": "Burgers",
+      "image": "",
+      "description": ""
+    },
+    {
+      "id": 4,
+      "name": "Pizza beef",
+      "section": "Pizzas",
+      "image": "",
+      "description": ""
+    },
+    {
+      "id": 5,
+      "name": "Pizza chichen",
+      "section": "Pizzas",
+      "image": "",
+      "description": ""
+    },
+    {
+      "id": 6,
+      "name": "Pizza vegan",
+      "section": "Pizzas",
+      "image": "",
+      "description": ""
+    },
+    {
+      "id": 7,
+      "name": "Beer",
+      "section": "Drinks",
+      "image": "",
+      "description": ""
+    },
+    {
+      "id": 8,
+      "name": "Wine",
+      "section": "Drinks",
+      "image": "",
+      "description": ""
+    },
+    {
+      "id": 9,
+      "name": "Cosmopolitan Cocktail",
+      "section": "Drinks",
+      "image": "",
+      "description": ""
+    },
+    {
+      "id": 10,
+      "name": "Raspberry cheesecake",
+      "section": "Desserts",
+      "image": "",
+      "description": "Gourmet dessert plate raspberry cheesecake mousse indulgence"
+    },
+    {
+      "id": 11,
+      "name": "Homemade brownie with icecream",
+      "section": "Desserts",
+      "image": "",
+      "description": "Indulgent homemade brownie with chocolate icing and pecans"
+    },
+    {
+      "id": 12,
+      "name": "Carrot cake",
+      "section": "Desserts",
+      "image": "",
+      "description": "Delicious carrot cake with cream"
+    }
+  ],
+  "events": [
+    {
+      "id": 1,
+      "name": "Party",
+      "image": "",
+      "description": ""
+    },
+    {
+      "id": 2,
+      "name": "Celebrate",
+      "image": "",
+      "description": ""
+    },
+    {
+      "id": 3,
+      "name": "Sports",
+      "image": "",
+      "description": ""
+    }
+  ],
+  "user": [
+    {
+      "id": 1,
+      "name": "Cristina",
+      "type": "admin"
+    },
+    {
+      "id": 2,
+      "name": "Daiana",
+      "type": "admin"
+    },
+    {
+      "id": 3,
+      "name": "Dan",
+      "type": "admin"
+    }
+  ]
+}
