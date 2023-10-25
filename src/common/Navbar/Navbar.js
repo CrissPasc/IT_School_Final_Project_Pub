@@ -16,12 +16,19 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
+import { useParams } from "react-router-dom";
 
-function NavbarBootstrap() {
+
+
+
+function NavbarBootstrap({isAdmin, logo}) {
+  const params = useParams();
+  console.log(isAdmin, logo);
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar expand="lg" className={isAdmin ? "bg-body-tertiary" : "bg-body-tertiary green-class"}>
       <Container>
-        <Navbar.Brand href="#home">The Phoenix Pub</Navbar.Brand>
+        <Navbar.Brand href="#home">
+          <Logo />The Phoenix Pub</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
