@@ -9,15 +9,19 @@ function App() {
   return (
     <>
       <Routes>
-
-          <Route path="/homepage" element={
+        <Route
+          path="/homepage"
+          element={
             <>
+              {/* aici va trebui schimbat / scos */}
               <NavbarBootstrap isAdmin={true}></NavbarBootstrap>
-              <Homepage /></>}></Route>
-     
+              <Homepage />
+            </>
+          }
+        ></Route>
+
         <Route path="/" element={<Homepage />}></Route>
       </Routes>
-
     </>
   );
 }

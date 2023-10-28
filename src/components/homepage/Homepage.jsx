@@ -4,17 +4,15 @@ import { Button, Image } from "react-bootstrap";
 import useLog from "../../hooks/useLog";
 
 import { ruteAdmin } from "../../constants/rute";
-import Navbar from "../../common/Navbar/Navbar";
 import NavbarBootstrap from "../../common/Navbar/Navbar";
+// import LogoPic from "./../../media/logo/logo.png";
 
+// avem dublat din rute -->> voi pune acolo doar poza sa schimbe in Navbar
 const Homepage = () => {
   useLog("Salut", "err");
   return (
     <Container>
-      <NavbarBootstrap logo="./../../media/logo/logo.jpg" rute={ruteAdmin} />
-      <Image src="./../../media/logo/logo.jpg" alt="Logo" />
-      TEST HOMEPAGE
-      <Button> TEST</Button>
+      <NavbarBootstrap rute={ruteAdmin}></NavbarBootstrap>
     </Container>
   );
 };
