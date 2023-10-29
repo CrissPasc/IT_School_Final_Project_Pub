@@ -6,8 +6,14 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 
 export const Logo = styled.img`
-  height: 70px;
-  width: 70px;
+  height: 35px;
+  width: 53px;
+  margin: 0px 0px 0px 0px;
+`;
+
+export const UserInfo = styled.img`
+  height: 28px;
+  width: 28px;
   margin: 0px 0px 0px 0px;
 `;
 
@@ -20,8 +26,8 @@ export const Title = styled.h1`
 
 export const NavbarLink = styled(Nav.Link)`
   color: #f0fff0;
-  font-size: 1.5em;
-  padding: 0px 20px; // nu  reusesc sa le departez mai mult de 8px..
+  font-size: 1.25em;
+  margin: 0px 10px;
 `;
 
 export const BrandContainer = styled.div`
@@ -41,6 +47,8 @@ export const NavLinkContainer = styled.div`
 
 export const NavbarWrapper = styled(Navbar)`
   // Styles for the Navbar
+  display: flex;
+  vertical-align: top;
   position: absolute;
   top: 0;
   left: 0;
@@ -48,7 +56,7 @@ export const NavbarWrapper = styled(Navbar)`
   bottom: 0;
   z-index: 0;
   max-height: 70vh;
-  background-image: url(${NavbarBackground}); /* Replace 'your_image_url.jpg' with your actual image URL */
+  background-image: url(${NavbarBackground});
   background-size: cover;
 `;
 
