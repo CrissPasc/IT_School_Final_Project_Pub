@@ -28,6 +28,8 @@ export const NavbarLink = styled(Nav.Link)`
   color: #f0fff0;
   font-size: 1.25em;
   margin: 0px 10px;
+
+  text-decoration: none;
 `;
 
 export const BrandContainer = styled.div`
@@ -37,18 +39,20 @@ export const BrandContainer = styled.div`
   align-items: center;
 `;
 
+// Aici nu e necesar decat 'display: flex'
 export const NavLinkContainer = styled.div`
   display: flex;
-  justify-content: flex-end;
-  vertical-align: middle;
-  align-items: center;
-  margin: 0px, 0px, 0px, 100px;
+  // justify-content: flex-end;
+  // vertical-align: middle;
+  // align-items: center;
+  // margin: 0px, 0px, 0px, 100px;
 `;
 
 export const NavbarWrapper = styled(Navbar)`
   // Styles for the Navbar
   display: flex;
-  vertical-align: top;
+  justify-content: space-around;
+  // vertical-align: top;
   position: absolute;
   top: 0;
   left: 0;
@@ -60,9 +64,22 @@ export const NavbarWrapper = styled(Navbar)`
   background-size: cover;
 `;
 
+// AICI SE REZOLVA CA NAVBARUL SA FIE SUS CU 'top: 0;'
 export const NavbarContainer = styled(Container)`
   position: fixed;
+  top: 0;
+
+  backdrop-filter: blur(20px);
+  backdrop-filter: grayscale(100%);
+  // backdrop-filter: opacity(20%);
 `;
+
+// Am incercat sa fac butonul acela de meniu (3 liniute) alb, dar nu am reusit.
+// Trebuie gasita o solutie din Bootstrap...
+export const NavbarMenuIcon = styled.span`
+  background-color: white;
+  color: white;
+`
 
 // export const NavbarContainer = styled.div`
 //   display: flex;

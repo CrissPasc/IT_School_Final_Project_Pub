@@ -8,6 +8,9 @@ import AdminRouter from "./routers/admin";
 function App() {
   return (
     <>
+      {/* Deocamdata am pus Navbar-ul aici, ca sa il avem in toata aplicatia */}
+      <NavbarBootstrap />
+      
       <Routes>
         <Route
           path="/homepage"
