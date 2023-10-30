@@ -27,7 +27,7 @@ function NavbarBootstrap({ isAdmin, logo }) {
     <NavbarWrapper
       expand="lg"
       // de unde este clasa "bg-body-tertiary" ?
-      className={isAdmin ? "bg-body-tertiary" : "bg-body-tertiary green-class"}
+      className={isAdmin ? "bg-body-tertiary" : "green-class"}
     >
       <NavbarContainer>
         {/* nu reusesc sa aduc sus NavbarContainer => REZOLVARE IN Navbar.style.js*/}

@@ -4,6 +4,7 @@ import Homepage from "./components/homepage/Homepage";
 import Menu from "./components/menu/Menu";
 import NavbarBootstrap from "./common/Navbar/Navbar";
 import AdminRouter from "./routers/admin";
+import Footer from "./common/Footer/Footer";
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
           element={
             <>
               {/* aici va trebui schimbat / scos?? */}
-              <NavbarBootstrap isAdmin={true}></NavbarBootstrap>
+              {/* <NavbarBootstrap isAdmin={true}></NavbarBootstrap> */}
               <Homepage />
             </>
           }
@@ -30,12 +31,15 @@ function App() {
               {/* aici va trebui schimbat / scos?? */}
               {/* <NavbarBootstrap isAdmin={true}></NavbarBootstrap> */}
               <Menu />
+              {/* <Footer /> */}
             </>
           }
         ></Route>
 
         <Route path="/" element={<Homepage />}></Route>
       </Routes>
+
+      <Footer />
     </>
   );
 }

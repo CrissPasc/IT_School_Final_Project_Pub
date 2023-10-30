@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Container } from "./Homepage.style";
-import { Button, Image } from "react-bootstrap";
+import { Button, Card, Image } from "react-bootstrap";
 import useLog from "../../hooks/useLog";
 
 import { ruteAdmin } from "../../constants/rute";
@@ -13,7 +13,8 @@ const Homepage = () => {
   useLog("Salut", "err");
   return (
     <Container>
-      <NavbarBootstrap rute={ruteAdmin}></NavbarBootstrap>
+      <Card></Card>
+      {/* <NavbarBootstrap rute={ruteAdmin}></NavbarBootstrap> */}
     </Container>
   );
 };

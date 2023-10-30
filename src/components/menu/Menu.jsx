@@ -5,6 +5,7 @@ import useLog from "../../hooks/useLog";
 
 import { ruteAdmin } from "../../constants/rute";
 import NavbarBootstrap from "../../common/Navbar/Navbar";
+import CardMenu from "../../common/Card/Card";
 
 const Menu = () => {
   useLog("Salut", "err");
@@ -12,6 +13,7 @@ const Menu = () => {
     <Container>
       {/* <NavbarBootstrap rute={ruteAdmin} /> */}
       <MenuContainer>unde sunt???</MenuContainer>
+      <CardMenu></CardMenu>
     </Container>
   );
 };

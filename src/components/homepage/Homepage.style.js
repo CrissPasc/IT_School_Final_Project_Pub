@@ -5,7 +5,7 @@ import { BREAKPOINT_MOBILE } from "../../constants/breakpoints";
 
 // de unde iau valoarea lui isGuest??
 export const Container = styled.div`
-  background: ${(props) => (props.isGuest ? "#2f718b" : "#a19f9f")};
+  background: ${(props) => (props.isAdmin ? "#2f718b" : "#a19f9f")};
   color: ${WHITE_COLORF};
 `;
 

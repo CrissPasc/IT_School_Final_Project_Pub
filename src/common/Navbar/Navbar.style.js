@@ -53,21 +53,23 @@ export const NavbarWrapper = styled(Navbar)`
   display: flex;
   justify-content: space-around;
   // vertical-align: top;
-  position: absolute;
+  // position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 0;
-  max-height: 70vh;
+  // z-index: 1;
+  max-height: 50vh;
+  height: 300px;
   background-image: url(${NavbarBackground});
   background-size: cover;
+  margin-bottom: 300px;
 `;
 
 // AICI SE REZOLVA CA NAVBARUL SA FIE SUS CU 'top: 0;'
 export const NavbarContainer = styled(Container)`
-  position: fixed;
-  top: 0;
+  //position: fixed;
+  // top: 0;
 
   backdrop-filter: blur(20px);
   backdrop-filter: grayscale(100%);

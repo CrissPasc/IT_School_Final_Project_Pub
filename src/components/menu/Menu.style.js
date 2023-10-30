@@ -4,22 +4,27 @@ import { WHITE_COLORF } from "../../constants/colors";
 import { BREAKPOINT_MOBILE } from "../../constants/breakpoints";
 import MenuBackground from "../../media/images/menu-background.png";
 
-// de unde iau valoarea lui isGuest??
+
 export const Container = styled.div`
-  background: ${(props) => (props.isGuest ? "#2f718b" : "#a19f9f")};
-  color: ${WHITE_COLORF};
-  display: flex;
-  /* vertical-align: top; */
-  position: absolute;
+background-image: url(${MenuBackground});
+  color: black;
+  // display: flex;
+
+  height: 100vh;
+  position: reltive;
+
+  background-color: red;
+  // z-index: 99;
+  margin-top: 300px;
 `;
 
 export const MenuContainer = styled.div`
-  display: flex;
-  /* vertical-align: top; */
-  position: absolute;
-  z-index: 0;
-  background-image: url(${MenuBackground});
-  background-size: cover;
+  // display: flex;
+
+  // position: absolute;
+  // z-index: 999;
+  // background-image: url(${MenuBackground});
+  // background-size: cover;
 `;
 
 export const Logo = styled.img``;
