@@ -28,7 +28,7 @@ function App() {
           element={
             <>
               {/* aici va trebui schimbat / scos?? */}
-              <NavbarBootstrap isAdmin={true}></NavbarBootstrap>
+              {/* <NavbarBootstrap isAdmin={true}></NavbarBootstrap> */}
               <Menu />
             </>
           }

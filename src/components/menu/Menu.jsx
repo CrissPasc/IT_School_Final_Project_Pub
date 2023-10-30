@@ -10,7 +10,7 @@ const Menu = () => {
   useLog("Salut", "err");
   return (
     <Container>
-      <NavbarBootstrap rute={ruteAdmin} />
+      {/* <NavbarBootstrap rute={ruteAdmin} /> */}
       <MenuContainer>unde sunt???</MenuContainer>
     </Container>
   );
