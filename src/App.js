@@ -13,9 +13,20 @@ function App() {
           path="/homepage"
           element={
             <>
-              {/* aici va trebui schimbat / scos */}
+              {/* aici va trebui schimbat / scos?? */}
               <NavbarBootstrap isAdmin={true}></NavbarBootstrap>
               <Homepage />
+            </>
+          }
+        ></Route>
+
+        <Route
+          path="/menu"
+          element={
+            <>
+              {/* aici va trebui schimbat / scos?? */}
+              <NavbarBootstrap isAdmin={true}></NavbarBootstrap>
+              <Menu />
             </>
           }
         ></Route>

@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Container } from "./Menu.style";
+import { Container, MenuContainer } from "./Menu.style";
 import { Button, Image } from "react-bootstrap";
 import useLog from "../../hooks/useLog";
 
@@ -10,9 +10,8 @@ const Menu = () => {
   useLog("Salut", "err");
   return (
     <Container>
-      <NavbarBootstrap logo="src/common/pictures/logo.jpg" rute={ruteAdmin} />
-      TEST HOMEPAGE
-      <Button> TEST</Button>
+      <NavbarBootstrap rute={ruteAdmin} />
+      <MenuContainer>unde sunt???</MenuContainer>
     </Container>
   );
 };

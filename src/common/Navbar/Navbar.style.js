@@ -28,6 +28,11 @@ export const NavbarLink = styled(Nav.Link)`
   color: #f0fff0;
   font-size: 1.25em;
   margin: 0px 10px;
+  /* cursor: pointer; */
+  text-decoration: none;
+  &:hover {
+    background: rgb(187, 186, 185);
+  }
 `;
 
 export const BrandContainer = styled.div`
