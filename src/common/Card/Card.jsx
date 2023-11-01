@@ -54,11 +54,8 @@ const Cardmenu = () => {
             <Card.Title>{menus?.section}</Card.Title>
             <Card.Text>{menus?.description}</Card.Text>
             <Link to={`/menus/${menus.section}`}>
-              See {menus?.section} Menu
+              <Button variant="primary">See {menus?.section} Menu</Button>
             </Link>
-
-            {/*  <Link to={`/menu/${menu.id}`}>See {menus?.section} Menu</Link> */}
-            <Button variant="primary">See {menus?.section} Menu</Button>
           </Card.Body>
         </CardContainer>
       ))}
