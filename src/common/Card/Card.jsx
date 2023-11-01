@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Card, Button, Alert } from "react-bootstrap";
-import { CardContainer } from "./Card.style";
+import { CardsContainer, CardContainer } from "./Card.style";
 import { Link } from "react-router-dom";
 import PicBrugerMenu from "../../media/images/burgers-three-mini.jpg";
 import PicPizzaMenu from "../../media/images/pizza-table.jpg";
@@ -35,7 +35,7 @@ const Cardmenu = () => {
   }, []);
 
   return (
-    <CardContainer>
+    <CardsContainer>
       <Alert show={error} variant="danger">
         <Alert.Heading>My Alert</Alert.Heading>
         <p style={{ width: "300px" }}>Failed to load Menu</p>
@@ -48,7 +48,7 @@ const Cardmenu = () => {
       </Alert>
 
       {menuscard?.map((menus, menu, index) => (
-        <Card key={index} style={{ width: "18rem" }}>
+        <CardContainer key={index} style={{ width: "18rem" }}>
           <Card.Img variant="top" src={menus?.image} />
           <Card.Body>
             <Card.Title>{menus?.section}</Card.Title>
@@ -60,9 +60,9 @@ const Cardmenu = () => {
             {/*  <Link to={`/menu/${menu.id}`}>See {menus?.section} Menu</Link> */}
             <Button variant="primary">See {menus?.section} Menu</Button>
           </Card.Body>
-        </Card>
+        </CardContainer>
       ))}
-    </CardContainer>
+    </CardsContainer>
   );
 };
 
