@@ -4,9 +4,8 @@ import { WHITE_COLORF } from "../../constants/colors";
 import { BREAKPOINT_MOBILE } from "../../constants/breakpoints";
 import MenuBackground from "../../media/images/menu-background.png";
 
-
 export const Container = styled.div`
-background-image: url(${MenuBackground});
+  background-image: url(${MenuBackground});
   color: black;
   // display: flex;
 
@@ -15,7 +14,7 @@ background-image: url(${MenuBackground});
 
   background-color: red;
   // z-index: 99;
-  margin-top: 300px;
+  /* margin-top: 300px; */
 `;
 
 export const MenuContainer = styled.div`

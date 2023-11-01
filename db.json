@@ -1,5 +1,31 @@
 {
-  "meniu": [
+  "menusections": [
+    {
+      "id": 1,
+      "section": "Burgers",
+      "image": "../../media/images/burgers-three-mini.jpg",
+      "description": "Have you tried our burgers? It starts with a special blend of beef, quickly pressed flat into a searing hot grill before the fat can escape. Maximising surface area with the grill, the beef cooks quickly with a heavy brown crust (just like a good steak) that keeps the juices in and is packed with flavour."
+    },
+    {
+      "id": 2,
+      "section": "Pizzas",
+      "image": "../../media/images/burgers-three-mini.jpg",
+      "description": "You don't have to go to Italy on vacation to try Italian pizza. Now Italy can come to you! We cook original recipes using ingredients that we order at the source from reliable suppliers."
+    },
+    {
+      "id": 3,
+      "section": "Drinks",
+      "image": "",
+      "description": ""
+    },
+    {
+      "id": 4,
+      "section": "Desserts",
+      "image": "",
+      "description": "Gourmet dessert plate raspberry cheesecake mousse indulgence"
+    }
+  ],
+  "menu": [
     {
       "id": 1,
       "name": "Beef burger",
@@ -85,6 +111,7 @@
       "description": "Delicious carrot cake with cream"
     }
   ],
+
   "events": [
     {
       "id": 1,
