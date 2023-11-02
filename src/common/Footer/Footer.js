@@ -6,7 +6,7 @@ import { Router } from "react-router-dom";
 
 function Footer () {
     return (
-      <FooterWrapper>text</FooterWrapper>
+      <FooterWrapper>ASTEPT IDEI PENTRU FOOTER :)</FooterWrapper>
     )
 }
 

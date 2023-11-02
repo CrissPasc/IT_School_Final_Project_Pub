@@ -55,19 +55,21 @@ export const NavbarWrapper = styled(Navbar)`
   right: 0;
   bottom: 0;
   // z-index: 1;
-  max-height: 50vh;
-  height: 300px;
+  height: 100vh;
+  // height: 300px;
   background-image: url(${NavbarBackground});
   background-size: cover;
-  margin-bottom: 300px;
 `;
 
 // AICI SE REZOLVA CA NAVBARUL SA FIE SUS CU 'top: 0;'
 export const NavbarContainer = styled(Container)`
-  //position: fixed;
-  // top: 0;
-
-  backdrop-filter: blur(20px);
+  position: fixed;
+  top: 0;
+  max-width: 100vw;
+  backdrop-filter: blur(10px);
+  background: linear-gradient(145deg, rgba(0,0,0,0.9) 0%, rgba(255,241,27,0.8) 100%);
+  z-index: 999;
+  border-radius: 0 0 30px 30px;
   /* backdrop-filter: grayscale(100%); */
   // backdrop-filter: opacity(20%);
 `;

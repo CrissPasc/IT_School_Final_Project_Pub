@@ -3,26 +3,38 @@
     {
       "id": 1,
       "section": "Burgers",
-      "image": "../../media/images/burgers-three-mini.jpg",
+      "image": "https://www.tastingtable.com/img/gallery/what-makes-restaurant-burgers-taste-different-from-homemade-burgers-upgrade/l-intro-1662064407.jpg",
       "description": "Have you tried our burgers? It starts with a special blend of beef, quickly pressed flat into a searing hot grill before the fat can escape. Maximising surface area with the grill, the beef cooks quickly with a heavy brown crust (just like a good steak) that keeps the juices in and is packed with flavour."
     },
     {
       "id": 2,
       "section": "Pizzas",
-      "image": "../../media/images/burgers-three-mini.jpg",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/91/Pizza-3007395.jpg",
       "description": "You don't have to go to Italy on vacation to try Italian pizza. Now Italy can come to you! We cook original recipes using ingredients that we order at the source from reliable suppliers."
     },
     {
       "id": 3,
-      "section": "Drinks",
-      "image": "",
-      "description": ""
+      "section": "Soups",
+      "image": "https://www.southernliving.com/thmb/DwsVp7xH_SCCIBBbLTPbVBzOhfk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/2678201_HIHAn_27538-2000-47842017c4a9440ea1c615cc941c42f2.jpg",
+      "description": "You don't have to go to Italy on vacation to try Italian pizza. Now Italy can come to you! We cook original recipes using ingredients that we order at the source from reliable suppliers."
     },
     {
       "id": 4,
+      "section": "Salads",
+      "image": "https://nashvilleedit.com/wp-content/uploads/2021/01/salad-1600x900.jpg",
+      "description": "You don't have to go to Italy on vacation to try Italian pizza. Now Italy can come to you! We cook original recipes using ingredients that we order at the source from reliable suppliers."
+    },
+    {
+      "id": 5,
+      "section": "Drinks",
+      "image": "https://dropinblog.net/34240221/files/featured/non-alcoholic-drinks-to-order-at-a-bar.jpg",
+      "description": "Indulge in our handcrafted cocktails, a symphony of flavors that dance on your palate. From classic martinis to innovative mixology creations, our drink menu is a liquid adventure waiting to be explored. Sip, savor, and let your taste buds revel in the artistry of our expert bartenders. Cheers to unforgettable moments and unforgettable drinks!"
+    },
+    {
+      "id": 6,
       "section": "Desserts",
-      "image": "",
-      "description": "Gourmet dessert plate raspberry cheesecake mousse indulgence"
+      "image": "https://www.foodandwine.com/thmb/ckc6L6xKox0WfpfO6dMkuVGPQOY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Angel-Food-Cake-with-Three-Berry-Compote-FT-RECIPE0323-541a780b871441e0ab14383ee38acc44.jpg",
+      "description": "Prepare to embark on a sweet journey with our delectable desserts. Each creation is a masterpiece of flavor and presentation, carefully crafted to satisfy your cravings and delight your senses. From rich, velvety chocolate indulgence to light, fruity delights, our desserts are a celebration of culinary artistry. Save room for a sweet ending that will leave you craving for more!"
     }
   ],
   "menu": [

@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-import { Card, Button, Alert } from "react-bootstrap";
-import { CardsContainer, CardContainer } from "./Card.style";
+import { Card, Button, Alert, CardBody } from "react-bootstrap";
+import { CardsContainer, CardContainer, CardImage, CardButton } from "./Card.style";
 import { Link } from "react-router-dom";
 import PicBrugerMenu from "../../media/images/burgers-three-mini.jpg";
 import PicPizzaMenu from "../../media/images/pizza-table.jpg";
 
-const Cardmenu = () => {
+const CardMenu = () => {
   const [menuscard, setMenuscard] = useState(undefined);
   const [menucard, setMenucard] = useState(undefined);
   const [error, setError] = useState(false);
@@ -48,19 +48,19 @@ const Cardmenu = () => {
       </Alert>
 
       {menuscard?.map((menus, menu, index) => (
-        <CardContainer key={index} style={{ width: "18rem" }}>
-          <Card.Img variant="top" src={menus?.image} />
-          <Card.Body>
+        <CardContainer key={index} >
+          <CardImage variant="top" src={menus?.image} />
+          <CardBody>
             <Card.Title>{menus?.section}</Card.Title>
             <Card.Text>{menus?.description}</Card.Text>
             <Link to={`/menus/${menus.section}`}>
-              <Button variant="primary">See {menus?.section} Menu</Button>
+              <CardButton>See {menus?.section} Menu</CardButton>
             </Link>
-          </Card.Body>
+          </CardBody>
         </CardContainer>
       ))}
     </CardsContainer>
   );
 };
 
-export default Cardmenu;
+export default CardMenu;
