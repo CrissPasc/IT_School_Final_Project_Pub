@@ -4,6 +4,7 @@ import Navbar from "react-bootstrap/Navbar";
 import NavbarBackground from "./../../media/images/navbar-friends-chatting-pub.jpg";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
+import { useLocation } from "react-router-dom";
 
 export const Logo = styled.img`
   height: 35px;
@@ -81,7 +82,7 @@ export const NavbarContainer = styled(Container)`
 export const NavbarMenuIcon = styled.span`
   background-color: white;
   color: white;
-`
+`;
 
 // export const NavbarContainer = styled.div`
 //   display: flex;
@@ -95,3 +96,47 @@ export const NavbarMenuIcon = styled.span`
 //   height: 60px;
 //   padding: 4px 24px;
 // `;
+
+// background-image: url("https://img.freepik.com/free-photo/medium-shot-happy-friends-with-beer-mugs_23-2148872451.jpg?w=1800&t=st=1698907507~exp=1698908107~hmac=71ed74e301bba47568bb4e56f418f4c85b1c162f61cd71648f96dddd1046f35d");
+// background-image: url(${NavbarBackground}); // IMG ADUSA DIN LOCAL
+// https://www.freepik.com/free-photo/medium-shot-happy-friends-with-beer-mugs_12806237.htm#&position=1&from_view=collections
+
+// DE LA RAZVAN
+// const imageRender = () => {
+//   const location = useLocation();
+
+//   switch (location.pathname) {
+//     case "/menu":
+//       return "Https//imagine";
+//     default:
+//       break;
+//   }
+// };
+
+// <img src={imageRender}></img>;
+
+// // Define a function to dynamically render different image URLs based on location
+// const getImageForLocation = (pathname) => {
+//   switch (pathname) {
+//     case "/homepage":
+//       return "https://img.freepik.com/free-photo/medium-shot-happy-friends-with-beer-mugs_23-2148872451.jpg?w=1800&t=st=1698907507~exp=1698908107~hmac=71ed74e301bba47568bb4e56f418f4c85b1c162f61cd71648f96dddd1046f35d";
+//     case "/menu":
+//       return "https://www.crushpixel.com/big-static12/preview4/group-couples-with-friends-drinking-798836.jpg";
+//     // Add more cases as needed for different routes
+//     default:
+//       return "https://img.freepik.com/free-photo/medium-shot-happy-friends-with-beer-mugs_23-2148872451.jpg?w=1800&t=st=1698907507~exp=1698908107~hmac=71ed74e301bba47568bb4e56f418f4c85b1c162f61cd71648f96dddd1046f35d";
+//   }
+// };
+
+// const NavbarComponent = () => {
+//   const location = useLocation();
+//   const backgroundImage = getImageForLocation(location.pathname);
+
+//   return (
+//     <NavbarWrapper style={{ backgroundImage: `url(${backgroundImage})` }}>
+//       <Container>{/* Rest of your Navbar content */}</Container>
+//     </NavbarWrapper>
+//   );
+// };
+
+// export default NavbarComponent;

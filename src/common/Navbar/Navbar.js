@@ -20,12 +20,38 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 
+import NavbarBackground from "./../../media/images/navbar-friends-chatting-pub.jpg";
+import NavbarHome from "./../../media/images/navbar-happy-friends-with-beer-mugs.jpg";
+import NavbarMenu from "./../../media/images/navbar-happy-friends-with-beer-mugs.jpg";
+import NavbarMenuBurgers from "./../../media/images/burgers-three-mini.jpg";
+import NavbarOrderonline from "./../../media/images/navbar-happy-friends-with-beer-mugs.jpg";
+
 // folosim parametrul logo? => pe viitor DA!
 function NavbarBootstrap({ isAdmin, logo }) {
   const params = useParams();
   console.log(isAdmin, logo);
 
+  // Define a function to dynamically render different image URLs based on location
+  const getImageForLocation = (pathname) => {
+    switch (pathname) {
+      case "/homepage":
+        return NavbarHome;
+      case "/menu":
+        return NavbarMenu;
+      case "/menus/Burgers":
+        return NavbarMenuBurgers;
+        console.log(pathname);
+      case "/orderonline":
+        return NavbarOrderonline;
+      // Add more cases as needed for different routes
+      default:
+        return "https://img.freepik.com/free-photo/medium-shot-happy-friends-with-beer-mugs_23-2148872451.jpg?w=1800&t=st=1698907507~exp=1698908107~hmac=71ed74e301bba47568bb4e56f418f4c85b1c162f61cd71648f96dddd1046f35d";
+    }
+  };
+
   const location = useLocation();
+  console.log(location.pathname);
+  const backgroundImage = getImageForLocation(location.pathname);
   console.log(location.pathname);
 
   return (
@@ -33,9 +59,9 @@ function NavbarBootstrap({ isAdmin, logo }) {
       expand="lg"
       // de unde este clasa "bg-body-tertiary" ?
       className={isAdmin ? "bg-body-tertiary" : "green-class"}
+      style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       <NavbarContainer>
-        {/* nu reusesc sa aduc sus NavbarContainer => REZOLVARE IN Navbar.style.js*/}
         <NavLinkContainer>
           <Navbar.Brand as={Link} to="/homepage">
             <BrandContainer>
@@ -108,3 +134,8 @@ function NavbarBootstrap({ isAdmin, logo }) {
 }
 
 export default NavbarBootstrap;
+
+// {rute?.map((ruta, index) => (
+//   <NavbarLink to={ruta.ruta} key={ruta + index}>
+//     {ruta.name}
+//   </NavbarLink>

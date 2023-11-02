@@ -11,8 +11,8 @@ export const Container = styled.div`
 
   height: 100vh;
   position: reltive;
-
-  background-color: red;
+  background-repeat: no-repeat;
+  /* background-color: red; */
   // z-index: 99;
   /* margin-top: 300px; */
 `;
