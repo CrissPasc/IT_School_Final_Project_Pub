@@ -13,8 +13,6 @@ import LogoPic from "./../../media/logo/logo-no-background.png"; // "./logo.png"
 import UserInfoPic from "./../../media/icons/user-icon-black.jpg";
 import { useLocation } from "react-router-dom";
 
-// import Container from "react-bootstrap/Container";
-// import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { useParams } from "react-router-dom";
@@ -57,7 +55,6 @@ function NavbarBootstrap({ isAdmin, logo }) {
   return (
     <NavbarWrapper
       expand="lg"
-      // de unde este clasa "bg-body-tertiary" ?
       className={isAdmin ? "bg-body-tertiary" : "green-class"}
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
@@ -77,8 +74,7 @@ function NavbarBootstrap({ isAdmin, logo }) {
             style={{ NavbarMenuIcon }}
           />
           <Navbar.Collapse id="basic-navbar-nav" style={{ NavbarMenuIcon }}>
-            {/* nu merge sa le aliniez de la dreapta */}
-            {/* => am folosit 2 containere NavLinkContainer pentru a incapsula cele 2 parti din navbar, 
+            {/* pt a alinia la dreapta => am folosit 2 containere NavLinkContainer pentru a incapsula cele 2 parti din navbar, 
             dupa care am dat space-around in style.js pe containerul parinte NavbarWrapper */}
 
             {/* <Nav className="me-auto" style={{ marginRight: "0px" }}> */}
@@ -100,9 +96,11 @@ function NavbarBootstrap({ isAdmin, logo }) {
             <NavbarLink as={Link} to="/bookatable">
               Book a table
             </NavbarLink>
+            {/* {rute?.map((ruta, index) => (
+              <NavbarLink to={ruta.ruta} key={ruta + index}>
+                {ruta.name}
+              </NavbarLink> */}
             <NavDropdown
-              // title="User info"
-              // style={{ color: "#f0fff0", fontSize: "1.5em" }} //  nu imi ia culoara si fontul
               title={
                 <img
                   src={UserInfoPic}
@@ -115,7 +113,6 @@ function NavbarBootstrap({ isAdmin, logo }) {
               }
               id="basic-nav-dropdown"
               // cum sa facem sagetica alba + burger menu icon alba??
-              // se
               // => PROBLEMA ERA componenta de <Nav> care dadea overwrite la alte proprietati de CSS (nu e necesara)
             >
               <NavDropdown.Item as={Link} to="/signin">
@@ -135,7 +132,16 @@ function NavbarBootstrap({ isAdmin, logo }) {
 
 export default NavbarBootstrap;
 
-// {rute?.map((ruta, index) => (
-//   <NavbarLink to={ruta.ruta} key={ruta + index}>
-//     {ruta.name}
-//   </NavbarLink>
+// DE LA RAZVAN
+// const imageRender = () => {
+//   const location = useLocation();
+
+//   switch (location.pathname) {
+//     case "/menu":
+//       return "Https//imagine";
+//     default:
+//       break;
+//   }
+// };
+
+// <img src={imageRender}></img>;
