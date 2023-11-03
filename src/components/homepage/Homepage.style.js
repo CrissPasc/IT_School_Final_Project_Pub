@@ -1,12 +1,10 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { WHITE_COLORF } from "../../constants/colors";
 import { BREAKPOINT_MOBILE } from "../../constants/breakpoints";
 
 // de unde iau valoarea lui isGuest??
 export const Container = styled.div`
   background: ${(props) => (props.isAdmin ? "#2f718b" : "#a19f9f")};
-  color: ${WHITE_COLORF};
 `;
 
 export const Logo = styled.img``;
