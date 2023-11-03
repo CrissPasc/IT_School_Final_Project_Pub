@@ -38,7 +38,6 @@ function NavbarBootstrap({ isAdmin, logo }) {
         return NavbarMenu;
       case "/menus/Burgers":
         return NavbarMenuBurgers;
-        console.log(pathname);
       case "/orderonline":
         return NavbarOrderonline;
       // Add more cases as needed for different routes
