@@ -17,7 +17,7 @@ const CardMenu = () => {
   const [error, setError] = useState(false);
 
   useEffect(() => {
-    fetch(`http://localhost:3005/menusections`)
+    fetch(`http://localhost:3002/menusections`)
       .then((response) => response.json())
       .then((menus) => {
         setMenuscard(menus);
@@ -29,7 +29,7 @@ const CardMenu = () => {
   }, []);
 
   useEffect(() => {
-    fetch(`http://localhost:3005/menu`)
+    fetch(`http://localhost:3002/menu`)
       .then((response) => response.json())
       .then((menu) => {
         setMenucard(menu);
