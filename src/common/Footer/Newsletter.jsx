@@ -21,6 +21,7 @@ const Input = styled.input`
 `;
 
 const Button = styled.button`
+  // background-color: #007bff;
   background-color: #007bff;
   color: #fff;
   padding: 10px 20px;
@@ -32,6 +33,8 @@ const Button = styled.button`
 const ConfirmationMessage = styled.p`
   margin-top: 10px;
 `;
+
+
 
 function Newsletter() {
   const [email, setEmail] = useState("");
@@ -46,7 +49,7 @@ function Newsletter() {
 
   return (
     <NewsletterContainer>
-      <h2>Subscribe to our Newsletter</h2>
+      <h2 style={{color: "#fffefef5", textwrap: "nowrap"}}>Subscribe to our Newsletter</h2>
       <NewsletterForm onSubmit={handleSubscribe}>
         <Input
           type="email"
