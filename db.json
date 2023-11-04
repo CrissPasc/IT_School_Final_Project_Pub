@@ -4,25 +4,25 @@
       "id": 1,
       "section": "Burgers",
       "image": "https://www.tastingtable.com/img/gallery/what-makes-restaurant-burgers-taste-different-from-homemade-burgers-upgrade/l-intro-1662064407.jpg",
-      "description": "Have you tried our burgers? It starts with a special blend of beef, quickly pressed flat into a searing hot grill before the fat can escape. Maximising surface area with the grill, the beef cooks quickly with a heavy brown crust (just like a good steak) that keeps the juices in and is packed with flavour."
+      "description": "Have you experienced the magic of our burgers? We take pride in crafting them with a special blend of beef, quickly pressed flat onto a searing hot grill before the fat can escape. This technique maximizes the surface area, allowing the beef to cook rapidly, forming a luscious, heavy brown crust, akin to a perfectly seared steak. This crust locks in the juices, ensuring each bite is a flavor-packed delight."
     },
     {
       "id": 2,
       "section": "Pizzas",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/9/91/Pizza-3007395.jpg",
-      "description": "You don't have to go to Italy on vacation to try Italian pizza. Now Italy can come to you! We cook original recipes using ingredients that we order at the source from reliable suppliers."
+      "image": "https://wallpapersmug.com/download/1600x900/b67e3e/pizza-slices-food.jpg",
+      "description": "Experience pizza perfection at our restaurant. Our artisanal pizzas are a taste of Italy right in your neighborhood. Crafted with love and the finest, freshest ingredients, each pizza is a culinary masterpiece. From the classic Margherita with its simplicity to adventurous and creative toppings, our pizzas will transport your taste buds to a world of flavor. Join us for a slice of heaven today."
     },
     {
       "id": 3,
       "section": "Soups",
-      "image": "https://www.southernliving.com/thmb/DwsVp7xH_SCCIBBbLTPbVBzOhfk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/2678201_HIHAn_27538-2000-47842017c4a9440ea1c615cc941c42f2.jpg",
-      "description": "You don't have to go to Italy on vacation to try Italian pizza. Now Italy can come to you! We cook original recipes using ingredients that we order at the source from reliable suppliers."
+      "image": "https://vaya.in/news/wp-content/uploads/2019/04/soups-for-pregnant-women.jpg",
+      "description": "Delight your taste buds in a symphony of flavors with our delectable soup selection. From rich and creamy bisques to hearty broths brimming with farm-fresh vegetables, our soups are a warm embrace for your senses. Whether you're seeking comfort in a classic tomato soup or a culinary adventure with our exotic spiced creations, our soups are a soul-warming journey through the art of gastronomy. Bon appétit!"
     },
     {
       "id": 4,
       "section": "Salads",
       "image": "https://nashvilleedit.com/wp-content/uploads/2021/01/salad-1600x900.jpg",
-      "description": "You don't have to go to Italy on vacation to try Italian pizza. Now Italy can come to you! We cook original recipes using ingredients that we order at the source from reliable suppliers."
+      "description": "Dive into a garden of freshness with our exquisite salads. Each vibrant creation is a symphony of colors, textures, and flavors, featuring crisp, locally sourced greens, ripe seasonal ingredients, and house-made dressings that elevate every bite. Whether you crave a classic Caesar or a daring fusion of tastes, our salads are a refreshing journey for your palate. Savor the taste of health and happiness."
     },
     {
       "id": 5,
@@ -33,7 +33,7 @@
     {
       "id": 6,
       "section": "Desserts",
-      "image": "https://www.foodandwine.com/thmb/ckc6L6xKox0WfpfO6dMkuVGPQOY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Angel-Food-Cake-with-Three-Berry-Compote-FT-RECIPE0323-541a780b871441e0ab14383ee38acc44.jpg",
+      "image": "https://images.wallpaperscraft.com/image/single/food_sweets_cakes_75172_1600x900.jpg",
       "description": "Prepare to embark on a sweet journey with our delectable desserts. Each creation is a masterpiece of flavor and presentation, carefully crafted to satisfy your cravings and delight your senses. From rich, velvety chocolate indulgence to light, fruity delights, our desserts are a celebration of culinary artistry. Save room for a sweet ending that will leave you craving for more!"
     }
   ],

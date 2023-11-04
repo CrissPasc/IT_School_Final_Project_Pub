@@ -1,6 +1,12 @@
 import { useEffect, useState } from "react";
-import { Card, Button, Alert, CardBody } from "react-bootstrap";
-import { CardsContainer, CardContainer, CardImage, CardButton } from "./Card.style";
+import { Card, Button, Alert } from "react-bootstrap";
+import {
+  CardsContainer,
+  CardContainer,
+  CardBody,
+  CardImage,
+  CardButton,
+} from "./Card.style";
 import { Link } from "react-router-dom";
 import PicBrugerMenu from "../../media/images/burgers-three-mini.jpg";
 import PicPizzaMenu from "../../media/images/pizza-table.jpg";
@@ -48,7 +54,7 @@ const CardMenu = () => {
       </Alert>
 
       {menuscard?.map((menus, menu, index) => (
-        <CardContainer key={index} >
+        <CardContainer key={index}>
           <CardImage variant="top" src={menus?.image} />
           <CardBody>
             <Card.Title>{menus?.section}</Card.Title>
