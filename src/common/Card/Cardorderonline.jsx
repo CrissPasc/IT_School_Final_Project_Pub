@@ -11,25 +11,13 @@ import { Link } from "react-router-dom";
 import PicBrugerMenu from "../../media/images/burgers-three-mini.jpg";
 import PicPizzaMenu from "../../media/images/pizza-table.jpg";
 
-const CardMenu = () => {
+const CardOrderonline = () => {
   const [menuscard, setMenuscard] = useState(undefined);
   const [menucard, setMenucard] = useState(undefined);
   const [error, setError] = useState(false);
 
   useEffect(() => {
-    fetch(`http://localhost:3005/menusections`)
-      .then((response) => response.json())
-      .then((menus) => {
-        setMenuscard(menus);
-      })
-      .catch((error) => {
-        setError(true);
-        console.log("Error", error);
-      });
-  }, []);
-
-  useEffect(() => {
-    fetch(`http://localhost:3005/menu`)
+    fetch(`http://localhost:3002/menu`)
       .then((response) => response.json())
       .then((menu) => {
         setMenucard(menu);
@@ -53,14 +41,17 @@ const CardMenu = () => {
         </div>
       </Alert>
 
-      {menuscard?.map((menus, menu, index) => (
+      {menucard?.map((menu, index) => (
         <CardContainer key={index}>
-          <CardImage variant="top" src={menus?.image} />
+          <CardImage variant="top" src={menu?.image} />
           <CardBody>
-            <Card.Title>{menus?.section}</Card.Title>
-            <Card.Text>{menus?.description}</Card.Text>
-            <Link to={`/menus/${menus.section}`}>
-              <CardButton>See {menus?.section} Menu</CardButton>
+            <Card.Title>{menu?.name}</Card.Title>
+            <Card.Text>{menu?.quantity}</Card.Text>
+            <Card.Text>{menu?.details}</Card.Text>
+            <Card.Text>{menu?.price}</Card.Text>
+            <Link to={`/orderonline}`}>
+              {/* // ADD MODAL!!! */}
+              <CardButton>Add {menu?.name} to cart</CardButton>
             </Link>
           </CardBody>
         </CardContainer>
@@ -69,4 +60,4 @@ const CardMenu = () => {
   );
 };
 
-export default CardMenu;
+export default CardOrderonline;

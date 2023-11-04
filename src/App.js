@@ -8,6 +8,7 @@ import Footer from "./common/Footer/Footer";
 import Menus from "./components/menu/Menus";
 import Meals from "./components/menu/Meals";
 import Newsletter from "./common/Footer/Footer";
+import Orderonline from "./components/orderonline/Orderonline";
 
 function App() {
   return (
@@ -58,6 +59,18 @@ function App() {
               {/* aici va trebui schimbat / scos?? */}
               {/* <NavbarBootstrap isAdmin={true}></NavbarBootstrap> */}
               <Meals />
+              {/* <Footer /> */}
+            </>
+          }
+        ></Route>
+
+        <Route
+          path="/orderonline"
+          element={
+            <>
+              {/* aici va trebui schimbat / scos?? */}
+              {/* <NavbarBootstrap isAdmin={true}></NavbarBootstrap> */}
+              <Orderonline />
               {/* <Footer /> */}
             </>
           }
