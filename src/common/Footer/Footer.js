@@ -5,20 +5,28 @@ import Newsletter from "./Newsletter";
 
 function Footer() {
   return (
+
+    // Aici trebuiesc puse link-urile la href
     <FooterContainer className="main-footer">
       <div className="footer-middle">
         <div className="container">
           <div className="row">
             <div className="col-md-3 col-sm-6">
-              <ul className="list-unstyled">
-                <li>
-                  <a href="/">About us</a>
+              <ul className="first-list">
+                <li className="list-href">
+                <a class="noDecoration" href="#">
+                    About us
+                  </a>
                 </li>
                 <li>
-                  <a href="/">Order Online</a>
+                  <a class="noDecoration" href="#">
+                    Order Online
+                  </a>
                 </li>
                 <li>
-                  <a href="/">Book a table here</a>
+                  <a class="noDecoration" href="#">
+                    Book a table here
+                  </a>
                 </li>
               </ul>
             </div>
@@ -29,8 +37,9 @@ function Footer() {
             </div>
 
             <div className="col-md-3 col-sm-6">
+              
+              <ul className="list-styled">
               <h4>Open:</h4>
-              <ul className="list-unstyled">
                 <li>Monday - Thursday: 10:00 am - 00:00 am</li>
                 <li>Friday - Saturday: 10:00 am - 01:00 am</li>
                 <li>Sunday: 10:00 am - 11:00 pm</li>
@@ -63,6 +72,63 @@ const FooterContainer = styled.footer`
       rgba(255, 215, 0, 0.8) 100%
     );
   }
+
+  .footer-bottom {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+  }
+
+  ul li {
+    color: white;
+  }
+
+  ulli a: hover {
+    color: green;
+  }
+
+  .noDecoration,
+  a:link,
+  a:visited {
+    text-decoration: none;
+  }
+
+  .noDecoration {
+    color: white;
+  }
+
+  .list-href {
+    color: white;
+  }
+
+  .list-unstyled {
+    margin-top: 50px;
+    text-align: -webkit-right;
+  }
+
+h4{
+color: white;
+}
+
+.list-styled{
+  margin-left: 250px;
+  text-wrap: nowrap;
+  margin-top: 100px;
+}
+
+.row{
+  margin-top: 100px;
+}
+
+.first-list{
+  margin-top: 100px;
+  list-style: none;
+}
+
+.text-xs-center{
+  text-align: center;
+  color: #edededd1;
+  font-variant-caps: petite-caps;
+}
 `;
 
 export default Footer;
