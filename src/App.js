@@ -7,6 +7,7 @@ import AdminRouter from "./routers/admin";
 import Footer from "./common/Footer/Footer";
 import Menus from "./components/menu/Menus";
 import Meals from "./components/menu/Meals";
+import Newsletter from "./common/Footer/Footer";
 
 function App() {
   return (
