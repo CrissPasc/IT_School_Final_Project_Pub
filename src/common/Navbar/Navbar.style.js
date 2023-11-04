@@ -67,7 +67,11 @@ export const NavbarContainer = styled(Container)`
   top: 0;
   max-width: 100vw;
   backdrop-filter: blur(10px);
-  background: linear-gradient(145deg, rgba(0,0,0,0.9) 0%, rgba(255,215,0,0.8) 100%);
+  background: linear-gradient(
+    145deg,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(255, 215, 0, 0.8) 100%
+  );
   z-index: 999;
   border-radius: 0 0 30px 30px;
   /* backdrop-filter: grayscale(100%); */

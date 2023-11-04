@@ -9,13 +9,13 @@ import Cardmenu from "../../common/Card/Card";
 import { Link, useParams } from "react-router-dom";
 import { CardContainer, CardsContainer } from "../../common/Card/Card.style";
 
-const Menus = () => {
+const Meals = () => {
   useLog("Salut", "err");
   const [menucard, setMenucard] = useState(undefined);
   const [menucardfiltered, setMenucardfiltered] = useState(undefined);
   const [error, setError] = useState(false);
-  const { section } = useParams();
-  console.log(section);
+  const { name } = useParams();
+  console.log(name);
 
   useEffect(() => {
     fetch(`http://localhost:3002/menu`)
@@ -33,13 +33,13 @@ const Menus = () => {
   console.log(menucard);
 
   useEffect(() => {
-    if (section) {
-      const filteredMenu = menucard?.filter((item) => item.section === section); // facem lifter
+    if (name) {
+      const filteredMenu = menucard?.filter((item) => item.name === name); // facem filter
 
       setMenucardfiltered(filteredMenu);
       console.log(filteredMenu);
     }
-  }, [section, menucard]);
+  }, [name, menucard]);
 
   console.log(menucardfiltered);
 
@@ -64,9 +64,9 @@ const Menus = () => {
           <Card.Body>
             <Card.Title>{menu.name}</Card.Title>
             <Card.Text>{menu.description}</Card.Text>
-            <Link to={`/meals/${menu.name}`}>
+            {/* <Link to={`/meals/${menu.section}`}>
               <Button variant="primary">See {menu.name} details</Button>
-            </Link>
+            </Link> */}
             {/* asta ramane de vazut daca vrem sa mai deschidem o alta pagina pt 
 fiecare fel u=in parte cu o poza mai mare si cu si mai multe detalii*/}
           </Card.Body>
@@ -86,4 +86,4 @@ fiecare fel u=in parte cu o poza mai mare si cu si mai multe detalii*/}
   );
 };
 
-export default Menus;
+export default Meals;

@@ -6,6 +6,8 @@ import NavbarBootstrap from "./common/Navbar/Navbar";
 import AdminRouter from "./routers/admin";
 import Footer from "./common/Footer/Footer";
 import Menus from "./components/menu/Menus";
+import Meals from "./components/menu/Meals";
+import Orderonline from "./components/orderonline/Orderonline";
 
 function App() {
   return (
@@ -44,6 +46,30 @@ function App() {
               {/* aici va trebui schimbat / scos?? */}
               {/* <NavbarBootstrap isAdmin={true}></NavbarBootstrap> */}
               <Menus />
+              {/* <Footer /> */}
+            </>
+          }
+        ></Route>
+
+        <Route
+          path="/meals/:name"
+          element={
+            <>
+              {/* aici va trebui schimbat / scos?? */}
+              {/* <NavbarBootstrap isAdmin={true}></NavbarBootstrap> */}
+              <Meals />
+              {/* <Footer /> */}
+            </>
+          }
+        ></Route>
+
+        <Route
+          path="/orderonline"
+          element={
+            <>
+              {/* aici va trebui schimbat / scos?? */}
+              {/* <NavbarBootstrap isAdmin={true}></NavbarBootstrap> */}
+              <Orderonline />
               {/* <Footer /> */}
             </>
           }

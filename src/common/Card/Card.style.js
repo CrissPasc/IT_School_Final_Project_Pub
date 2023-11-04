@@ -1,6 +1,10 @@
 import { Card, Button } from "react-bootstrap";
 import { styled } from "styled-components";
-import { BLACK_COLOR, GOLD_COLOR_HEX, WHITE_COLOR } from "../../constants/colors";
+import {
+  BLACK_COLOR,
+  GOLD_COLOR_HEX,
+  WHITE_COLOR,
+} from "../../constants/colors";
 
 export const CardsContainer = styled.div`
   // display: flex;
@@ -10,7 +14,6 @@ export const CardsContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
 
-  
   padding: 48px;
 `;
 
@@ -40,7 +43,6 @@ export const CardImage = styled(Card.Img)`
   right: 50px;
   filter: grayscale(30%);
   transition: filter 1s ease-out;
-  
   &:hover {
     border: solid 1px ${BLACK_COLOR};
     height: 201px;
@@ -49,7 +51,7 @@ export const CardImage = styled(Card.Img)`
     transition: transform 0.5s ease, filter 0.5s ease;
     filter: grayscale(0%);
   }
-`
+`;
 
 export const CardBody = styled(Card.Body)`
   display: flex;
@@ -57,10 +59,14 @@ export const CardBody = styled(Card.Body)`
   text-align: justify;
   align-items: center;
   //// NU-MI PLACE, AS VREA SA SCHIMB, DAR FOR NOW MERGE
-`
+`;
 
 export const CardButton = styled(Button)`
-  background: linear-gradient(0deg, rgba(255,215,0,1) 0%, rgba(126,106,0,1) 100%);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 215, 0, 1) 0%,
+    rgba(126, 106, 0, 1) 100%
+  );
 
   border: solid 1px ${BLACK_COLOR};
   transition: background-color 0.5s ease, color 0.5s ease;
@@ -79,4 +85,4 @@ export const CardButton = styled(Button)`
     border: solid 1px ${BLACK_COLOR};
     transition: background-color 0.5s ease, color 1s ease;
   }
-`
+`;

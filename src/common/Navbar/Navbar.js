@@ -22,6 +22,7 @@ import NavbarBackground from "./../../media/images/navbar-friends-chatting-pub.j
 import NavbarHome from "./../../media/images/navbar-happy-friends-with-beer-mugs.jpg";
 import NavbarMenu from "./../../media/images/navbar-happy-friends-with-beer-mugs.jpg";
 import NavbarMenuBurgers from "./../../media/images/burgers-three-mini.jpg";
+import NavbarMenuPizzas from "./../../media/images/navbar-happy-friends-with-beer-mugs.jpg";
 import NavbarOrderonline from "./../../media/images/navbar-happy-friends-with-beer-mugs.jpg";
 
 // folosim parametrul logo? => pe viitor DA!
@@ -38,7 +39,8 @@ function NavbarBootstrap({ isAdmin, logo }) {
         return NavbarMenu;
       case "/menus/Burgers":
         return NavbarMenuBurgers;
-        console.log(pathname);
+      case "/menus/Pizzas":
+        return "https://upload.wikimedia.org/wikipedia/commons/9/91/Pizza-3007395.jpg";
       case "/orderonline":
         return NavbarOrderonline;
       // Add more cases as needed for different routes
