@@ -2,25 +2,11 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { WHITE_COLORF } from "../../constants/colors";
 import { BREAKPOINT_MOBILE } from "../../constants/breakpoints";
-import MenuBackground from "../../media/images/menu-background.png";
 
+// de unde iau valoarea lui isGuest??
 export const Container = styled.div`
-  background: url(${MenuBackground});
-  // color: black;
-  // display: flex;
-
-  // height: 100vh;
-  // position: relative;
-  background-repeat: round;
-  
-`;
-
-export const MenuContainer = styled.div`
-  
-  // position: absolute;
-  // z-index: 999;
-  // background-image: url(${MenuBackground});
-  // background-size: cover;
+  background: ${(props) => (props.isAdmin ? "#2f718b" : "#a19f9f")};
+  color: ${WHITE_COLORF};
 `;
 
 export const Logo = styled.img``;
