@@ -43,7 +43,6 @@ export const CardImage = styled(Card.Img)`
   right: 50px;
   filter: grayscale(30%);
   transition: filter 1s ease-out;
-
   &:hover {
     border: solid 1px ${BLACK_COLOR};
     height: 201px;

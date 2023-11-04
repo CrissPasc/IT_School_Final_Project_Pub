@@ -52,12 +52,15 @@ function Footer() {
   );
 }
 
+// Partea asta de styling ar trebui sa fie in Footer.style.js :)
+// De asemenea am schimbat culoarea, deoarece prima data am folosit un galben urat pentru Navbar,
+// iar ulterior am schimbat in acest Gold frumos :)
 const FooterContainer = styled.footer`
   .footer-middle {
     background: linear-gradient(
       145deg,
       rgba(0, 0, 0, 0.9) 0%,
-      rgba(255, 241, 27, 0.8) 100%
+      rgba(255, 215, 0, 0.8) 100%
     );
   }
 `;

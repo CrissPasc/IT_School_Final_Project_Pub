@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-
 import { BREAKPOINT_MOBILE } from "../../constants/breakpoints";
 
 // de unde iau valoarea lui isGuest??
