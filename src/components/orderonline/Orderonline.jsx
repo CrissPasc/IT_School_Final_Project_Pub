@@ -22,6 +22,7 @@ import CardMenu from "../../common/Card/Card";
 import CardOrderonline from "../../common/Card/Cardorderonline";
 import { Link } from "react-router-dom";
 import { CardTitle, LinkCustom } from "../../common/Card/Card.style";
+import CardOrderonlineSectioned from "../../common/Card/CardorderonlinSectioned";
 
 const Orderonline = () => {
   const [menucard, setMenucard] = useState(undefined);
@@ -63,8 +64,8 @@ const Orderonline = () => {
       </OrderonlineSectionsContainer>
 
       <MenuContainer>
-        <CardOrderonline />
-
+        {/* <CardOrderonline /> */}
+        <CardOrderonlineSectioned />
         <OrderContainer>
           <AccountContainer></AccountContainer>
           <YourOrderContainer>
@@ -86,54 +87,3 @@ const Orderonline = () => {
 };
 
 export default Orderonline;
-
-// const CardOrderonline = () => {
-//   const [menuscard, setMenuscard] = useState(undefined);
-//   const [menucard, setMenucard] = useState(undefined);
-//   const [error, setError] = useState(false);
-
-//   useEffect(() => {
-//     fetch(`http://localhost:3002/menu`)
-//       .then((response) => response.json())
-//       .then((menu) => {
-//         setMenucard(menu);
-//       })
-//       .catch((error) => {
-//         setError(true);
-//         console.log("Error", error);
-//       });
-//   }, []);
-
-//   return (
-//     <CardsContainer>
-//       <Alert show={error} variant="danger">
-//         <Alert.Heading>My Alert</Alert.Heading>
-//         <p style={{ width: "300px" }}>Failed to load Menu</p>
-//         <hr />
-//         <div className="d-flex justify-content-end">
-//           <Button onClick={() => setError(false)} variant="outline-danger">
-//             Close
-//           </Button>
-//         </div>
-//       </Alert>
-
-//       {menucard?.map((menu, index) => (
-//         <CardContainer key={index}>
-//           <CardImage variant="top" src={menu?.image} />
-//           <CardBody>
-//             <Card.Title>{menu?.name}</Card.Title>
-//             <Card.Text>{menu?.quantity}</Card.Text>
-//             <Card.Text>{menu?.details}</Card.Text>
-//             <Card.Text>{menu?.price}</Card.Text>
-//             <Link to={`/orderonline}`}>
-//               {/* // ADD MODAL!!! */}
-//               <OrderonlineButton>Add {menu?.name} to cart</OrderonlineButton>
-//             </Link>
-//           </CardBody>
-//         </CardContainer>
-//       ))}
-//     </CardsContainer>
-//   );
-// };
-
-// export default CardOrderonline;

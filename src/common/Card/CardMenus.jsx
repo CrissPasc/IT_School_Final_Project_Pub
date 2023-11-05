@@ -48,8 +48,6 @@ const CardMenus = () => {
   console.log(menucardfiltered);
 
   return (
-    // ar cam trebui mutat cumva in cards si facuta maparea ca acolo unde e comentat
-    // pt a simplifica codul
     <CardsContainer>
       <Alert show={error} variant="danger">
         <Alert.Heading>My Alert</Alert.Heading>
@@ -75,16 +73,6 @@ const CardMenus = () => {
         </CardContainer>
       ))}
     </CardsContainer>
-
-    // <Container>
-    //   {/* <NavbarBootstrap rute={ruteAdmin} /> */}
-    //   <MenuContainer>
-    //     {/* Iterate through filtered menu items to display */}
-    //     {menucardfiltered.map((item) => (
-    //       <Cardmenu key={item.id} item={item} />
-    //     ))}
-    //   </MenuContainer>
-    // </Container>
   );
 };
 
