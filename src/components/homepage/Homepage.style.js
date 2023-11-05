@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { BREAKPOINT_MOBILE } from "../../constants/breakpoints";
+import BackgroundStaticImage from "../../media/images/navbar-restaurant-lights.jpg"
 
 // de unde iau valoarea lui isGuest??
 export const Container = styled.div`
@@ -20,4 +21,45 @@ export const Test = styled.div`
 
 export const LinkCostum = styled(Link)`
   padding: 8px;
+`;
+
+
+export const HomeContainer = styled.div`
+  background-image: url(${BackgroundStaticImage});
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  // height: 100vh;
+  overflow: hidden;
+  // position: relative;
+`;
+
+export const Section = styled.div`
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  margin: 20px;
+  border-radius: 8px;
+`;
+
+export const FirstSection = styled(Section)`
+  // margin-top: 100vh;
+  height: 50vh;
+`;
+
+export const SecondSection = styled(Section)`
+  // margin-top: 100vh;
+  height: 50vh;
+`;
+
+export const SpaceSection = styled.div`
+  height: 25vh;
+`
+
+export const StyledH1 = styled.h1`
+  font-family: 'Monotype Corsiva';
+  font-size: 3rem;
+  color: #333; /* Choose your desired text color */
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 0;
 `;
