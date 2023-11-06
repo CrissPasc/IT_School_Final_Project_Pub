@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Card, Button, Alert } from "react-bootstrap";
 import {
   CardContainer,
@@ -8,8 +8,9 @@ import {
   CardsContainer,
 } from "./Card.style";
 import { Link, useParams } from "react-router-dom";
+import { ContorContext } from "../../store/Contor/contextContor";
 
-const CardOrderonlineSectioned = () => {
+const CardOrderonlineSectioned = (usemenu) => {
   const [menuSections, setMenuSections] = useState([]);
   const [menuItems, setmenuItems] = useState([]);
   const { usesection } = useParams();
@@ -41,6 +42,12 @@ const CardOrderonlineSectioned = () => {
       });
   }, []);
 
+  const { dispatch } = useContext(ContorContext);
+
+  const handleAddToCart = () => {
+    dispatch({ type: "ADD_TO_CART", payload: usemenu });
+  };
+
   return (
     <CardsContainer>
       <Alert show={error} variant="danger">
@@ -69,7 +76,7 @@ const CardOrderonlineSectioned = () => {
                     <Card.Text>{menu.details}</Card.Text>
                     <Card.Text>{menu.price}</Card.Text>
                     <Link to={`/orderonline}`}>
-                      <OrderonlineButton>
+                      <OrderonlineButton onClick={handleAddToCart}>
                         Add {menu.name} to cart
                       </OrderonlineButton>
                     </Link>

@@ -22,15 +22,16 @@ export const Container = styled.div`
 `;
 
 export const OrderContainer = styled.div`
-  margin: 48px;
+  margin: 40px;
   display: flex;
   justify-self: center;
+  background: white;
   /* align-self: center; */
   ////
-  flex-direction: row;
+  flex-direction: column;
   /* align-items: center; */
   ////
-  border-radius: 50px;
+  border-radius: 20px;
   ////
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   &:hover {
@@ -49,15 +50,19 @@ export const MenuContainer = styled.div`
   /* align-items: center; */
 `;
 
-export const AccountContainer = styled.div``;
+export const AccountContainer = styled.div`
+  margin: 40px;
+`;
 
 export const YourOrderContainer = styled.div``;
 
+export const Delivery = styled.div``;
+
 export const OrderCalculator = styled.div``;
 
-export const PlusImg = styled.img``;
+export const PlusImage = styled.img``;
 
-export const MinusImg = styled.img``;
+export const MinusImage = styled.img``;
 
 export const Total = styled.div``;
 
