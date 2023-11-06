@@ -68,8 +68,11 @@ const CardMeals = () => {
           <CardBody>
             <Card.Title>{menu.name}</Card.Title>
             <Card.Text>{menu.description}</Card.Text>
-            <Link to={`/meals/${menu.section}`}>
-              <CardButton variant="primary">See {menu.name} details</CardButton>
+            <Link to={`/orderonline`}>
+              {/* de adaugat sa ma duca exact in sectiune!! */}
+              <CardButton variant="primary">
+                Click here to order online our {menu.name}
+              </CardButton>
             </Link>
             {/* asta ramane de vazut daca vrem sa mai deschidem o alta pagina pt 
 fiecare fel u=in parte cu o poza mai mare si cu si mai multe detalii*/}

@@ -8,8 +8,6 @@ import {
   CardButton,
 } from "./Card.style";
 import { Link } from "react-router-dom";
-import PicBrugerMenu from "../../media/images/burgers-three-mini.jpg";
-import PicPizzaMenu from "../../media/images/pizza-table.jpg";
 
 const CardMenu = () => {
   const [menuscard, setMenuscard] = useState(undefined);

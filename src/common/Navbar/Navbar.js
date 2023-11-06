@@ -39,10 +39,22 @@ function NavbarBootstrap({ isAdmin, logo }) {
         return NavbarMenu;
       case "/menus/Burgers":
         return NavbarMenuBurgers;
+      case "/meals/Beef%20burger":
+        return NavbarMenuBurgers;
+      case "/meals/Chichen%20burger":
+        return NavbarMenuBurgers;
+      case "/meals/Vegan%20burger":
+        return NavbarMenuBurgers;
       case "/menus/Pizzas":
         return "https://upload.wikimedia.org/wikipedia/commons/9/91/Pizza-3007395.jpg";
+      case "/meals/Pizza%20beef":
+        return "https://upload.wikimedia.org/wikipedia/commons/9/91/Pizza-3007395.jpg";
+      case "/meals/Pizza%20chichen":
+        return "https://upload.wikimedia.org/wikipedia/commons/9/91/Pizza-3007395.jpg";
+      case "/meals/Pizza%20vegan":
+        return "https://upload.wikimedia.org/wikipedia/commons/9/91/Pizza-3007395.jpg";
       case "/orderonline":
-        return NavbarOrderonline;
+        return "https://media.timeout.com/images/105491872/image.jpg";
       // Add more cases as needed for different routes
       default:
         return "https://img.freepik.com/free-photo/medium-shot-happy-friends-with-beer-mugs_23-2148872451.jpg?w=1800&t=st=1698907507~exp=1698908107~hmac=71ed74e301bba47568bb4e56f418f4c85b1c162f61cd71648f96dddd1046f35d";

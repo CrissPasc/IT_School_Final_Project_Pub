@@ -12,11 +12,9 @@ export const Container = styled.div`
   // height: 100vh;
   // position: relative;
   background-repeat: round;
-  
 `;
 
 export const MenuContainer = styled.div`
-  
   // position: absolute;
   // z-index: 999;
   // background-image: url(${MenuBackground});
