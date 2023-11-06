@@ -1,22 +1,31 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import Homepage from "./components/homepage/Homepage";
-import Menu from "./components/menu/Menu";
-import NavbarBootstrap from "./common/Navbar/Navbar";
-import AdminRouter from "./routers/admin";
 import Footer from "./common/Footer/Footer";
-import Menus from "./components/menu/Menus";
-import Meals from "./components/menu/Meals";
-import Newsletter from "./common/Footer/Footer";
-import Orderonline from "./components/orderonline/Orderonline";
-import { ContorContextProvider } from "./store/Contor/contextContor";
+import NavbarBootstrap from "./common/Navbar/Navbar";
 import About from "./components/about/About";
+import Homepage from "./components/homepage/Homepage";
+import Meals from "./components/menu/Meals";
+import Menu from "./components/menu/Menu";
+import Menus from "./components/menu/Menus";
+import Orderonline from "./components/orderonline/Orderonline";
+import { ContorContext } from "./store/Contor/contextContor";
+import { useReducer } from "react";
+import {
+  contorReducer,
+  initialStateContor,
+} from "./store/Contor/reducerContor";
 
 function App() {
+  const [stateGlobal, dispatch] = useReducer(contorReducer, initialStateContor);
+
+  const contorContextValue = {
+    stateGlobal,
+    dispatch,
+  };
+
   return (
-    <ContorContextProvider>
+    <ContorContext.Provider value={contorContextValue}>
       <NavbarBootstrap />
-      
 
       <Routes>
         <Route
@@ -64,14 +73,12 @@ function App() {
           }
         ></Route>
 
-        
-        <Route path="/about" element={<About/>}></Route>
+        <Route path="/about" element={<About />}></Route>
         <Route path="/" element={<Homepage />}></Route>
       </Routes>
 
-
       <Footer />
-    </ContorContextProvider>
+    </ContorContext.Provider>
   );
 }
 
