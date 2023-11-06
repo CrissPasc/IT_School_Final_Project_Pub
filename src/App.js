@@ -10,20 +10,19 @@ import Meals from "./components/menu/Meals";
 import Newsletter from "./common/Footer/Footer";
 import Orderonline from "./components/orderonline/Orderonline";
 import { ContorContextProvider } from "./store/Contor/contextContor";
+import About from "./components/about/About";
 
 function App() {
   return (
     <ContorContextProvider>
-      {/* Deocamdata am pus Navbar-ul aici, ca sa il avem in toata aplicatia */}
       <NavbarBootstrap />
+      
 
       <Routes>
         <Route
           path="/homepage"
           element={
             <>
-              {/* aici va trebui schimbat / scos?? */}
-              {/* <NavbarBootstrap isAdmin={true}></NavbarBootstrap> */}
               <Homepage />
             </>
           }
@@ -33,10 +32,7 @@ function App() {
           path="/menu"
           element={
             <>
-              {/* aici va trebui schimbat / scos?? */}
-              {/* <NavbarBootstrap isAdmin={true}></NavbarBootstrap> */}
               <Menu />
-              {/* <Footer /> */}
             </>
           }
         ></Route>
@@ -45,10 +41,7 @@ function App() {
           path="/menus/:section"
           element={
             <>
-              {/* aici va trebui schimbat / scos?? */}
-              {/* <NavbarBootstrap isAdmin={true}></NavbarBootstrap> */}
               <Menus />
-              {/* <Footer /> */}
             </>
           }
         ></Route>
@@ -57,10 +50,7 @@ function App() {
           path="/meals/:name"
           element={
             <>
-              {/* aici va trebui schimbat / scos?? */}
-              {/* <NavbarBootstrap isAdmin={true}></NavbarBootstrap> */}
               <Meals />
-              {/* <Footer /> */}
             </>
           }
         ></Route>
@@ -69,16 +59,15 @@ function App() {
           path="/orderonline"
           element={
             <>
-              {/* aici va trebui schimbat / scos?? */}
-              {/* <NavbarBootstrap isAdmin={true}></NavbarBootstrap> */}
               <Orderonline />
-              {/* <Footer /> */}
             </>
           }
         ></Route>
 
         <Route path="/" element={<Homepage />}></Route>
+        <Route path="/about" element={<About/>}></Route>
       </Routes>
+
 
       <Footer />
     </ContorContextProvider>
