@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { BLACK_COLOR, GOLD_COLOR_HEX } from '../../constants/colors';
 
 const Container = styled.div`
   display: flex;
@@ -31,6 +32,24 @@ const CardImage = styled.img`
   border-radius: 50px;
 `;
 
+export const PngWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  filter: grayscale(100%);
+  
+  &:hover {
+    filter: grayscale(0%);
+    
+    transition: filter 0.4s ease-in-out;
+  }
+`
+
+export const PngImage = styled.img`
+  heigth: auto;
+  width: 5rem;
+  
+`
+
 const CardContainer = () => {
   return (
     <Container>
@@ -48,15 +67,15 @@ const CardContainer = () => {
       </Card>
       <Card>
         <div>
-          <h5>Amazing Desserts!</h5>
-        </div>
-        <CardImage src="https://wallpapersmug.com/download/2560x1440/f98bf6/dessert-bokeh-docorations.jpg" alt="desserts image" />
-      </Card>
-      <Card>
-        <div>
           <h5>Our complete selection of Drinks!</h5>
         </div>
         <CardImage src="https://www.mashed.com/img/gallery/mixed-drinks-you-shouldnt-be-drinking/intro-1559222519.jpg" alt="drinks image" />
+      </Card>
+      <Card>
+        <div>
+          <h5>Amazing Desserts!</h5>
+        </div>
+        <CardImage src="https://wallpapersmug.com/download/2560x1440/f98bf6/dessert-bokeh-docorations.jpg" alt="desserts image" />
       </Card>
     </Container>
   );

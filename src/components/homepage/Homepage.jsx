@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Container, FirstSection, HomeContainer, SecondSection, Section, SpaceSection, StyledH1 } from "./Homepage.style";
+import { Container, FirstSection, HomeContainer, SecondSection, Section, SpaceSection, StyledH1, ThirdSection } from "./Homepage.style";
 import { Button, Card, Image } from "react-bootstrap";
 import useLog from "../../hooks/useLog";
 
@@ -8,7 +8,7 @@ import NavbarBootstrap from "../../common/Navbar/Navbar";
 
 import CarouselSlides from "../../common/Carousel/CarouselSlides";
 import Logo from "./Logo";
-import ImageContainer from "./ContainerFirstSection";
+import ImageContainer, { PngImage, PngWrapper } from "./ContainerFirstSection";
 
 // de unde stie sa se lege cu pagina de /homepage
 
@@ -21,15 +21,24 @@ const Homepage = () => {
       {/* <NavbarBootstrap rute={ruteAdmin}></NavbarBootstrap> */}
       <Logo></Logo>
       <SpaceSection></SpaceSection>
+
       <FirstSection>
-        <Image src="https://c0.klipartz.com/pngpicture/982/938/gratis-png-ilustracion-de-pizza-logotipo-de-entrega-de-pizza-cocina-italiana-logotipo-de-conjunto-de-pizza-logotipo-thumbnail.png"></Image>
-        <StyledH1>Our Favorites</StyledH1>
+        <PngWrapper>
+          <PngImage src='https://cdn-icons-png.flaticon.com/512/7688/7688781.png' />
+          <StyledH1>Our Favorites</StyledH1>
+          <PngImage src='https://cdn-icons-png.flaticon.com/512/920/920707.png' />
+        </PngWrapper>
         <ImageContainer></ImageContainer>
       </FirstSection>
       <SpaceSection></SpaceSection>
+
       <CarouselSlides></CarouselSlides>
       <SpaceSection></SpaceSection>
+
       <SecondSection></SecondSection>
+      <SpaceSection></SpaceSection>
+      
+      <ThirdSection></ThirdSection>
       <SpaceSection></SpaceSection>
       
     </HomeContainer>

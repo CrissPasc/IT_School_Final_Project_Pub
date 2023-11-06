@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { BREAKPOINT_MOBILE } from "../../constants/breakpoints";
 import BackgroundStaticImage from "../../media/images/navbar-restaurant-lights.jpg"
+import { BLACK_COLOR, GOLD_COLOR_HEX, GOLD_COLOR_SECONDARY_HEX } from "../../constants/colors";
 
 // de unde iau valoarea lui isGuest??
 export const Container = styled.div`
@@ -36,7 +37,7 @@ export const HomeContainer = styled.div`
 
 export const Section = styled.div`
   padding: 20px;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.8);
   margin: 20px;
   border-radius: 8px;
 `;
@@ -51,6 +52,11 @@ export const SecondSection = styled(Section)`
   height: 50vh;
 `;
 
+export const ThirdSection = styled(Section)`
+  // margin-top: 100vh;
+  height: 50vh;
+`;
+
 export const SpaceSection = styled.div`
   height: 25vh;
 `
@@ -58,8 +64,10 @@ export const SpaceSection = styled.div`
 export const StyledH1 = styled.h1`
   font-family: 'Monotype Corsiva';
   font-size: 3rem;
-  color: #333; /* Choose your desired text color */
+  color: ${BLACK_COLOR};
   font-weight: bold;
   text-align: center;
-  margin: 20px 0;
+  margin: 20px;
+  // display: inline;
+  &:hover {color: ${GOLD_COLOR_SECONDARY_HEX}};
 `;
