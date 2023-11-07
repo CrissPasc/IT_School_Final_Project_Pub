@@ -18,7 +18,7 @@ const Meals = () => {
   console.log(name);
 
   useEffect(() => {
-    fetch(`http://localhost:3005/menu`)
+    fetch(`http://localhost:3002/menu`)
       .then((response) => response.json())
       .then((menu) => {
         setMenucard(menu);
