@@ -9,11 +9,12 @@ import Menus from "./components/menu/Menus";
 import Meals from "./components/menu/Meals";
 import Newsletter from "./common/Footer/Footer";
 import Orderonline from "./components/orderonline/Orderonline";
-import About from "./components/about/About";
+import { ContorContextProvider } from "./store/Contor/contextContor";
 
 function App() {
   return (
-    <>
+    <ContorContextProvider>
+      {/* Deocamdata am pus Navbar-ul aici, ca sa il avem in toata aplicatia */}
       <NavbarBootstrap />
 
       <Routes>
@@ -68,7 +69,7 @@ function App() {
 
 
       <Footer />
-    </>
+    </ContorContextProvider>
   );
 }
 

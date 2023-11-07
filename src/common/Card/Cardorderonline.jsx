@@ -5,7 +5,7 @@ import {
   CardContainer,
   CardBody,
   CardImage,
-  CardButton,
+  OrderonlineButton,
 } from "./Card.style";
 import { Link } from "react-router-dom";
 import PicBrugerMenu from "../../media/images/burgers-three-mini.jpg";
@@ -51,7 +51,7 @@ const CardOrderonline = () => {
             <Card.Text>{menu?.price}</Card.Text>
             <Link to={`/orderonline}`}>
               {/* // ADD MODAL!!! */}
-              <CardButton>Add {menu?.name} to cart</CardButton>
+              <OrderonlineButton>Add {menu?.name} to cart</OrderonlineButton>
             </Link>
           </CardBody>
         </CardContainer>

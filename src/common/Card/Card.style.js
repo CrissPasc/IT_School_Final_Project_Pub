@@ -5,6 +5,7 @@ import {
   GOLD_COLOR_HEX,
   WHITE_COLOR,
 } from "../../constants/colors";
+import { Link } from "react-router-dom";
 
 export const CardsContainer = styled.div`
   // display: flex;
@@ -14,7 +15,7 @@ export const CardsContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
 
-  padding: 48px;
+  padding: 0px 48px 24px 48px;
 `;
 
 export const CardContainer = styled(Card)`
@@ -61,7 +62,15 @@ export const CardBody = styled(Card.Body)`
   //// NU-MI PLACE, AS VREA SA SCHIMB, DAR FOR NOW MERGE
 `;
 
+export const CardTitle = styled(Card.Title)`
+  margin: 48px;
+`;
+export const LinkCustom = styled(Link)`
+  margin: 48px;
+`;
+
 export const CardButton = styled(Button)`
+  margin: 48px;
   background: linear-gradient(
     0deg,
     rgba(255, 215, 0, 1) 0%,
@@ -81,6 +90,29 @@ export const CardButton = styled(Button)`
 
   &:hover {
     background: ${GOLD_COLOR_HEX};
+    color: ${BLACK_COLOR};
+    border: solid 1px ${BLACK_COLOR};
+    transition: background-color 0.5s ease, color 1s ease;
+  }
+`;
+
+export const OrderonlineButton = styled(Button)`
+  margin: 12px;
+  background: #cf3e02;
+
+  border: solid 1px ${BLACK_COLOR};
+  transition: background-color 0.5s ease, color 0.5s ease;
+
+  color: ${WHITE_COLOR};
+  font-weight: 700;
+
+  width: 12rem;
+  height: 4rem;
+
+  border-radius: 50px;
+
+  &:hover {
+    background: #e05216;
     color: ${BLACK_COLOR};
     border: solid 1px ${BLACK_COLOR};
     transition: background-color 0.5s ease, color 1s ease;
