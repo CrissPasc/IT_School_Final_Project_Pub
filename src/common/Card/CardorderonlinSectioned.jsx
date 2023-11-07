@@ -44,8 +44,8 @@ const CardOrderonlineSectioned = (usemenu) => {
 
   const { dispatch } = useContext(ContorContext);
 
-  const handleAddToCart = () => {
-    dispatch({ type: "ADD_TO_CART", payload: usemenu });
+  const handleAddToCart = (menu) => {
+    dispatch({ type: "ADD_TO_CART", payload: menu });
   };
 
   return (
@@ -75,11 +75,10 @@ const CardOrderonlineSectioned = (usemenu) => {
                     <Card.Text>{menu.quantity}</Card.Text>
                     <Card.Text>{menu.details}</Card.Text>
                     <Card.Text>{menu.price}</Card.Text>
-                    <Link to={`/orderonline}`}>
-                      <OrderonlineButton onClick={handleAddToCart}>
-                        Add {menu.name} to cart
-                      </OrderonlineButton>
-                    </Link>
+
+                    <OrderonlineButton onClick={() => handleAddToCart(menu)}>
+                      Add {menu.name} to cart
+                    </OrderonlineButton>
                   </CardBody>
                 </CardContainer>
               ))}

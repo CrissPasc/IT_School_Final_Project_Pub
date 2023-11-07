@@ -1,13 +1,20 @@
 export function contorPlus(numbertoPlus) {
   return {
-    type: "CONTOR_PLUS",
+    type: "INCREMENT_ITEM",
     payload: numbertoPlus,
   };
 }
 
 export function contorMinus(numbertoMinus) {
   return {
-    type: "CONTOR_MINUS",
+    type: "DECREMENT_ITEM",
     payload: numbertoMinus,
+  };
+}
+
+export function addToCart(item) {
+  return {
+    type: "ADD_TO_CART",
+    payload: item,
   };
 }

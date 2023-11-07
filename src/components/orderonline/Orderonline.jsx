@@ -1,39 +1,33 @@
 import React, { useContext, useEffect, useState } from "react";
+import { Alert, Button, NavDropdown } from "react-bootstrap";
 import {
   AccountContainer,
-  Container,
-  MenuContainer,
-  MinusImage,
-  OrderContainer,
-  PlusImage,
-  YourOrderContainer,
-  Total,
-  OrderCalculator,
   CheckoutButton,
+  Container,
+  Delivery,
+  MenuContainer,
+  OrderCalculator,
+  OrderContainer,
   OrderonlineSections,
   OrderonlineSectionsContainer,
-  Delivery,
+  Total,
+  YourOrderContainer,
 } from "./Orderonline.style";
-import { Alert, Button, NavDropdown, Navbar } from "react-bootstrap";
-import useLog from "../../hooks/useLog";
 
-import { ruteAdmin } from "../../constants/rute";
-
-import CardOrderonline from "../../common/Card/Cardorderonline";
 import { Link } from "react-router-dom";
 import { CardTitle, LinkCustom } from "../../common/Card/Card.style";
 import CardOrderonlineSectioned from "../../common/Card/CardorderonlinSectioned";
 import CartImg from "../../media/icons/add-to-cart.png";
 import DeliveryImg from "../../media/icons/delivery.png";
+import MinusImg from "../../media/icons/minus-signg.png";
 import PickupImg from "../../media/icons/pickup.png";
 import PlusImg from "../../media/icons/plus-sign.png";
-import MinusImg from "../../media/icons/minus-signg.png";
 
-import { contorMinus, contorPlus } from "../../store/Contor/actionsContor";
 import { ContorContext } from "../../store/Contor/contextContor";
 
 const Orderonline = () => {
   const [menucard, setMenucard] = useState(undefined);
+  const [total, setTotal] = useState(undefined);
   const [error, setError] = useState(false);
 
   useEffect(() => {
@@ -48,11 +42,11 @@ const Orderonline = () => {
       });
   }, []);
 
-  const { stateGlobalContor, dispatch } = useContext(ContorContext);
-  console.log(stateGlobalContor);
+  const { stateGlobal, dispatch } = useContext(ContorContext);
+  console.log("STATE", stateGlobal);
 
   // Handle cases where stateGlobalContor might be undefined
-  if (!stateGlobalContor) {
+  if (!stateGlobal) {
     return <div>Loading...</div>; // Or handle the loading state here
   }
 
@@ -61,19 +55,26 @@ const Orderonline = () => {
   };
 
   const handlePlus = (itemId) => {
-    dispatch({ type: "INCREMENT_ITEM", payload: itemId });
+    dispatch({ type: "INCREMENT_ITEM", payload: 1 });
     // const actionPlus = contorPlus();
     // dispatchContor(actionPlus); // dispatchContor(contorPlus());
     // console.log("plus");
   };
   const handleMinus = (itemId) => {
-    dispatch({ type: "DECREMENT_ITEM", payload: itemId });
+    dispatch({ type: "DECREMENT_ITEM", payload: 1 });
     // const actionMinus = contorMinus();
     // dispatchContor(actionMinus);
     // console.log("minus");
   };
 
-  const { contorValue, cartItems } = stateGlobalContor;
+  const { contorValue, cartItems } = stateGlobal;
+
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  useEffect(() => {
+    let x = 0;
+    cartItems.forEach((el) => (x = x + el.price));
+    setTotal(x);
+  }, [cartItems]);
 
   return (
     <Container>
@@ -184,9 +185,15 @@ const Orderonline = () => {
               />
             </div>
             <OrderCalculator>
-              {cartItems} {contorValue}
+              {cartItems.map((el) => (
+                <p>
+                  {el.price}
+                  {el.name}
+                </p>
+              ))}{" "}
+              {contorValue}
               {/* <PlusImage /> */}
-              <Button onClick={handleMinus}>
+              <Button onClick={handlePlus}>
                 <img
                   src={PlusImg}
                   alt="PlusImg"
@@ -198,7 +205,7 @@ const Orderonline = () => {
                 />
               </Button>
               {/* <MinusImage /> */}
-              <Button onClick={handlePlus}>
+              <Button onClick={handleMinus}>
                 <img
                   src={MinusImg}
                   alt="MinusImg"
@@ -212,6 +219,7 @@ const Orderonline = () => {
             </OrderCalculator>
             <Total>
               <h4>Total</h4>
+              {total}
             </Total>
             <CardTitle></CardTitle>
 
