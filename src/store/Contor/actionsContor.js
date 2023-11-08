@@ -18,3 +18,10 @@ export function addToCart(item) {
     payload: item,
   };
 }
+
+export function updateCart(item) {
+  return {
+    type: "UPDATE_CART",
+    payload: item,
+  };
+}
