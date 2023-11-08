@@ -55,14 +55,17 @@ const Orderonline = () => {
     const existingItem = cartItems.find((item) => item.id === menu.id);
 
     if (existingItem) {
+      existingItem.contorValue += 1;
+
       dispatch({ type: "UPDATE_CART", payload: cartItems });
       // dispatch({ type: "ADD_TO_CART", payload: item }); // 6Nov
     } else {
+      dispatch({ type: "ADD_TO_CART", payload: { ...menu, contorValue: 1 } });
     }
   };
 
-  const handlePlus = (name) => {
-    dispatch({ type: "INCREMENT_ITEM", payload: name });
+  const handlePlus = (itemId) => {
+    dispatch({ type: "INCREMENT_ITEM", payload: 1 });
     // const actionPlus = contorPlus();
     // dispatchContor(actionPlus); // dispatchContor(contorPlus());
     // console.log("plus");
@@ -77,11 +80,11 @@ const Orderonline = () => {
   const { contorValue, cartItems } = stateGlobal;
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
-  // useEffect(() => {
-  //   let x = 0;
-  //   cartItems.forEach((el) => (x += el.price * contorValue));
-  //   setTotal(x);
-  // }, [cartItems]);
+  useEffect(() => {
+    let x = 0;
+    cartItems.forEach((el) => (x += el.price * contorValue));
+    setTotal(x);
+  }, [cartItems]);
 
   return (
     <Container>
@@ -201,13 +204,13 @@ const Orderonline = () => {
                     }}
                   >
                     {" "}
-                    {/* <ParagrafOrder>{contorValue}x</ParagrafOrder> */}
+                    <ParagrafOrder>{contorValue}x</ParagrafOrder>
                     <ParagrafOrder>{el.name}</ParagrafOrder>
                     <ParagrafOrder>{el.price}</ParagrafOrder>
                   </div>
 
                   <img
-                    onClick={() => handlePlus(el.name)}
+                    onClick={handlePlus}
                     src={PlusImg}
                     alt="PlusImg"
                     style={{
