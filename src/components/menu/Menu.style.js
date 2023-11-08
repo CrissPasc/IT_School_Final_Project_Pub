@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { WHITE_COLORF } from "../../constants/colors";
+
 import { BREAKPOINT_MOBILE } from "../../constants/breakpoints";
 import MenuBackground from "../../media/images/menu-background.png";
 
@@ -12,11 +12,9 @@ export const Container = styled.div`
   // height: 100vh;
   // position: relative;
   background-repeat: round;
-  
 `;
 
 export const MenuContainer = styled.div`
-  
   // position: absolute;
   // z-index: 999;
   // background-image: url(${MenuBackground});

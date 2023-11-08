@@ -8,8 +8,6 @@ import {
   CardButton,
 } from "./Card.style";
 import { Link } from "react-router-dom";
-import PicBrugerMenu from "../../media/images/burgers-three-mini.jpg";
-import PicPizzaMenu from "../../media/images/pizza-table.jpg";
 
 const CardMenu = () => {
   const [menuscard, setMenuscard] = useState(undefined);
@@ -17,7 +15,7 @@ const CardMenu = () => {
   const [error, setError] = useState(false);
 
   useEffect(() => {
-    fetch(`http://localhost:3005/menusections`)
+    fetch(`http://localhost:3002/menusections`)
       .then((response) => response.json())
       .then((menus) => {
         setMenuscard(menus);
@@ -29,7 +27,7 @@ const CardMenu = () => {
   }, []);
 
   useEffect(() => {
-    fetch(`http://localhost:3005/menu`)
+    fetch(`http://localhost:3002/menu`)
       .then((response) => response.json())
       .then((menu) => {
         setMenucard(menu);

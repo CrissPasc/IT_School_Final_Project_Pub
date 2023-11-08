@@ -1,19 +1,30 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import Homepage from "./components/homepage/Homepage";
-import Menu from "./components/menu/Menu";
-import NavbarBootstrap from "./common/Navbar/Navbar";
-import AdminRouter from "./routers/admin";
 import Footer from "./common/Footer/Footer";
-import Menus from "./components/menu/Menus";
+import NavbarBootstrap from "./common/Navbar/Navbar";
+import About from "./components/about/About";
+import Homepage from "./components/homepage/Homepage";
 import Meals from "./components/menu/Meals";
-import Newsletter from "./common/Footer/Footer";
+import Menu from "./components/menu/Menu";
+import Menus from "./components/menu/Menus";
 import Orderonline from "./components/orderonline/Orderonline";
+import { ContorContext } from "./store/Contor/contextContor";
+import { useReducer } from "react";
+import {
+  contorReducer,
+  initialStateContor,
+} from "./store/Contor/reducerContor";
 
 function App() {
+  const [stateGlobal, dispatch] = useReducer(contorReducer, initialStateContor);
+
+  const contorContextValue = {
+    stateGlobal,
+    dispatch,
+  };
+
   return (
-    <>
-      {/* Deocamdata am pus Navbar-ul aici, ca sa il avem in toata aplicatia */}
+    <ContorContext.Provider value={contorContextValue}>
       <NavbarBootstrap />
 
       <Routes>
@@ -21,8 +32,6 @@ function App() {
           path="/homepage"
           element={
             <>
-              {/* aici va trebui schimbat / scos?? */}
-              {/* <NavbarBootstrap isAdmin={true}></NavbarBootstrap> */}
               <Homepage />
             </>
           }
@@ -32,10 +41,7 @@ function App() {
           path="/menu"
           element={
             <>
-              {/* aici va trebui schimbat / scos?? */}
-              {/* <NavbarBootstrap isAdmin={true}></NavbarBootstrap> */}
               <Menu />
-              {/* <Footer /> */}
             </>
           }
         ></Route>
@@ -44,10 +50,7 @@ function App() {
           path="/menus/:section"
           element={
             <>
-              {/* aici va trebui schimbat / scos?? */}
-              {/* <NavbarBootstrap isAdmin={true}></NavbarBootstrap> */}
               <Menus />
-              {/* <Footer /> */}
             </>
           }
         ></Route>
@@ -56,10 +59,7 @@ function App() {
           path="/meals/:name"
           element={
             <>
-              {/* aici va trebui schimbat / scos?? */}
-              {/* <NavbarBootstrap isAdmin={true}></NavbarBootstrap> */}
               <Meals />
-              {/* <Footer /> */}
             </>
           }
         ></Route>
@@ -68,19 +68,17 @@ function App() {
           path="/orderonline"
           element={
             <>
-              {/* aici va trebui schimbat / scos?? */}
-              {/* <NavbarBootstrap isAdmin={true}></NavbarBootstrap> */}
               <Orderonline />
-              {/* <Footer /> */}
             </>
           }
         ></Route>
 
+        <Route path="/about" element={<About />}></Route>
         <Route path="/" element={<Homepage />}></Route>
       </Routes>
 
       <Footer />
-    </>
+    </ContorContext.Provider>
   );
 }
 
