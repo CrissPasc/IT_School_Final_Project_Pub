@@ -21,6 +21,10 @@ export const Container = styled.div`
   background-repeat: round;
 `;
 
+export const ParagrafOrder = styled.div`
+  margin-right: 5px;
+`;
+
 export const OrderContainer = styled.div`
   margin: 40px;
   display: flex;

@@ -1,5 +1,5 @@
 export const initialStateContor = {
-  contorValue: 0, // Your initial value for contor
+  contorValue: 1, // Your initial value for contor
   cartItems: [], // Your initial array for cart items
 };
 

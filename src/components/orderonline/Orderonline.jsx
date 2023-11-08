@@ -10,6 +10,7 @@ import {
   OrderContainer,
   OrderonlineSections,
   OrderonlineSectionsContainer,
+  ParagrafOrder,
   Total,
   YourOrderContainer,
 } from "./Orderonline.style";
@@ -50,8 +51,17 @@ const Orderonline = () => {
     return <div>Loading...</div>; // Or handle the loading state here
   }
 
-  const addToCart = (item) => {
-    dispatch({ type: "ADD_TO_CART", payload: item });
+  const addToCart = (menu) => {
+    const existingItem = cartItems.find((item) => item.id === menu.id);
+
+    if (existingItem) {
+      existingItem.contorValue += 1;
+
+      dispatch({ type: "UPDATE_CART", payload: cartItems });
+      // dispatch({ type: "ADD_TO_CART", payload: item }); // 6Nov
+    } else {
+      dispatch({ type: "ADD_TO_CART", payload: { ...menu, contorValue: 1 } });
+    }
   };
 
   const handlePlus = (itemId) => {
@@ -72,7 +82,7 @@ const Orderonline = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   useEffect(() => {
     let x = 0;
-    cartItems.forEach((el) => (x = x + el.price));
+    cartItems.forEach((el) => (x += el.price * contorValue));
     setTotal(x);
   }, [cartItems]);
 
@@ -186,36 +196,41 @@ const Orderonline = () => {
             </div>
             <OrderCalculator>
               {cartItems.map((el) => (
-                <p>
-                  {el.price}
-                  {el.name}
-                </p>
+                <div>
+                  <div
+                    style={{
+                      display: "flex",
+                      flexdirection: "row",
+                    }}
+                  >
+                    {" "}
+                    <ParagrafOrder>{contorValue}x</ParagrafOrder>
+                    <ParagrafOrder>{el.name}</ParagrafOrder>
+                    <ParagrafOrder>{el.price}</ParagrafOrder>
+                  </div>
+
+                  <img
+                    onClick={handlePlus}
+                    src={PlusImg}
+                    alt="PlusImg"
+                    style={{
+                      width: "25px",
+                      height: "25px",
+                      marginRight: "5px",
+                    }}
+                  />
+                  <img
+                    onClick={handleMinus}
+                    src={MinusImg}
+                    alt="MinusImg"
+                    style={{
+                      width: "25px",
+                      height: "25px",
+                      marginRight: "5px",
+                    }}
+                  />
+                </div>
               ))}{" "}
-              {contorValue}
-              {/* <PlusImage /> */}
-              <Button onClick={handlePlus}>
-                <img
-                  src={PlusImg}
-                  alt="PlusImg"
-                  style={{
-                    width: "25px",
-                    height: "25px",
-                    marginRight: "5px",
-                  }}
-                />
-              </Button>
-              {/* <MinusImage /> */}
-              <Button onClick={handleMinus}>
-                <img
-                  src={MinusImg}
-                  alt="MinusImg"
-                  style={{
-                    width: "25px",
-                    height: "25px",
-                    marginRight: "5px",
-                  }}
-                />
-              </Button>
             </OrderCalculator>
             <Total>
               <h4>Total</h4>

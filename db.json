@@ -45,7 +45,7 @@
       "sectiondescription": "Our burgers are made with healthy ingredients...",
       "image": "https://staticcookist.akamaized.net/wp-content/uploads/sites/22/2021/09/beef-burger.jpg",
       "description": "Two prime beef patties, Canadian cheddar cheese, crusted mozzarella cheese, beef bacon, guacamole, pineapple, salsa between two grilled cheese buns, chipotle aïoli and BBQ sauce",
-      "price": "12$",
+      "price": "12",
       "quantity": "250gr",
       "details": "beef patties, Canadian cheddar cheese, mozzarella, beef bacon, guacamole, pineapple, salsa"
     },
@@ -55,7 +55,7 @@
       "section": "Burgers",
       "image": "https://www.ajinomoto.com.my/sites/default/files/styles/large/public/content/recipe/image/2022-10/Crispy-Chicken-Burger-new.jpg?itok=YcnPgO_Z",
       "description": "Large fried chicken tender (regular or spicy) crusted mozzarella cheese, beef bacon, tomatoes, lettuce, pickles and chipotle aïoli",
-      "price": "10$",
+      "price": "10",
       "quantity": "250gr",
       "details": "beef patties, Canadian cheddar cheese, mozzarella, beef bacon, guacamole, pineapple, salsa"
     },
@@ -65,7 +65,7 @@
       "section": "Burgers",
       "image": "https://biancazapatka.com/wp-content/uploads/2020/05/veganer-bohnen-burger.jpg",
       "description": "Crusted Portobello Mushroom stuffed with cheese, cheddar cheese, guacamole, sautéed mushroom, roasted peppers, caramelized onion, tomatoes, lettuce, pickles and chipotle aïol",
-      "price": "11$",
+      "price": "11",
       "quantity": "250gr",
       "details": "beef patties, Canadian cheddar cheese, mozzarella, beef bacon, guacamole, pineapple, salsa"
     },
@@ -75,7 +75,7 @@
       "section": "Pizzas",
       "image": "",
       "description": "Our beef burger is made with healthy ingredients...",
-      "price": "10$",
+      "price": "10",
       "quantity": "250gr",
       "details": "beef patties, Canadian cheddar cheese, mozzarella, beef bacon, guacamole, pineapple, salsa"
     },
@@ -85,7 +85,7 @@
       "section": "Pizzas",
       "image": "",
       "description": "Our beef burger is made with healthy ingredients...",
-      "price": "10$",
+      "price": "10",
       "quantity": "250gr",
       "details": "beef patties, Canadian cheddar cheese, mozzarella, beef bacon, guacamole, pineapple, salsa"
     },
@@ -95,7 +95,7 @@
       "section": "Pizzas",
       "image": "",
       "description": "Our beef burger is made with healthy ingredients...",
-      "price": "10$",
+      "price": "10",
       "quantity": "250gr",
       "details": "beef patties, Canadian cheddar cheese, mozzarella, beef bacon, guacamole, pineapple, salsa"
     },
@@ -105,7 +105,7 @@
       "section": "Drinks",
       "image": "",
       "description": "Our beef burger is made with healthy ingredients...",
-      "price": "10$",
+      "price": "10",
       "quantity": "250ml",
       "details": "blonde beer, unfiltered, unrefined"
     },
@@ -115,7 +115,7 @@
       "section": "Drinks",
       "image": "",
       "description": "Our beef burger is made with healthy ingredients...",
-      "price": "10$",
+      "price": "10",
       "quantity": "250ml",
       "details": "rose wine"
     },
@@ -125,7 +125,7 @@
       "section": "Drinks",
       "image": "",
       "description": "The cosmopolitan cocktail, typically referred to as the 'cosmo', gained popularity during the 1990s when it was frequently mentioned on the television show Sex and the City. The combination of vodka, orange liqueur, lime juice, and cranberry juice have made it a timeless classic.",
-      "price": "10$",
+      "price": "10",
       "quantity": "250ml",
       "details": "vodka, orange liqueur, lime juice, and cranberry juice"
     },
@@ -135,7 +135,7 @@
       "section": "Desserts",
       "image": "",
       "description": "Gourmet dessert plate raspberry cheesecake mousse indulgence",
-      "price": "10$",
+      "price": "10",
       "quantity": "250gr",
       "details": "beef patties, Canadian cheddar cheese, mozzarella, beef bacon, guacamole, pineapple, salsa"
     },
@@ -145,7 +145,7 @@
       "section": "Desserts",
       "image": "",
       "description": "Indulgent homemade brownie with chocolate icing and pecans",
-      "price": "10$",
+      "price": "10",
       "quantity": "250gr",
       "details": "beef patties, Canadian cheddar cheese, mozzarella, beef bacon, guacamole, pineapple, salsa"
     },
@@ -155,7 +155,7 @@
       "section": "Desserts",
       "image": "",
       "description": "Delicious carrot cake with cream",
-      "price": "10$",
+      "price": "10",
       "quantity": "250gr",
       "details": "beef patties, Canadian cheddar cheese, mozzarella, beef bacon, guacamole, pineapple, salsa"
     }
