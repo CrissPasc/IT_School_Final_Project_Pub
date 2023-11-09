@@ -51,18 +51,23 @@ const Orderonline = () => {
     return <div>Loading...</div>; // Or handle the loading state here
   }
 
-  const addToCart = (menu) => {
+  const { contorValue, cartItems } = stateGlobal;
+
+  const handleAddToCart = (menu) => {
     const existingItem = cartItems.find((item) => item.id === menu.id);
 
     if (existingItem) {
       dispatch({ type: "UPDATE_CART", payload: cartItems });
       // dispatch({ type: "ADD_TO_CART", payload: item }); // 6Nov
     } else {
+      // dispatch({ type: "ADD_TO_CART", payload: { ...menu, contorValue: 1 } }); // 8Nov
     }
   };
 
+  // the contorValue should be accessible as stateGlobal.contorValue
+
   const handlePlus = (name) => {
-    dispatch({ type: "INCREMENT_ITEM", payload: name });
+    dispatch({ type: "INCREMENT_ITEM", payload: name }); // SCHIMBAT DIN 1!!
     // const actionPlus = contorPlus();
     // dispatchContor(actionPlus); // dispatchContor(contorPlus());
     // console.log("plus");
@@ -74,14 +79,22 @@ const Orderonline = () => {
     // console.log("minus");
   };
 
-  const { contorValue, cartItems } = stateGlobal;
-
+  // ADUCEM ALTFEL TOTAL
   // eslint-disable-next-line react-hooks/rules-of-hooks
   // useEffect(() => {
   //   let x = 0;
   //   cartItems.forEach((el) => (x += el.price * contorValue));
   //   setTotal(x);
   // }, [cartItems]);
+
+  const cartItemCounts = {}; // Object to store counts for each item
+  let totalfinal = 0; // Total price
+
+  // Calculate total and count for each cart item
+  cartItems.forEach((item) => {
+    cartItemCounts[item.name] = cartItemCounts[item.name] + 1 || 1; // Increment count for the item
+    totalfinal += Number(item.price); // Accumulate the total price by converting item.price to a number
+  });
 
   return (
     <Container>
@@ -201,7 +214,9 @@ const Orderonline = () => {
                     }}
                   >
                     {" "}
+                    {/* TREBUIE PUS CEVA PT A ARATA NR -- DA EROARE CU CE ESTE:*/}
                     {/* <ParagrafOrder>{contorValue}x</ParagrafOrder> */}
+                    <ParagrafOrder>{cartItemCounts[el.name]}x</ParagrafOrder>
                     <ParagrafOrder>{el.name}</ParagrafOrder>
                     <ParagrafOrder>{el.price}</ParagrafOrder>
                   </div>
@@ -231,7 +246,7 @@ const Orderonline = () => {
             </OrderCalculator>
             <Total>
               <h4>Total</h4>
-              {total}
+              {totalfinal.toFixed(2)} {/* function to add decimal numbers */}
             </Total>
             <CardTitle></CardTitle>
 
@@ -249,3 +264,7 @@ const Orderonline = () => {
 };
 
 export default Orderonline;
+
+// WHEN CLICK AGAIN ON THE BUTTON DON'T ADD IT AGAIN IN THE CARTITEMS, BUTT ADD IT TO THE CONTOR VALUE COUNT
+// DISPLAY THE COUNT FOR EACH CARTITEM BEFORE THE CARTITEM
+// AND EVERYTHING TO THE TOTAL AND DISPLAY TOTAL

@@ -14,6 +14,7 @@ import {
   contorReducer,
   initialStateContor,
 } from "./store/Contor/reducerContor";
+import Signin from "./components/signin/SignIn";
 
 function App() {
   const [stateGlobal, dispatch] = useReducer(contorReducer, initialStateContor);
@@ -74,6 +75,15 @@ function App() {
         ></Route>
 
         <Route path="/about" element={<About />}></Route>
+        <Route
+          path="/signin"
+          element={
+            <>
+              <Signin />
+            </>
+          }
+        ></Route>
+        <Route path="/register" element={<About />}></Route>
         <Route path="/" element={<Homepage />}></Route>
       </Routes>
 
