@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 import PicBrugerMenu from "../../media/images/burgers-three-mini.jpg";
 import PicPizzaMenu from "../../media/images/pizza-table.jpg";
 
-const CardOrderonline = () => {
+const CardAdmin = () => {
   const [menuscard, setMenuscard] = useState(undefined);
   const [menucard, setMenucard] = useState(undefined);
   const [error, setError] = useState(false);
@@ -60,4 +60,4 @@ const CardOrderonline = () => {
   );
 };
 
-export default CardOrderonline;
+export default CardAdmin;
