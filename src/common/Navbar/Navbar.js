@@ -10,7 +10,7 @@ import {
   NavbarMenuIcon,
 } from "./Navbar.style";
 import LogoPic from "./../../media/logo/logo-no-background.png"; // "./logo.png";
-import UserInfoPic from "./../../media/icons/user-icon-black.jpg";
+import UserInfoPic from "./../../media/icons/user-icon-white.png";
 import { useLocation } from "react-router-dom";
 
 import Navbar from "react-bootstrap/Navbar";
