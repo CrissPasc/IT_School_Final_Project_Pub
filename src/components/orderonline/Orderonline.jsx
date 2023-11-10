@@ -72,8 +72,8 @@ const Orderonline = () => {
     // dispatchContor(actionPlus); // dispatchContor(contorPlus());
     // console.log("plus");
   };
-  const handleMinus = (itemId) => {
-    dispatch({ type: "DECREMENT_ITEM", payload: 1 });
+  const handleMinus = (name) => {
+    dispatch({ type: "DECREMENT_ITEM", payload: name });
     // const actionMinus = contorMinus();
     // dispatchContor(actionMinus);
     // console.log("minus");
@@ -206,7 +206,7 @@ const Orderonline = () => {
             </div>
             <OrderCalculator>
               {cartItems.map((el) => (
-                <div>
+                <div key={el.id}>
                   <div
                     style={{
                       display: "flex",
@@ -232,7 +232,7 @@ const Orderonline = () => {
                     }}
                   />
                   <img
-                    onClick={handleMinus}
+                    onClick={() => handleMinus(el.name)}
                     src={MinusImg}
                     alt="MinusImg"
                     style={{

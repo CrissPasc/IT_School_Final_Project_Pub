@@ -15,8 +15,9 @@ const CardOrderonlineSectioned = (usemenu) => {
   const [menuItems, setmenuItems] = useState([]);
   const { usesection } = useParams();
   const [error, setError] = useState(false);
+  const [totalfinal, setTotalfinal] = useState();
 
-  console.log(usesection);
+  // console.log(usesection);
 
   useEffect(() => {
     fetch(`http://localhost:3002/menusections`)
@@ -26,7 +27,7 @@ const CardOrderonlineSectioned = (usemenu) => {
       })
       .catch((error) => {
         setError(true);
-        console.log("Error", error);
+        // console.log("Error", error);
       });
   }, []);
 
@@ -38,7 +39,7 @@ const CardOrderonlineSectioned = (usemenu) => {
       })
       .catch((error) => {
         setError(true);
-        console.log("Error", error);
+        // console.log("Error", error);
       });
   }, []);
 
@@ -49,18 +50,27 @@ const CardOrderonlineSectioned = (usemenu) => {
     const existingItem = cartItems.find((item) => item.name === menu.name);
 
     if (existingItem) {
-      // If item already exists, update its quantity
+      // If item already exists, update its quantity and total
       existingItem.contorValue += 1;
       dispatch({ type: "UPDATE_CART", payload: cartItems });
     } else {
       // If it's a new item, add it to cartItems
       dispatch({ type: "ADD_TO_CART", payload: { ...menu, contorValue: 1 } });
     }
+    // Update total
+    let updatedTotal = totalfinal + Number(menu.price);
+    setTotalfinal(updatedTotal);
+
     // dispatch({ type: "ADD_TO_CART", payload: menu });
   };
 
   const handlePlus = (name) => {
     dispatch({ type: "INCREMENT_ITEM", payload: name });
+
+    let updatedTotal =
+      totalfinal + Number(cartItems.find((item) => item.name === name).price);
+    setTotalfinal(updatedTotal);
+
     // const actionPlus = contorPlus();
     // dispatchContor(actionPlus); // dispatchContor(contorPlus());
     // console.log("plus");

@@ -28,7 +28,7 @@ import NavbarOrderonline from "./../../media/images/navbar-happy-friends-with-be
 // folosim parametrul logo? => pe viitor DA!
 function NavbarBootstrap({ isAdmin, logo }) {
   const params = useParams();
-  console.log(isAdmin, logo);
+  // console.log(isAdmin, logo);
 
   // Define a function to dynamically render different image URLs based on location
   const getImageForLocation = (pathname) => {
@@ -62,9 +62,9 @@ function NavbarBootstrap({ isAdmin, logo }) {
   };
 
   const location = useLocation();
-  console.log(location.pathname);
+  // console.log(location.pathname);
   const backgroundImage = getImageForLocation(location.pathname);
-  console.log(location.pathname);
+  // console.log(location.pathname);
 
   return (
     <NavbarWrapper
