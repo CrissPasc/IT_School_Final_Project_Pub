@@ -1,35 +1,80 @@
-import { useEffect, useState } from "react";
-import { Card, Button, Alert } from "react-bootstrap";
+import { useContext, useEffect, useState } from "react";
+import { Card, Button, Alert, Modal } from "react-bootstrap";
 import {
   CardsContainer,
   CardContainer,
   CardBody,
   CardImage,
-  OrderonlineButton,
   EditButton,
   DeleteButton,
-  AddButton,
 } from "./Card.style";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import PicBrugerMenu from "../../media/images/burgers-three-mini.jpg";
 import PicPizzaMenu from "../../media/images/pizza-table.jpg";
+import { MenuContext } from "../../store/Udates/contextUpdates";
+import {
+  deleteMenuAction,
+  deleteReset,
+} from "../../store/Udates/actionsUpdates";
 
-const CardsAdmin = () => {
-  const [menuscard, setMenuscard] = useState(undefined);
+const UpdateCardAdmin = () => {
   const [menucard, setMenucard] = useState(undefined);
+  const [menucardfiltered, setMenucardfiltered] = useState(undefined);
+  const [mealcard, setMealcard] = useState(undefined);
   const [error, setError] = useState(false);
+
+  const { name } = useParams();
+
+  const [showModal, setShowModal] = useState(false);
+
+  const { stateGlobalMenu, dispatchMenu } = useContext(MenuContext);
 
   useEffect(() => {
     fetch(`http://localhost:3002/menu`)
       .then((response) => response.json())
       .then((menu) => {
         setMenucard(menu);
+        console.log(menu);
       })
       .catch((error) => {
         setError(true);
         console.log("Error", error);
       });
   }, []);
+
+  useEffect(() => {
+    if (name) {
+      fetch(`http://localhost:3002/menu/${name}`)
+        .then((response) => response.json())
+        .then((meal) => {
+          setMealcard(meal);
+        })
+        .catch((error) => {
+          setError(true);
+          console.log("Error", error);
+        });
+    }
+    const actionOfreset = deleteReset(name, dispatchMenu);
+    dispatchMenu(actionOfreset);
+  }, [name, dispatchMenu]);
+
+  const deleteMenu = () => {
+    const actionOfDelete = deleteMenuAction(name, dispatchMenu); // id??
+    dispatchMenu(actionOfDelete);
+  };
+
+  console.log(menucard);
+
+  useEffect(() => {
+    if (name) {
+      const filteredMenu = menucard?.filter((item) => item.name === name); // facem filter
+
+      setMenucardfiltered(filteredMenu);
+      console.log(filteredMenu);
+    }
+  }, [name, menucard]);
+
+  console.log(menucardfiltered);
 
   return (
     <CardsContainer>
@@ -44,39 +89,36 @@ const CardsAdmin = () => {
         </div>
       </Alert>
 
-      <Link to={`/admin/add`}>
-        <AddButton>Add a new meal</AddButton>
-      </Link>
-
-      {menucard?.map((menu, index) => (
-        <CardContainer key={index}>
+      {menucardfiltered?.map((menu, index) => (
+        <CardContainer key={index} style={{ width: "18rem" }}>
           <CardImage variant="top" src={menu?.image} />
           <CardBody>
             <Card.Title>{menu?.name}</Card.Title>
             <Card.Text>{menu?.quantity}</Card.Text>
             <Card.Text>{menu?.details}</Card.Text>
             <Card.Text>{menu?.price}</Card.Text>
-            <Link to={`/admin/update/${menu?.name}`}>
-              <EditButton>Update {menu?.name}</EditButton>
+            <Link to={`/admin/edit/${menu?.id}`}>
+              {/* AICI ERA MAREA SMECHERIE!!! AM SCHIMBAT IN ID */}
+              <EditButton>Edit {menu?.name}</EditButton>
             </Link>
 
-            {/* <DeleteButton onClick={() => setShowModal(true)} variant="danger">
+            <DeleteButton onClick={() => setShowModal(true)} variant="danger">
               Delete {menu?.name}
-            </DeleteButton> */}
+            </DeleteButton>
           </CardBody>
         </CardContainer>
       ))}
 
-      {/* <Modal
-        show={showModal && !stateGlobal.isDeleted}
+      <Modal
+        show={showModal && !stateGlobalMenu.isDeleted}
         onHide={() => setShowModal(false)}
       >
         <Modal.Header closeButton>
           <Modal.Title>Delete</Modal.Title>
         </Modal.Header>
         <Modal.Body>Are you sure?!</Modal.Body>
-        {stateGlobal.deleteMessageFail && (
-          <Modal.Body>{stateGlobal.deleteMessageFail}</Modal.Body>
+        {stateGlobalMenu?.deleteMessageFail && (
+          <Modal.Body>{stateGlobalMenu?.deleteMessageFail}</Modal.Body>
         )}
         <Modal.Footer>
           <Button variant="secondary" onClick={() => setShowModal(false)}>
@@ -86,9 +128,9 @@ const CardsAdmin = () => {
             Delete
           </Button>
         </Modal.Footer>
-      </Modal> */}
+      </Modal>
     </CardsContainer>
   );
 };
 
-export default CardsAdmin;
+export default UpdateCardAdmin;

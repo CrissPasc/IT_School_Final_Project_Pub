@@ -4,11 +4,11 @@ export function closeMessage() {
   };
 }
 
-export function addToMenu(menu, dispatch) {
+export function addToMenu(menu, dispatchMenu) {
   return {
     type: "ADD_TO_MENU",
     payload: menu,
-    otherValue: dispatch,
+    otherValue: dispatchMenu,
   };
 }
 
@@ -24,11 +24,11 @@ export function addToMenuError() {
   };
 }
 
-export function deleteMenuAction(name, dispatch) {
+export function deleteMenuAction(id, dispatchMenu) {
   return {
     type: "DELETE_MENU",
-    payload: name,
-    otherFunctionThatINeedOnDelete: dispatch,
+    payload: id,
+    otherFunctionThatINeedOnDelete: dispatchMenu,
   };
 }
 

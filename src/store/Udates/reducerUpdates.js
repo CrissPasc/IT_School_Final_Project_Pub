@@ -61,7 +61,15 @@ export function menuReducer(state, action) {
         ...state,
         isLoadingDelete: true,
       };
-
+      console.log(
+        localState,
+        "localState",
+        state,
+        "state",
+        action.payload,
+        "action.payload"
+      );
+      // aici imi vine action.payload = sweet calamari burger
       return localState;
     }
     case "DELETE_MENU_SUCCESS": {
@@ -71,7 +79,15 @@ export function menuReducer(state, action) {
         isLoadingDelete: false,
         isDeleted: true,
       };
-
+      console.log(
+        localState,
+        "localState",
+        state,
+        "state",
+        action.payload,
+        "action.payload"
+      );
+      // aici imi vine action.payload = UNDEFINED???
       return localState;
     }
     case "DELETE_MENU_FAILED": {

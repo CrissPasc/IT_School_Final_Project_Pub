@@ -48,8 +48,6 @@ const CardMeals = () => {
   console.log(menucardfiltered);
 
   return (
-    // ar cam trebui mutat cumva in cards si facuta maparea ca acolo unde e comentat
-    // pt a simplifica codul
     <CardsContainer>
       <Alert show={error} variant="danger">
         <Alert.Heading>My Alert</Alert.Heading>
@@ -74,8 +72,6 @@ const CardMeals = () => {
                 Click here to order online our {menu.name}
               </CardButton>
             </Link>
-            {/* asta ramane de vazut daca vrem sa mai deschidem o alta pagina pt 
-fiecare fel u=in parte cu o poza mai mare si cu si mai multe detalii*/}
           </CardBody>
         </CardContainer>
       ))}

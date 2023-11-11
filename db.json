@@ -185,17 +185,30 @@
     {
       "id": 1,
       "name": "Cristina",
+      "email": "admin1@thephoenixpub.com",
+      "password": "admin1",
       "type": "admin"
     },
     {
       "id": 2,
       "name": "Daiana",
+      "email": "admin2@thephoenixpub.com",
+      "password": "admin2",
       "type": "admin"
     },
     {
       "id": 3,
       "name": "Dan",
+      "email": "admin3@thephoenixpub.com",
+      "password": "admin3",
       "type": "admin"
+    },
+    {
+      "id": 4,
+      "name": "Andrei",
+      "email": "andrei@thephoenixpub.com",
+      "password": "andrei",
+      "type": "guest"
     }
   ]
 }

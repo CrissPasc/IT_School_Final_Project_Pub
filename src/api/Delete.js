@@ -3,8 +3,8 @@ import {
   deleteMenuActionFailed,
 } from "../store/Udates/actionsUpdates";
 
-export const deleteMenuApi = (name, dispatch) => {
-  fetch(`http://localhost:3002/menu/${name}`, {
+export const deleteMenuApi = (id, dispatchMenu) => {
+  fetch(`http://localhost:3002/menu/${id}`, {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",
@@ -13,10 +13,10 @@ export const deleteMenuApi = (name, dispatch) => {
     .then((response) => response.json())
     .then(() => {
       const deleteActionSucces = deleteMenuActionSuccess();
-      dispatch(deleteActionSucces);
+      dispatchMenu(deleteActionSucces);
     })
     .catch(() => {
       const deleteActionFail = deleteMenuActionFailed();
-      dispatch(deleteActionFail);
+      dispatchMenu(deleteActionFail);
     });
 };

@@ -14,12 +14,14 @@ import {
   contorReducer,
   initialStateContor,
 } from "./store/Contor/reducerContor";
-import Signin from "./components/signin/SignIn";
+import Signin from "./components/userlogin/SignIn";
 import { initialStateMenu, menuReducer } from "./store/Udates/reducerUpdates";
 import { MenuContext } from "./store/Udates/contextUpdates";
 import HomeAdmin from "./admin/HomeAdmin";
 import AddMenu from "./admin/UpdatesAddMenu/AddMenu";
 import EditMenu from "./admin/UpdatesEdditMenu/EditMenu";
+import UpdateMeal from "./admin/UpdateMeal";
+import Register from "./components/userlogin/Register";
 
 function App() {
   const [stateGlobalMenu, dispatchMenu] = useReducer(
@@ -47,8 +49,8 @@ function App() {
         <Routes>
           <Route path="/admin" element={<HomeAdmin />} />
           <Route path="/admin/add" element={<AddMenu />} />
-          <Route path="/admin/update/:name" element={<EditMenu />} />
-          <Route path="/admin/edit/:name" element={<EditMenu />} />
+          <Route path="/admin/update/:name" element={<UpdateMeal />} />
+          <Route path="/admin/edit/:id" element={<EditMenu />} />
           <Route
             path="/homepage"
             element={
@@ -103,7 +105,7 @@ function App() {
               </>
             }
           ></Route>
-          <Route path="/register" element={<About />}></Route>
+          <Route path="/register" element={<Register />}></Route>
           <Route path="/" element={<Homepage />}></Route>
         </Routes>
 
