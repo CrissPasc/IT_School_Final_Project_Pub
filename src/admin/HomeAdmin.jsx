@@ -1,9 +1,9 @@
 import React from "react";
 import { ruteAdmin } from "../constants/rute";
 import { useState } from "react";
-import CardAdmin from "../common/Card/CardAdmin";
 import useLog from "../hooks/useLog";
 import { Container, MenuContainer } from "../components/menu/Menu.style";
+import CardsAdmin from "../common/Card/CardsAdmin";
 
 const HomeAdmin = () => {
   const [numeUser, setNumeUser] = useState("Cristina");
@@ -12,7 +12,7 @@ const HomeAdmin = () => {
     <Container>
       <MenuContainer />
 
-      <CardAdmin
+      <CardsAdmin
         numeUser={numeUser}
         setNumeUser={setNumeUser}
         rute={ruteAdmin}

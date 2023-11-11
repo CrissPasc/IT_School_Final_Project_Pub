@@ -6,12 +6,15 @@ import {
   CardBody,
   CardImage,
   OrderonlineButton,
+  EditButton,
+  DeleteButton,
+  AddButton,
 } from "./Card.style";
 import { Link } from "react-router-dom";
 import PicBrugerMenu from "../../media/images/burgers-three-mini.jpg";
 import PicPizzaMenu from "../../media/images/pizza-table.jpg";
 
-const CardAdmin = () => {
+const CardsAdmin = () => {
   const [menuscard, setMenuscard] = useState(undefined);
   const [menucard, setMenucard] = useState(undefined);
   const [error, setError] = useState(false);
@@ -41,6 +44,10 @@ const CardAdmin = () => {
         </div>
       </Alert>
 
+      <Link to={`/admin/add`}>
+        <AddButton>Add a new meal</AddButton>
+      </Link>
+
       {menucard?.map((menu, index) => (
         <CardContainer key={index}>
           <CardImage variant="top" src={menu?.image} />
@@ -49,15 +56,39 @@ const CardAdmin = () => {
             <Card.Text>{menu?.quantity}</Card.Text>
             <Card.Text>{menu?.details}</Card.Text>
             <Card.Text>{menu?.price}</Card.Text>
-            <Link to={`/orderonline}`}>
-              {/* // ADD MODAL!!! */}
-              <OrderonlineButton>Add {menu?.name} to cart</OrderonlineButton>
+            <Link to={`/admin/update/${menu?.name}`}>
+              <EditButton>Update {menu?.name}</EditButton>
             </Link>
+
+            {/* <DeleteButton onClick={() => setShowModal(true)} variant="danger">
+              Delete {menu?.name}
+            </DeleteButton> */}
           </CardBody>
         </CardContainer>
       ))}
+
+      {/* <Modal
+        show={showModal && !stateGlobal.isDeleted}
+        onHide={() => setShowModal(false)}
+      >
+        <Modal.Header closeButton>
+          <Modal.Title>Delete</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Are you sure?!</Modal.Body>
+        {stateGlobal.deleteMessageFail && (
+          <Modal.Body>{stateGlobal.deleteMessageFail}</Modal.Body>
+        )}
+        <Modal.Footer>
+          <Button variant="secondary" onClick={() => setShowModal(false)}>
+            Close
+          </Button>
+          <Button variant="primary" onClick={deleteMenu}>
+            Delete
+          </Button>
+        </Modal.Footer>
+      </Modal> */}
     </CardsContainer>
   );
 };
 
-export default CardAdmin;
+export default CardsAdmin;

@@ -1,11 +1,9 @@
 import { Route, Routes } from "react-router-dom";
-import NavbarBootstrap from "../common/Navbar/Navbar";
-import Homepage from "../components/homepage/Homepage";
-import Menu from "../components/menu/Menu";
+import HomeAdmin from "../admin/HomeAdmin";
 
 // este folosit pe undeva???
 function AdminRouter() {
-  return <Route path="/homepage" element={<Homepage />}></Route>;
+  return <Route path="/admin" element={<HomeAdmin />}></Route>;
 }
 
 export default AdminRouter;

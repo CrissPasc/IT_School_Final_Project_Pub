@@ -24,10 +24,10 @@ export function addToMenuError() {
   };
 }
 
-export function deleteMenuAction(id, dispatch) {
+export function deleteMenuAction(name, dispatch) {
   return {
     type: "DELETE_MENU",
-    payload: id,
+    payload: name,
     otherFunctionThatINeedOnDelete: dispatch,
   };
 }

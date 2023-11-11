@@ -22,7 +22,7 @@ import AddMenu from "./admin/UpdatesAddMenu/AddMenu";
 import EditMenu from "./admin/UpdatesEdditMenu/EditMenu";
 
 function App() {
-  const [stateGlobalMenu, dispachMenu] = useReducer(
+  const [stateGlobalMenu, dispatchMenu] = useReducer(
     menuReducer,
     initialStateMenu
   );
@@ -36,7 +36,7 @@ function App() {
 
   const menuContextValue = {
     stateGlobalMenu,
-    dispachMenu,
+    dispatchMenu,
   };
 
   return (
@@ -47,7 +47,8 @@ function App() {
         <Routes>
           <Route path="/admin" element={<HomeAdmin />} />
           <Route path="/admin/add" element={<AddMenu />} />
-          <Route path="/admin/edit" element={<EditMenu />} />
+          <Route path="/admin/update/:name" element={<EditMenu />} />
+          <Route path="/admin/edit/:name" element={<EditMenu />} />
           <Route
             path="/homepage"
             element={

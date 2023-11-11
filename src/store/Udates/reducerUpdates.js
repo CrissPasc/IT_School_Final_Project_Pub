@@ -2,7 +2,7 @@ import { addMenu } from "../../api/Add";
 import { deleteMenuApi } from "../../api/Delete";
 
 export const initialStateMenu = {
-  menus: [],
+  menu: [],
   displayAddMenuMessage: false,
   addMenuMessage: "",
   isLoading: false,

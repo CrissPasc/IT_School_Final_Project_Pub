@@ -6,7 +6,7 @@ import { MenuContext } from "../../store/Udates/contextUpdates";
 import { addToMenu, closeMessage } from "../../store/Udates/actionsUpdates";
 
 const AddMenu = () => {
-  const { stateGlobalMenu, dispachMenu } = useContext(MenuContext);
+  const { stateGlobalMenu, dispatchMenu } = useContext(MenuContext);
 
   const [form, setForm] = useState({
     name: "",
@@ -27,13 +27,13 @@ const AddMenu = () => {
   };
 
   const submit = () => {
-    const actionAdd = addToMenu(form, dispachMenu);
-    dispachMenu(actionAdd);
+    const actionAdd = addToMenu(form, dispatchMenu);
+    dispatchMenu(actionAdd);
   };
 
   const closeSubmit = () => {
     const functionOfClose = closeMessage();
-    dispachMenu(functionOfClose);
+    dispatchMenu(functionOfClose);
   };
 
   console.log(stateGlobalMenu);
