@@ -22,6 +22,7 @@ import AddMenu from "./admin/UpdatesAddMenu/AddMenu";
 import EditMenu from "./admin/UpdatesEdditMenu/EditMenu";
 import UpdateMeal from "./admin/UpdateMeal";
 import Register from "./components/userlogin/Register";
+import Customer from "./components/userlogin/Customer";
 
 function App() {
   const [stateGlobalMenu, dispatchMenu] = useReducer(
@@ -51,6 +52,7 @@ function App() {
           <Route path="/admin/add" element={<AddMenu />} />
           <Route path="/admin/update/:name" element={<UpdateMeal />} />
           <Route path="/admin/edit/:id" element={<EditMenu />} />
+          <Route path="/customer" element={<Customer />} />
           <Route
             path="/homepage"
             element={

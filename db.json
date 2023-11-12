@@ -183,32 +183,89 @@
   ],
   "user": [
     {
-      "id": 1,
+      "id": "adminCris",
       "name": "Cristina",
       "email": "admin1@thephoenixpub.com",
       "password": "admin1",
-      "type": "admin"
+      "role": "admin"
     },
     {
-      "id": 2,
+      "id": "adminDaiana",
       "name": "Daiana",
       "email": "admin2@thephoenixpub.com",
       "password": "admin2",
-      "type": "admin"
+      "role": "admin"
     },
     {
-      "id": 3,
+      "id": "adminDan",
       "name": "Dan",
       "email": "admin3@thephoenixpub.com",
       "password": "admin3",
-      "type": "admin"
+      "role": "admin"
     },
     {
       "id": 4,
       "name": "Andrei",
       "email": "andrei@thephoenixpub.com",
       "password": "andrei",
-      "type": "guest"
+      "role": "user"
+    }
+  ],
+  "roleaccess": [
+    {
+      "role": "admin",
+      "menu": "customer",
+      "haveadd": true,
+      "haveedit": true,
+      "havedelete": true
+    },
+    {
+      "role": "admin",
+      "menu": "supplier",
+      "haveadd": true,
+      "haveedit": true,
+      "havedelete": true
+    },
+    {
+      "role": "user",
+      "menu": "customer",
+      "haveadd": false,
+      "haveedit": false,
+      "havedelete": false
+    },
+    {
+      "role": "user1",
+      "menu": "customer",
+      "haveadd": false,
+      "haveedit": false,
+      "havedelete": false
+    }
+  ],
+  "customer": [
+    {
+      "code": 1,
+      "name": "Chris",
+      "email": "chris@in.com"
+    },
+    {
+      "code": 2,
+      "name": "Lynn",
+      "email": "lynn@in.com"
+    },
+    {
+      "code": 3,
+      "name": "Tim",
+      "email": "tim@in.com"
+    },
+    {
+      "code": 4,
+      "name": "Southee",
+      "email": "southee@in.com"
+    },
+    {
+      "code": 5,
+      "name": "boult",
+      "email": "bould@in.com"
     }
   ]
 }

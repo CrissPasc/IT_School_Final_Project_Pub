@@ -98,7 +98,7 @@ const UpdateCardAdmin = () => {
             <Card.Text>{menu?.details}</Card.Text>
             <Card.Text>{menu?.price}</Card.Text>
             <Link to={`/admin/edit/${menu?.id}`}>
-              {/* AICI ERA MAREA SMECHERIE!!! AM SCHIMBAT IN ID */}
+              {/* AICI ERA MAREA BUBA!!! AM SCHIMBAT IN ID */}
               <EditButton>Edit {menu?.name}</EditButton>
             </Link>
 
