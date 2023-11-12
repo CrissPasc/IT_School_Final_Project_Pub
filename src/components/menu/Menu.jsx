@@ -6,15 +6,19 @@ import useLog from "../../hooks/useLog";
 import { ruteAdmin } from "../../constants/rute";
 import NavbarBootstrap from "../../common/Navbar/Navbar";
 import CardMenu from "../../common/Card/Card";
+import Footer from "../../common/Footer/Footer";
 
 const Menu = () => {
   useLog("Salut", "err");
   return (
-    <Container>
-      <MenuContainer>
-        <CardMenu />
-      </MenuContainer>
-    </Container>
+    <>
+      <Container>
+        <MenuContainer>
+          <CardMenu />
+        </MenuContainer>
+      </Container>
+      <Footer />
+    </>
   );
 };
 

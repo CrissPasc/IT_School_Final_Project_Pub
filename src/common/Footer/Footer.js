@@ -1,134 +1,44 @@
-import styled from "styled-components";
 import React from "react";
 import Newsletter from "./Newsletter";
-// import MyMap from './Map';
+import { FooterContainer, FooterH1, FooterH3, FooterH4, FooterLink, FooterP, FooterSection, FooterSocialContainer, FooterSocialIcon, LocationIcon } from "./Footer.style";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
+    <FooterContainer>
+      <FooterSection>
+        <FooterH1>Find Us</FooterH1>
+        <FooterP><FooterLink to="/about">The Phoenix Locator</FooterLink></FooterP>
+        <FooterP>The Phoenix Restaurant & Pub</FooterP>
+        <FooterH4>Restaurant Hours:</FooterH4>
+        <FooterP>Monday - Thursday: 10:00 am - 00:00 am</FooterP>
+        <FooterP>Friday - Saturday: 10:00 am - 01:00 am</FooterP>
+        <FooterP>Sunday: 10:00 am - 11:00 pm</FooterP>
+        <FooterP><LocationIcon src="https://png2.cleanpng.com/sh/a0eb019e07e844d43e6c6a425c762cbd/L0KzQYm3U8E6N5NoiZH0aYP2gLBuTfNwdaF6jNd7LXnmf7B6Tfxwa5J5gdH3LXHvPcS0lPltbV5yeeRrbHWwdrr1j71qa15xh9VqdHnyfn76mf1jd50yiNDwLXPsgrTzhb1td5RmjNt4bj3sc7F1TcViamE7fKo7MEK0QYq8Tsk0PGQATaoBMUW1QYa4UcgyOGE1UKc3cH7q/kisspng-computer-icons-location-al-s-tile-marble-fino-ic-location-symbol-png-circle-location-icon-5ab06d82021195.9343958615215118100085.png" />Strada Victoriei 10, Bucharest, Romania, 050711</FooterP>
+      </FooterSection>
 
-    // Aici trebuiesc puse link-urile la href
-    <FooterContainer className="main-footer">
-      <div className="footer-middle">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-3 col-sm-6">
-              <ul className="first-list">
-                <li className="list-href">
-                <a class="noDecoration" href="#">
-                    About us
-                  </a>
-                </li>
-                <li>
-                  <a class="noDecoration" href="#">
-                    Order Online
-                  </a>
-                </li>
-                <li>
-                  <a class="noDecoration" href="#">
-                    Book a table here
-                  </a>
-                </li>
-              </ul>
-            </div>
+      <FooterSection>
+        <FooterH1>Contact Us</FooterH1>
+        <FooterP><FooterLink to="/about">Email</FooterLink></FooterP>
+        <FooterP>(857) 250-4959 (text or call us!)</FooterP>
+        <FooterP>Office days: Tuesday-Saturday</FooterP>
+        <FooterSocialContainer>
+          <a href="https://www.instagram.com/"><FooterSocialIcon src="https://cdn3.iconfinder.com/data/icons/social-media-2527/24/glyph_instagram_logo_logotype_social_network_social_media_social_media-512.png" /></a>
+          <a href="https://www.facebook.com/"><FooterSocialIcon src="https://cdn0.iconfinder.com/data/icons/font-awesome-brands-vol-1/512/facebook-square-512.png" /></a>
+          <a href="https://twitter.com/?lang=en"><FooterSocialIcon src="https://cdn0.iconfinder.com/data/icons/font-awesome-brands-vol-2/512/twitter-square-512.png" /></a>
+          <a href="https://www.pinterest.com/"><FooterSocialIcon src="https://cdn2.iconfinder.com/data/icons/font-awesome/1792/pinterest-square-512.png" /></a>
+          <a href="https://www.whatsapp.com/"><FooterSocialIcon src="https://cdn0.iconfinder.com/data/icons/font-awesome-brands-vol-2/512/whatsapp-square-512.png" /></a>
+        </FooterSocialContainer>
+      </FooterSection>
 
-            <div className="col-md-3 col-sm-6">
-              <ul className="list-unstyled"></ul>
-              <Newsletter></Newsletter>
-            </div>
-
-            <div className="col-md-3 col-sm-6">
-              
-              <ul className="list-styled">
-              <h4>Open:</h4>
-                <li>Monday - Thursday: 10:00 am - 00:00 am</li>
-                <li>Friday - Saturday: 10:00 am - 01:00 am</li>
-                <li>Sunday: 10:00 am - 11:00 pm</li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="footer-bottom">
-            <p className="text-xs-center">
-              &copy;{new Date().getFullYear()} Copyright © The Phoenix Pub &
-              Restaurant - All Rights Reserved
-            </p>
-
-            {/* <MyMap></MyMap> */}
-          </div>
-        </div>
-      </div>
+      <FooterSection>
+        <FooterH1>Subscribe</FooterH1>
+        <FooterP>Keep up with the good news! Sign up for our newsletter and 
+        get the latest on where to find us, recipes, & more!</FooterP>
+        <Newsletter />
+      </FooterSection>
     </FooterContainer>
   );
 }
-
-// Partea asta de styling ar trebui sa fie in Footer.style.js :)
-// De asemenea am schimbat culoarea, deoarece prima data am folosit un galben urat pentru Navbar,
-// iar ulterior am schimbat in acest Gold frumos :)
-const FooterContainer = styled.footer`
-  .footer-middle {
-    background: linear-gradient(
-      145deg,
-      rgba(0, 0, 0, 0.9) 0%,
-      rgba(255, 215, 0, 0.8) 100%
-    );
-  }
-
-  .footer-bottom {
-    padding-top: 3rem;
-    padding-bottom: 2rem;
-  }
-
-  ul li {
-    color: white;
-  }
-
-  ulli a: hover {
-    color: green;
-  }
-
-  .noDecoration,
-  a:link,
-  a:visited {
-    text-decoration: none;
-  }
-
-  .noDecoration {
-    color: white;
-  }
-
-  .list-href {
-    color: white;
-  }
-
-  .list-unstyled {
-    margin-top: 50px;
-    text-align: -webkit-right;
-  }
-
-h4{
-color: white;
-}
-
-.list-styled{
-  margin-left: 250px;
-  text-wrap: nowrap;
-  margin-top: 100px;
-}
-
-.row{
-  // margin-top: 100px;
-}
-
-.first-list{
-  margin-top: 100px;
-  list-style: none;
-}
-
-.text-xs-center{
-  text-align: center;
-  color: #edededd1;
-  font-variant-caps: petite-caps;
-}
-`;
 
 export default Footer;

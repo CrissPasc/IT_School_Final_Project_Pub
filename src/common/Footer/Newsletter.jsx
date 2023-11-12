@@ -1,40 +1,46 @@
 import styled from "styled-components";
 import React, { useEffect, useState } from "react";
+import { FooterH4 } from "./Footer.style";
+import { BLACK_COLOR } from "../../constants/colors";
+import { CardButton } from "../Card/Card.style";
 
 const NewsletterContainer = styled.div`
-  padding: 20px;
-  text-align: center;
+  font-family: "Lucida Handwriting", cursive;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 `;
 
 const NewsletterForm = styled.form`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 `;
 
 const Input = styled.input`
   width: 250px;
   padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
+  border: 1px solid ${BLACK_COLOR};
+  border-radius: 15px;
   margin: 10px 0;
 `;
 
-const Button = styled.button`
-  // background-color: #007bff;
-  background-color: #007bff;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 3px;
+const Button = styled(CardButton)`
+  margin: 5px 0;
+  padding: 0;
+  width: 8rem;
+  height: 3rem;
   cursor: pointer;
 `;
 
 const ConfirmationMessage = styled.p`
-  margin-top: 10px;
+  display: inline;
+  color: darkGreen;
+  padding-left: 20px;
 `;
 
-
+const ButtonContainer = styled.div``
 
 function Newsletter() {
   const [email, setEmail] = useState("");
@@ -49,7 +55,7 @@ function Newsletter() {
 
   return (
     <NewsletterContainer>
-      <h2 style={{color: "#fffefef5", textwrap: "nowrap"}}>Subscribe to our Newsletter</h2>
+      <FooterH4>Email (required)</FooterH4>
       <NewsletterForm onSubmit={handleSubscribe}>
         <Input
           type="email"
@@ -58,9 +64,11 @@ function Newsletter() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
-        <Button type="submit">Subscribe</Button>
+        <ButtonContainer>
+          <Button type="submit">Subscribe</Button>
+          <ConfirmationMessage>{confirmation}</ConfirmationMessage>
+        </ButtonContainer>
       </NewsletterForm>
-      <ConfirmationMessage>{confirmation}</ConfirmationMessage>
     </NewsletterContainer>
   );
 }

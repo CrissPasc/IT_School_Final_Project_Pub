@@ -8,7 +8,10 @@ import NavbarBootstrap from "../../common/Navbar/Navbar";
 
 import CarouselSlides from "../../common/Carousel/CarouselSlides";
 import Logo from "./Logo";
-import ImageContainer, { PngImage, PngWrapper } from "./ContainerFirstSection";
+import CardContainer, { PngImage, PngWrapper } from "./ContainerFirstSection";
+import AboutUs from "./ContainerSecondSection";
+import Footer from "../../common/Footer/Footer";
+
 
 // de unde stie sa se lege cu pagina de /homepage
 
@@ -19,7 +22,7 @@ const Homepage = () => {
     <HomeContainer>
 
       {/* <NavbarBootstrap rute={ruteAdmin}></NavbarBootstrap> */}
-      <Logo></Logo>
+      
       <SpaceSection></SpaceSection>
 
       <FirstSection>
@@ -28,19 +31,22 @@ const Homepage = () => {
           <StyledH1>Our Favorites</StyledH1>
           <PngImage src='https://cdn-icons-png.flaticon.com/512/920/920707.png' />
         </PngWrapper>
-        <ImageContainer></ImageContainer>
+        <CardContainer></CardContainer>
       </FirstSection>
       <SpaceSection></SpaceSection>
 
       <CarouselSlides></CarouselSlides>
       <SpaceSection></SpaceSection>
 
-      <SecondSection></SecondSection>
+      <SecondSection>
+        <AboutUs></AboutUs>
+      </SecondSection>
       <SpaceSection></SpaceSection>
       
       <ThirdSection></ThirdSection>
       <SpaceSection></SpaceSection>
       
+      <Footer />
     </HomeContainer>
   );
 };

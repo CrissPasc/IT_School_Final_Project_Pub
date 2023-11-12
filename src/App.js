@@ -14,6 +14,8 @@ import {
   contorReducer,
   initialStateContor,
 } from "./store/Contor/reducerContor";
+import Logo from "./components/homepage/Logo";
+import BookTable from "./components/booktable/BookTable";
 
 function App() {
   const [stateGlobal, dispatch] = useReducer(contorReducer, initialStateContor);
@@ -26,13 +28,22 @@ function App() {
   return (
     <ContorContext.Provider value={contorContextValue}>
       <NavbarBootstrap />
-
+      <Logo />
       <Routes>
         <Route
           path="/homepage"
           element={
             <>
               <Homepage />
+            </>
+          }
+        ></Route>
+
+        <Route 
+          path="/about" 
+          element={
+            <>
+              <About />
             </>
           }
         ></Route>
@@ -73,11 +84,19 @@ function App() {
           }
         ></Route>
 
-        <Route path="/about" element={<About />}></Route>
+        <Route
+          path="/bookatable"
+          element={
+            <>
+              <BookTable />
+            </>
+          }
+        ></Route>
+        
         <Route path="/" element={<Homepage />}></Route>
+
       </Routes>
 
-      <Footer />
     </ContorContext.Provider>
   );
 }
