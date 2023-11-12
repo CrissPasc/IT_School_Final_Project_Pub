@@ -38,19 +38,31 @@ function NavbarBootstrap({ isAdmin, logo }) {
   const location = useLocation();
 
   // // adaugat 12Nov
+  const [displayadminname, displayadminnameupdate] = useState("");
   const [displayusername, displayusernameupdate] = useState("");
-  const [showmenu, showmenuupdateupdate] = useState(false);
+  const [showadminmenu, showadminmenuupdate] = useState(false);
+  const [showguestmenu, showaguestmenuupdate] = useState(false);
   const usenavigate = useNavigate();
 
   // console.log(location.pathname);
+  // am ramas aici --- mai am de lucrat la logica asta pt a-mi arata pt admin ceva si pt user altceva
   useEffect(() => {
     if (location.pathname === "/signin" || location.pathname === "/register") {
-      showmenuupdateupdate(false);
+      showadminmenuupdate(false);
     } else {
-      showmenuupdateupdate(true);
+      showadminmenuupdate(true);
+      showaguestmenuupdate(true);
       let username = sessionStorage.getItem("username");
       if (username === "" || username === null) {
         usenavigate("/signin");
+      } else if (
+        (username !== "admin1") &
+        (username !== "admin2") &
+        (username !== "admin3") &
+        (username !== "") &
+        (username !== null)
+      ) {
+        displayusernameupdate(username);
       } else {
         displayusernameupdate(username);
       }
@@ -121,7 +133,12 @@ function NavbarBootstrap({ isAdmin, logo }) {
             {/* AM INLOCUIT TOATE LINK-URILE DIN 'href=' => 'as={Link} to=' 
               PENTRU A NE FOLOSI DE REACT-ROUTER-DOM SI NU DE LINK-URI CLASICE <a> */}
             {/* // adaugat 12Nov */}
-            {showmenu && (
+            {showguestmenu && (
+              <AdminWellcome>
+                Welcome <b>{displayusername}</b>
+              </AdminWellcome>
+            )}
+            {showadminmenu && (
               <AdminContainer>
                 <AdminWellcome>
                   Welcome <b>{displayusername}</b>
