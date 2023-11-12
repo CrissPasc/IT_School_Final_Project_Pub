@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { ruteAdmin } from "../../constants/rute";
-import { ContainerButton, ContainerEdit } from "./EditMenu.style";
+import { ContainerButton, ContainerEdit, EditButton } from "./EditMenu.style";
 import { Button, Form, Alert } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 
@@ -104,7 +104,7 @@ const EditMenu = () => {
           </Form>
         </div>
         <ContainerButton>
-          <Button onClick={submit}>Edit Menu</Button>
+          <EditButton onClick={submit}>Edit Menu</EditButton>
         </ContainerButton>
       </ContainerEdit>
     </>

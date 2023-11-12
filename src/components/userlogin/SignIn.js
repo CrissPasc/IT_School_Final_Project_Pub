@@ -12,40 +12,6 @@ const Signin = () => {
     sessionStorage.clear();
   }, []);
 
-  // const ProceedLogin = async (e) => {
-  //   e.preventDefault();
-  //   if (validate()) {
-  //     try {
-  //       const response = await fetch(`http://localhost:3002/user`);
-  //       // const response = await fetch(`http://localhost:3002/user/${username}`);
-  //       if (!response.ok) {
-  //         throw new Error(`HTTP error! Status: ${response.status}`);
-  //       }
-
-  //       const user = await response.json();
-
-  //       console.log(response);
-  //       console.log(response.status);
-  //       console.log(user);
-
-  //       if (Object.keys(user).length === 0) {
-  //         toast.error("Please Enter valid username");
-  //       } else {
-  //         if (user.password === password) {
-  //           toast.success("Success");
-  //           sessionStorage.setItem("username", username);
-  //           usenavigate("/");
-  //         } else {
-  //           toast.error("Please Enter valid credentials");
-  //         }
-  //       }
-  //     } catch (error) {
-  //       console.error("Error fetching user data:", error.message);
-  //       toast.error("Login Failed. Please try again later.");
-  //     }
-  //   }
-  // };
-
   const ProceedLogin = (e) => {
     e.preventDefault();
     if (validate()) {

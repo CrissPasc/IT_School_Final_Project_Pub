@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import { ruteAdmin } from "../../constants/rute";
-import { ContainerAdd, ContainerButton } from "./AddMenu.style";
+import { AddButton, ContainerAdd, ContainerButton } from "./AddMenu.style";
 import { Button, Form, Alert, Spinner } from "react-bootstrap";
 import { MenuContext } from "../../store/Udates/contextUpdates";
 import { addToMenu, closeMessage } from "../../store/Udates/actionsUpdates";
@@ -88,7 +88,7 @@ const AddMenu = () => {
         </div>
         <ContainerButton>
           {!stateGlobalMenu.isLoading && (
-            <Button onClick={submit}>Add Menu</Button>
+            <AddButton onClick={submit}>Add Menu</AddButton>
           )}
         </ContainerButton>
       </ContainerAdd>

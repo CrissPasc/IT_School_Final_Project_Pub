@@ -8,6 +8,10 @@ import {
   NavbarLink,
   UserInfo,
   NavbarMenuIcon,
+  LogoutButton,
+  AdminWellcome,
+  LinkAdmin,
+  AdminContainer,
 } from "./Navbar.style";
 import LogoPic from "./../../media/logo/logo-no-background.png"; // "./logo.png";
 import UserInfoPic from "./../../media/icons/user-icon-white.png";
@@ -24,6 +28,7 @@ import NavbarMenuBurgers from "./../../media/images/burgers-three-mini.jpg";
 import NavbarMenuPizzas from "./../../media/images/navbar-happy-friends-with-beer-mugs.jpg";
 import NavbarOrderonline from "./../../media/images/navbar-happy-friends-with-beer-mugs.jpg";
 import { useEffect, useState } from "react";
+import { Button } from "react-bootstrap";
 
 // folosim parametrul logo? => pe viitor DA!
 function NavbarBootstrap({ isAdmin, logo }) {
@@ -115,7 +120,27 @@ function NavbarBootstrap({ isAdmin, logo }) {
 
             {/* AM INLOCUIT TOATE LINK-URILE DIN 'href=' => 'as={Link} to=' 
               PENTRU A NE FOLOSI DE REACT-ROUTER-DOM SI NU DE LINK-URI CLASICE <a> */}
+            {/* // adaugat 12Nov */}
+            {showmenu && (
+              <AdminContainer>
+                <AdminWellcome>
+                  Welcome <b>{displayusername}</b>
+                </AdminWellcome>
 
+                <LinkAdmin as={Link} to="/admin">
+                  Menu Admin
+                </LinkAdmin>
+                <LinkAdmin as={Link} to="/admin/add">
+                  Add
+                </LinkAdmin>
+                <Link
+                  to={"/signin"}
+                  // style={{ float: "right" }}
+                >
+                  <LogoutButton>Logout</LogoutButton>
+                </Link>
+              </AdminContainer>
+            )}
             <NavbarLink as={Link} to="/homepage">
               Home
             </NavbarLink>
@@ -158,25 +183,7 @@ function NavbarBootstrap({ isAdmin, logo }) {
                 Register
               </NavDropdown.Item>
             </NavDropdown>
-            {/* // adaugat 12Nov */}
-            {showmenu && (
-              <div>
-                <NavbarLink as={Link} to="/customer">
-                  Customer
-                </NavbarLink>
-                <span
-                // style={{ marginLeft: "70%" }}
-                >
-                  Welcome <b>{displayusername}</b>
-                </span>
-                <Link
-                  to={"/signin"}
-                  // style={{ float: "right" }}
-                >
-                  Logout
-                </Link>
-              </div>
-            )}
+
             {/* </Nav> */}
           </Navbar.Collapse>
         </NavLinkContainer>

@@ -4,6 +4,8 @@ import Navbar from "react-bootstrap/Navbar";
 import NavbarBackground from "./../../media/images/navbar-friends-chatting-pub.jpg";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
+import { Button } from "react-bootstrap";
+import { BLACK_COLOR } from "../../constants/colors";
 
 export const Logo = styled.img`
   height: 35px;
@@ -82,6 +84,44 @@ export const NavbarContainer = styled(Container)`
 export const NavbarMenuIcon = styled.span`
   background-color: white;
   color: white;
+`;
+
+export const LinkAdmin = styled(Nav.Link)`
+  padding: 0px 4px;
+  color: #211d06;
+  font-size: 1.25em;
+  margin: 0px 7px 0px 7px;
+  text-decoration: none;
+  border: solid 1px ${BLACK_COLOR};
+  background: #8b750e;
+  border-radius: 4px;
+  &:hover {
+    color: #440000;
+  }
+`;
+
+export const LogoutButton = styled(Button)`
+  margin: 7px;
+  background: #211d06;
+  border: solid 1px ${BLACK_COLOR};
+
+  &:hover {
+    background: #440000;
+    /* #a30000; */
+    color: ${BLACK_COLOR};
+    border: solid 1px ${BLACK_COLOR};
+    transition: background-color 0.5s ease, color 1s ease;
+  }
+`;
+
+export const AdminWellcome = styled.span`
+  color: ${BLACK_COLOR};
+`;
+
+export const AdminContainer = styled.div`
+  display: flex;
+  margin-right: 15px;
+  align-items: center;
 `;
 
 // export const NavbarContainer = styled.div`
