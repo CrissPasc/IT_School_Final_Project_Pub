@@ -14,7 +14,7 @@ import {
   AdminContainer,
 } from "./Navbar.style";
 import LogoPic from "./../../media/logo/logo-no-background.png"; // "./logo.png";
-import UserInfoPic from "./../../media/icons/user-icon-white.png";
+import UserInfoPic from "../../media/icons/user-icon-white.png";
 
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
