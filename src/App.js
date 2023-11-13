@@ -14,6 +14,10 @@ import {
   contorReducer,
   initialStateContor,
 } from "./store/Contor/reducerContor";
+
+import Logo from "./components/homepage/Logo";
+import BookTable from "./components/booktable/BookTable";
+
 import Signin from "./components/userlogin/SignIn";
 import { initialStateMenu, menuReducer } from "./store/Udates/reducerUpdates";
 import { MenuContext } from "./store/Udates/contextUpdates";
@@ -22,6 +26,7 @@ import AddMenu from "./admin/UpdatesAddMenu/AddMenu";
 import EditMenu from "./admin/UpdatesEdditMenu/EditMenu";
 import UpdateMeal from "./admin/UpdateMeal";
 import Register from "./components/userlogin/Register";
+
 
 function App() {
   const [stateGlobalMenu, dispatchMenu] = useReducer(
@@ -42,10 +47,11 @@ function App() {
   };
 
   return (
+
     <MenuContext.Provider value={menuContextValue}>
       <ContorContext.Provider value={contorContextValue}>
         <NavbarBootstrap />
-
+<Logo />
         <Routes>
           <Route path="/admin" element={<HomeAdmin />} />
           <Route path="/admin/add" element={<AddMenu />} />
@@ -60,6 +66,15 @@ function App() {
             }
           ></Route>
 
+        <Route 
+          path="/about" 
+          element={
+            <>
+              <About />
+            </>
+          }
+        ></Route>
+
           <Route
             path="/menu"
             element={
@@ -68,6 +83,7 @@ function App() {
               </>
             }
           ></Route>
+
 
           <Route
             path="/menus/:section"
@@ -96,7 +112,16 @@ function App() {
             }
           ></Route>
 
-          <Route path="/about" element={<About />}></Route>
+        <Route
+          path="/bookatable"
+          element={
+            <>
+              <BookTable />
+            </>
+          }
+        ></Route>
+        
+
           <Route
             path="/signin"
             element={

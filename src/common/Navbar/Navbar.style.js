@@ -4,8 +4,12 @@ import Navbar from "react-bootstrap/Navbar";
 import NavbarBackground from "./../../media/images/navbar-friends-chatting-pub.jpg";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
+
+import { NavDropdown } from "react-bootstrap";
+
 import { Button } from "react-bootstrap";
 import { BLACK_COLOR } from "../../constants/colors";
+
 
 export const Logo = styled.img`
   height: 35px;
@@ -81,7 +85,7 @@ export const NavbarContainer = styled(Container)`
 `;
 
 // Am incercat sa fac butonul acela de meniu (3 liniute) alb, dar nu am reusit..
-export const NavbarMenuIcon = styled.span`
+export const NavbarMenuIcon = styled.img`
   background-color: white;
   color: white;
 `;
@@ -136,3 +140,16 @@ export const AdminContainer = styled.div`
 //   height: 60px;
 //   padding: 4px 24px;
 // `;
+
+
+export const NavbarCollapse = styled(Navbar.Collapse)`
+  // display: flex;
+  // flex-direction: column;
+`
+
+export const NavDropdown2 = styled(NavDropdown)`
+  &.dropdown-menu.show {
+    position: fixed;
+    left: -50px;
+  }
+`

@@ -8,10 +8,14 @@ import {
   NavbarLink,
   UserInfo,
   NavbarMenuIcon,
+  NavbarCollapse,
+  NavDropdown2,
+
   LogoutButton,
   AdminWellcome,
   LinkAdmin,
   AdminContainer,
+
 } from "./Navbar.style";
 import LogoPic from "./../../media/logo/logo-no-background.png"; // "./logo.png";
 import UserInfoPic from "../../media/icons/user-icon-white.png";
@@ -124,7 +128,7 @@ function NavbarBootstrap({ isAdmin, logo }) {
             aria-controls="basic-navbar-nav"
             style={{ NavbarMenuIcon }}
           />
-          <Navbar.Collapse id="basic-navbar-nav" style={{ NavbarMenuIcon }}>
+          <NavbarCollapse id="basic-navbar-nav" style={{ NavbarMenuIcon }}>
             {/* pt a alinia la dreapta => am folosit 2 containere NavLinkContainer pentru a incapsula cele 2 parti din navbar, 
             dupa care am dat space-around in style.js pe containerul parinte NavbarWrapper */}
 
@@ -178,10 +182,10 @@ function NavbarBootstrap({ isAdmin, logo }) {
               <NavbarLink to={ruta.ruta} key={ruta + index}>
                 {ruta.name}
               </NavbarLink> */}
-            <NavDropdown
+            <NavDropdown2
               title={
                 <img
-                  src={UserInfoPic}
+                  src="https://cdn0.iconfinder.com/data/icons/cryptocurrency-137/128/1_profile_user_avatar_account_person-132-512.png"
                   alt="User"
                   style={{
                     width: "28px",
@@ -199,10 +203,11 @@ function NavbarBootstrap({ isAdmin, logo }) {
               <NavDropdown.Item as={Link} to="/register">
                 Register
               </NavDropdown.Item>
-            </NavDropdown>
+
+            </NavDropdown2>
 
             {/* </Nav> */}
-          </Navbar.Collapse>
+          </NavbarCollapse>
         </NavLinkContainer>
       </NavbarContainer>
     </NavbarWrapper>

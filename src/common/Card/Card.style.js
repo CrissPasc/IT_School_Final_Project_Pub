@@ -6,6 +6,7 @@ import {
   WHITE_COLOR,
 } from "../../constants/colors";
 import { Link } from "react-router-dom";
+import { BREAKPOINT_LARGE, BREAKPOINT_XLARGE } from "../../constants/breakpoints";
 
 export const CardsContainer = styled.div`
   // display: flex;
@@ -16,6 +17,10 @@ export const CardsContainer = styled.div`
   grid-template-columns: 1fr 1fr;
 
   padding: 0px 48px 24px 48px;
+
+  @media only screen and (max-width: ${BREAKPOINT_LARGE}) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const CardContainer = styled(Card)`
@@ -29,7 +34,7 @@ export const CardContainer = styled(Card)`
   ////
   border-radius: 50px;
   ////
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
   &:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
     transition: box-shadow 0.3s ease;
@@ -70,7 +75,7 @@ export const LinkCustom = styled(Link)`
 `;
 
 export const CardButton = styled(Button)`
-  margin: 48px;
+  
   background: linear-gradient(
     0deg,
     rgba(255, 215, 0, 1) 0%,

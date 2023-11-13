@@ -1,18 +1,35 @@
 import React from 'react';
 import styled from 'styled-components';
 import { BLACK_COLOR, GOLD_COLOR_HEX } from '../../constants/colors';
+import { BREAKPOINT_MEDIUM, BREAKPOINT_XLARGE } from '../../constants/breakpoints';
 
 const Container = styled.div`
+  font-family: Cursive;
   display: flex;
   justify-content: space-around;
   align-items: center;
   // padding: 20px;
   // background-color: #f0f0f0;
+
+  @media screen and (max-width: ${BREAKPOINT_XLARGE}) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    justify-items: center;
+  }
+
+  @media screen and (max-width: ${BREAKPOINT_MEDIUM}) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    justify-items: center;
+  }
 `;
 
 const Card = styled.div`
   width: 400px;
   padding: 10px;
+  margin: 0 10px;
   background-color: #fff;
   border: 1px solid #ccc;
   text-align: center;
@@ -25,6 +42,19 @@ const Card = styled.div`
     transition: transform 1s ease-in-out;
   }
   
+  @media screen and (max-width: ${BREAKPOINT_XLARGE}) {
+    &:hover {
+      transform: scale(1.2);
+      transition: transform 0.8s ease-in-out;
+    }
+  }
+
+  @media screen and (max-width: ${BREAKPOINT_MEDIUM}) {
+    &:hover {
+      transform: scale(1.1);
+      transition: transform 0.5s ease-in-out;
+    }
+  }
 `;
 
 const CardImage = styled.img`

@@ -25,6 +25,7 @@ import PickupImg from "../../media/icons/pickup.png";
 import PlusImg from "../../media/icons/plus-sign.png";
 
 import { ContorContext } from "../../store/Contor/contextContor";
+import Footer from "../../common/Footer/Footer";
 
 const Orderonline = () => {
   const [menucard, setMenucard] = useState(undefined);
@@ -99,6 +100,8 @@ const Orderonline = () => {
   });
 
   return (
+
+  <>
     <Container>
       <Alert show={error} variant="danger">
         <Alert.Heading>My Alert</Alert.Heading>
@@ -221,7 +224,74 @@ const Orderonline = () => {
                     <ParagrafOrder>{cartItemCounts[el.name]}x</ParagrafOrder>
                     <ParagrafOrder>{el.name}</ParagrafOrder>
                     <ParagrafOrder>{el.price}</ParagrafOrder>
+
                   </div>
+                </NavDropdown.Item>
+              </NavDropdown>
+            </Delivery>
+
+            <YourOrderContainer>
+              <div style={{ display: "flex", flexdirection: "row" }}>
+                <h4>Your order</h4>
+                <img
+                  src={CartImg}
+                  alt="CartImg"
+                  style={{
+                    width: "25px",
+                    height: "25px",
+                    marginRight: "5px",
+                  }}
+                />
+              </div>
+              <OrderCalculator>
+                {cartItems.map((el) => (
+                  <div>
+                    <div
+                      style={{
+                        display: "flex",
+                        flexdirection: "row",
+                      }}
+                    >
+                      {" "}
+                      <ParagrafOrder>{contorValue}x</ParagrafOrder>
+                      <ParagrafOrder>{el.name}</ParagrafOrder>
+                      <ParagrafOrder>{el.price}</ParagrafOrder>
+                    </div>
+
+                    <img
+                      onClick={handlePlus}
+                      src={PlusImg}
+                      alt="PlusImg"
+                      style={{
+                        width: "25px",
+                        height: "25px",
+                        marginRight: "5px",
+                      }}
+                    />
+                    <img
+                      onClick={handleMinus}
+                      src={MinusImg}
+                      alt="MinusImg"
+                      style={{
+                        width: "25px",
+                        height: "25px",
+                        marginRight: "5px",
+                      }}
+                    />
+                  </div>
+                ))}{" "}
+              </OrderCalculator>
+              <Total>
+                <h4>Total</h4>
+                {total}
+              </Total>
+              <CardTitle></CardTitle>
+
+              <LinkCustom to={`/menus`}>
+                <CheckoutButton>Go to checkout </CheckoutButton>
+              </LinkCustom>
+              <p>Minimum order for delivery is $30.00</p>
+
 
                   <img
                     onClick={handlePlus}
@@ -262,6 +332,9 @@ const Orderonline = () => {
         </OrderContainer>
       </MenuContainer>
     </Container>
+      <Footer />
+    </>
+
   );
 };
 

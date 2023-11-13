@@ -44,12 +44,16 @@ export const Section = styled.div`
 
 export const FirstSection = styled(Section)`
   // margin-top: 100vh;
-  height: 50vh;
+  height: auto;
 `;
 
 export const SecondSection = styled(Section)`
   // margin-top: 100vh;
-  height: 50vh;
+  padding: 0;
+  margin: 100px;
+  height: auto;
+  width: auto;
+  background: white;
 `;
 
 export const ThirdSection = styled(Section)`
@@ -58,7 +62,7 @@ export const ThirdSection = styled(Section)`
 `;
 
 export const SpaceSection = styled.div`
-  height: 25vh;
+  height: 20vh;
 `
 
 export const StyledH1 = styled.h1`
