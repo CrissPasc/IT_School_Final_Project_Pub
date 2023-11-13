@@ -100,131 +100,96 @@ const Orderonline = () => {
   });
 
   return (
+    <>
+      <Container>
+        <Alert show={error} variant="danger">
+          <Alert.Heading>My Alert</Alert.Heading>
+          <p style={{ width: "300px" }}>Failed to load Menu</p>
+          <hr />
+          <div className="d-flex justify-content-end">
+            <Button onClick={() => setError(false)} variant="outline-danger">
+              Close
+            </Button>
+          </div>
+        </Alert>
 
-  <>
-    <Container>
-      <Alert show={error} variant="danger">
-        <Alert.Heading>My Alert</Alert.Heading>
-        <p style={{ width: "300px" }}>Failed to load Menu</p>
-        <hr />
-        <div className="d-flex justify-content-end">
-          <Button onClick={() => setError(false)} variant="outline-danger">
-            Close
-          </Button>
-        </div>
-      </Alert>
+        <OrderonlineSectionsContainer>
+          {menucard?.map((menu, index) => (
+            <OrderonlineSections key={index}>
+              <LinkCustom to={`/menus`}>
+                <CheckoutButton>{menu?.section}</CheckoutButton>
+              </LinkCustom>
+            </OrderonlineSections>
+          ))}
+        </OrderonlineSectionsContainer>
 
-      <OrderonlineSectionsContainer>
-        {menucard?.map((menu, index) => (
-          <OrderonlineSections key={index}>
-            <LinkCustom to={`/menus`}>
-              <CheckoutButton>{menu?.section}</CheckoutButton>
-            </LinkCustom>
-          </OrderonlineSections>
-        ))}
-      </OrderonlineSectionsContainer>
+        <MenuContainer>
+          {/* <CardOrderonline /> */}
+          <CardOrderonlineSectioned />
+          <OrderContainer>
+            <AccountContainer>
+              <NavDropdown
+                id="nav-dropdown-dark-example"
+                title="Account"
+                menuVariant="light"
+              >
+                <NavDropdown.Item as={Link} to="/signin">
+                  Sign in
+                </NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/register">
+                  Register
+                </NavDropdown.Item>
+              </NavDropdown>
+              <h3>The Phoenix Pub</h3>
+              <p>Park Lane 123</p>
+              <p>Orlando</p>
+              <NavDropdown
+                id="nav-dropdown-dark-example"
+                title="Open"
+                menuVariant="light"
+              >
+                <NavDropdown.Item>
+                  Monday - Thursday: 10:00 am - 00:00 am
+                </NavDropdown.Item>
+                <NavDropdown.Item>
+                  Friday - Saturday: 10:00 am - 01:00 am
+                </NavDropdown.Item>
+                <NavDropdown.Item>Sunday: 10:00 am - 11:00 pm</NavDropdown.Item>
+              </NavDropdown>
+            </AccountContainer>
 
-      <MenuContainer>
-        {/* <CardOrderonline /> */}
-        <CardOrderonlineSectioned />
-        <OrderContainer>
-          <AccountContainer>
-            <NavDropdown
-              id="nav-dropdown-dark-example"
-              title="Account"
-              menuVariant="light"
-            >
-              <NavDropdown.Item as={Link} to="/signin">
-                Sign in
-              </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/register">
-                Register
-              </NavDropdown.Item>
-            </NavDropdown>
-            <h3>The Phoenix Pub</h3>
-            <p>Park Lane 123</p>
-            <p>Orlando</p>
-            <NavDropdown
-              id="nav-dropdown-dark-example"
-              title="Open"
-              menuVariant="light"
-            >
-              <NavDropdown.Item>
-                Monday - Thursday: 10:00 am - 00:00 am
-              </NavDropdown.Item>
-              <NavDropdown.Item>
-                Friday - Saturday: 10:00 am - 01:00 am
-              </NavDropdown.Item>
-              <NavDropdown.Item>Sunday: 10:00 am - 11:00 pm</NavDropdown.Item>
-            </NavDropdown>
-          </AccountContainer>
-
-          <Delivery>
-            <NavDropdown
-              id="nav-dropdown-dark-example"
-              title={<h4>Delivery method</h4>}
-              menuVariant="light"
-            >
-              <NavDropdown.Item>
-                <div style={{ display: "flex", flexdirection: "row" }}>
-                  <h5>Delivery</h5>
-                  <img
-                    src={DeliveryImg}
-                    alt="DeliveryImg"
-                    style={{
-                      width: "25px",
-                      height: "25px",
-                      marginRight: "5px",
-                    }}
-                  />
-                </div>
-              </NavDropdown.Item>
-              <NavDropdown.Item>
-                <div style={{ display: "flex", flexdirection: "row" }}>
-                  <h5>Pickup</h5>
-                  <img
-                    src={PickupImg}
-                    alt="User"
-                    style={{
-                      width: "25px",
-                      height: "25px",
-                      marginRight: "5px",
-                    }}
-                  />
-                </div>
-              </NavDropdown.Item>
-            </NavDropdown>
-          </Delivery>
-
-          <YourOrderContainer>
-            <div style={{ display: "flex", flexdirection: "row" }}>
-              <h4>Your order</h4>
-              <img
-                src={CartImg}
-                alt="CartImg"
-                style={{
-                  width: "25px",
-                  height: "25px",
-                  marginRight: "5px",
-                }}
-              />
-            </div>
-            <OrderCalculator>
-              {cartItems.map((el) => (
-                <div key={el.id}>
-                  <div
-                    style={{
-                      display: "flex",
-                      flexdirection: "row",
-                    }}
-                  >
-                    {" "}
-                    {/* TREBUIE PUS CEVA PT A ARATA NR -- DA EROARE CU CE ESTE:*/}
-                    {/* <ParagrafOrder>{contorValue}x</ParagrafOrder> */}
-                    <ParagrafOrder>{cartItemCounts[el.name]}x</ParagrafOrder>
-                    <ParagrafOrder>{el.name}</ParagrafOrder>
-                    <ParagrafOrder>{el.price}</ParagrafOrder>
-
+            <Delivery>
+              <NavDropdown
+                id="nav-dropdown-dark-example"
+                title={<h4>Delivery method</h4>}
+                menuVariant="light"
+              >
+                <NavDropdown.Item>
+                  <div style={{ display: "flex", flexdirection: "row" }}>
+                    <h5>Delivery</h5>
+                    <img
+                      src={DeliveryImg}
+                      alt="DeliveryImg"
+                      style={{
+                        width: "25px",
+                        height: "25px",
+                        marginRight: "5px",
+                      }}
+                    />
+                  </div>
+                </NavDropdown.Item>
+                <NavDropdown.Item>
+                  <div style={{ display: "flex", flexdirection: "row" }}>
+                    <h5>Pickup</h5>
+                    <img
+                      src={PickupImg}
+                      alt="User"
+                      style={{
+                        width: "25px",
+                        height: "25px",
+                        marginRight: "5px",
+                      }}
+                    />
                   </div>
                 </NavDropdown.Item>
               </NavDropdown>
@@ -245,7 +210,7 @@ const Orderonline = () => {
               </div>
               <OrderCalculator>
                 {cartItems.map((el) => (
-                  <div>
+                  <div key={el.id}>
                     <div
                       style={{
                         display: "flex",
@@ -253,7 +218,9 @@ const Orderonline = () => {
                       }}
                     >
                       {" "}
-                      <ParagrafOrder>{contorValue}x</ParagrafOrder>
+                      {/* TREBUIE PUS CEVA PT A ARATA NR -- DA EROARE CU CE ESTE:*/}
+                      {/* <ParagrafOrder>{contorValue}x</ParagrafOrder> */}
+                      <ParagrafOrder>{cartItemCounts[el.name]}x</ParagrafOrder>
                       <ParagrafOrder>{el.name}</ParagrafOrder>
                       <ParagrafOrder>{el.price}</ParagrafOrder>
                     </div>
@@ -269,7 +236,7 @@ const Orderonline = () => {
                       }}
                     />
                     <img
-                      onClick={handleMinus}
+                      onClick={() => handleMinus(el.name)}
                       src={MinusImg}
                       alt="MinusImg"
                       style={{
@@ -283,7 +250,7 @@ const Orderonline = () => {
               </OrderCalculator>
               <Total>
                 <h4>Total</h4>
-                {total}
+                {totalfinal.toFixed(2)} {/* function to add decimal numbers */}
               </Total>
               <CardTitle></CardTitle>
 
@@ -292,49 +259,13 @@ const Orderonline = () => {
               </LinkCustom>
               <p>Minimum order for delivery is $30.00</p>
 
-
-                  <img
-                    onClick={handlePlus}
-                    src={PlusImg}
-                    alt="PlusImg"
-                    style={{
-                      width: "25px",
-                      height: "25px",
-                      marginRight: "5px",
-                    }}
-                  />
-                  <img
-                    onClick={() => handleMinus(el.name)}
-                    src={MinusImg}
-                    alt="MinusImg"
-                    style={{
-                      width: "25px",
-                      height: "25px",
-                      marginRight: "5px",
-                    }}
-                  />
-                </div>
-              ))}{" "}
-            </OrderCalculator>
-            <Total>
-              <h4>Total</h4>
-              {totalfinal.toFixed(2)} {/* function to add decimal numbers */}
-            </Total>
-            <CardTitle></CardTitle>
-
-            <LinkCustom to={`/menus`}>
-              <CheckoutButton>Go to checkout </CheckoutButton>
-            </LinkCustom>
-            <p>Minimum order for delivery is $30.00</p>
-
-            <p>Orders over $50.00 have FREE delivery</p>
-          </YourOrderContainer>
-        </OrderContainer>
-      </MenuContainer>
-    </Container>
+              <p>Orders over $50.00 have FREE delivery</p>
+            </YourOrderContainer>
+          </OrderContainer>
+        </MenuContainer>
+      </Container>
       <Footer />
     </>
-
   );
 };
 
