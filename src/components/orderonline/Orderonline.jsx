@@ -57,6 +57,8 @@ const Orderonline = () => {
     const existingItem = cartItems.find((item) => item.id === menu.id);
 
     if (existingItem) {
+      existingItem.contorValue += 1;
+
       dispatch({ type: "UPDATE_CART", payload: cartItems });
       // dispatch({ type: "ADD_TO_CART", payload: item }); // 6Nov
     } else {
@@ -81,11 +83,11 @@ const Orderonline = () => {
 
   // ADUCEM ALTFEL TOTAL
   // eslint-disable-next-line react-hooks/rules-of-hooks
-  // useEffect(() => {
-  //   let x = 0;
-  //   cartItems.forEach((el) => (x += el.price * contorValue));
-  //   setTotal(x);
-  // }, [cartItems]);
+  useEffect(() => {
+    let x = 0;
+    cartItems.forEach((el) => (x += el.price * contorValue));
+    setTotal(x);
+  }, [cartItems]);
 
   const cartItemCounts = {}; // Object to store counts for each item
   let totalfinal = 0; // Total price
@@ -222,7 +224,7 @@ const Orderonline = () => {
                   </div>
 
                   <img
-                    onClick={() => handlePlus(el.name)}
+                    onClick={handlePlus}
                     src={PlusImg}
                     alt="PlusImg"
                     style={{
