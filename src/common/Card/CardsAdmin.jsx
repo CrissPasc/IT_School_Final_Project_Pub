@@ -1,18 +1,24 @@
-import { useEffect, useState } from "react";
-import { Card, Button, Alert } from "react-bootstrap";
+import { useContext, useEffect, useState } from "react";
+import { Card, Button, Alert, Modal } from "react-bootstrap";
 import {
   CardsContainer,
   CardContainer,
   CardBody,
   CardImage,
-  OrderonlineButton,
+  EditButton,
+  DeleteButton,
+  AddButton,
 } from "./Card.style";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import PicBrugerMenu from "../../media/images/burgers-three-mini.jpg";
 import PicPizzaMenu from "../../media/images/pizza-table.jpg";
+import { MenuContext } from "../../store/Udates/contextUpdates";
+import {
+  deleteMenuAction,
+  deleteReset,
+} from "../../store/Udates/actionsUpdates";
 
-const CardOrderonline = () => {
-  const [menuscard, setMenuscard] = useState(undefined);
+const CardsAdmin = () => {
   const [menucard, setMenucard] = useState(undefined);
   const [error, setError] = useState(false);
 
@@ -41,6 +47,10 @@ const CardOrderonline = () => {
         </div>
       </Alert>
 
+      <Link to={`/admin/add`}>
+        <AddButton>Add a new meal</AddButton>
+      </Link>
+
       {menucard?.map((menu, index) => (
         <CardContainer key={index}>
           <CardImage variant="top" src={menu?.image} />
@@ -49,9 +59,8 @@ const CardOrderonline = () => {
             <Card.Text>{menu?.quantity}</Card.Text>
             <Card.Text>{menu?.details}</Card.Text>
             <Card.Text>{menu?.price}</Card.Text>
-            <Link to={`/orderonline}`}>
-              {/* // ADD MODAL!!! */}
-              <OrderonlineButton>Add {menu?.name} to cart</OrderonlineButton>
+            <Link to={`/admin/update/${menu?.name}`}>
+              <EditButton>Update {menu?.name}</EditButton>
             </Link>
           </CardBody>
         </CardContainer>
@@ -60,4 +69,4 @@ const CardOrderonline = () => {
   );
 };
 
-export default CardOrderonline;
+export default CardsAdmin;

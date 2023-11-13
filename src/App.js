@@ -14,8 +14,21 @@ import {
   contorReducer,
   initialStateContor,
 } from "./store/Contor/reducerContor";
+import Signin from "./components/userlogin/SignIn";
+import { initialStateMenu, menuReducer } from "./store/Udates/reducerUpdates";
+import { MenuContext } from "./store/Udates/contextUpdates";
+import HomeAdmin from "./admin/HomeAdmin";
+import AddMenu from "./admin/UpdatesAddMenu/AddMenu";
+import EditMenu from "./admin/UpdatesEdditMenu/EditMenu";
+import UpdateMeal from "./admin/UpdateMeal";
+import Register from "./components/userlogin/Register";
 
 function App() {
+  const [stateGlobalMenu, dispatchMenu] = useReducer(
+    menuReducer,
+    initialStateMenu
+  );
+
   const [stateGlobal, dispatch] = useReducer(contorReducer, initialStateContor);
 
   const contorContextValue = {
@@ -23,62 +36,82 @@ function App() {
     dispatch,
   };
 
+  const menuContextValue = {
+    stateGlobalMenu,
+    dispatchMenu,
+  };
+
   return (
-    <ContorContext.Provider value={contorContextValue}>
-      <NavbarBootstrap />
+    <MenuContext.Provider value={menuContextValue}>
+      <ContorContext.Provider value={contorContextValue}>
+        <NavbarBootstrap />
 
-      <Routes>
-        <Route
-          path="/homepage"
-          element={
-            <>
-              <Homepage />
-            </>
-          }
-        ></Route>
+        <Routes>
+          <Route path="/admin" element={<HomeAdmin />} />
+          <Route path="/admin/add" element={<AddMenu />} />
+          <Route path="/admin/update/:name" element={<UpdateMeal />} />
+          <Route path="/admin/edit/:id" element={<EditMenu />} />
+          <Route
+            path="/homepage"
+            element={
+              <>
+                <Homepage />
+              </>
+            }
+          ></Route>
 
-        <Route
-          path="/menu"
-          element={
-            <>
-              <Menu />
-            </>
-          }
-        ></Route>
+          <Route
+            path="/menu"
+            element={
+              <>
+                <Menu />
+              </>
+            }
+          ></Route>
 
-        <Route
-          path="/menus/:section"
-          element={
-            <>
-              <Menus />
-            </>
-          }
-        ></Route>
+          <Route
+            path="/menus/:section"
+            element={
+              <>
+                <Menus />
+              </>
+            }
+          ></Route>
 
-        <Route
-          path="/meals/:name"
-          element={
-            <>
-              <Meals />
-            </>
-          }
-        ></Route>
+          <Route
+            path="/meals/:name"
+            element={
+              <>
+                <Meals />
+              </>
+            }
+          ></Route>
 
-        <Route
-          path="/orderonline"
-          element={
-            <>
-              <Orderonline />
-            </>
-          }
-        ></Route>
+          <Route
+            path="/orderonline"
+            element={
+              <>
+                <Orderonline />
+              </>
+            }
+          ></Route>
 
-        <Route path="/about" element={<About />}></Route>
-        <Route path="/" element={<Homepage />}></Route>
-      </Routes>
+          <Route path="/about" element={<About />}></Route>
+          <Route
+            path="/signin"
+            element={
+              <>
+                <Signin />
+              </>
+            }
+          ></Route>
+          <Route path="/register" element={<Register />}></Route>
+          <Route path="/" element={<Homepage />}></Route>
+        </Routes>
 
-      <Footer />
-    </ContorContext.Provider>
+        <Footer />
+      </ContorContext.Provider>
+    </MenuContext.Provider>
   );
 }
 

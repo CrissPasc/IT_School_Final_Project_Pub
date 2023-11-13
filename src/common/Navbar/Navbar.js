@@ -8,14 +8,17 @@ import {
   NavbarLink,
   UserInfo,
   NavbarMenuIcon,
+  LogoutButton,
+  AdminWellcome,
+  LinkAdmin,
+  AdminContainer,
 } from "./Navbar.style";
 import LogoPic from "./../../media/logo/logo-no-background.png"; // "./logo.png";
-import UserInfoPic from "./../../media/icons/user-icon-black.jpg";
-import { useLocation } from "react-router-dom";
+import UserInfoPic from "./../../media/icons/user-icon-white.png";
 
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import { useParams } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 import NavbarBackground from "./../../media/images/navbar-friends-chatting-pub.jpg";
@@ -24,11 +27,47 @@ import NavbarMenu from "./../../media/images/navbar-happy-friends-with-beer-mugs
 import NavbarMenuBurgers from "./../../media/images/burgers-three-mini.jpg";
 import NavbarMenuPizzas from "./../../media/images/navbar-happy-friends-with-beer-mugs.jpg";
 import NavbarOrderonline from "./../../media/images/navbar-happy-friends-with-beer-mugs.jpg";
+import { useEffect, useState } from "react";
+import { Button } from "react-bootstrap";
 
 // folosim parametrul logo? => pe viitor DA!
 function NavbarBootstrap({ isAdmin, logo }) {
   const params = useParams();
-  console.log(isAdmin, logo);
+  // console.log(isAdmin, logo);
+
+  const location = useLocation();
+
+  // // adaugat 12Nov
+  const [displayadminname, displayadminnameupdate] = useState("");
+  const [displayusername, displayusernameupdate] = useState("");
+  const [showadminmenu, showadminmenuupdate] = useState(false);
+  const [showguestmenu, showaguestmenuupdate] = useState(false);
+  const usenavigate = useNavigate();
+
+  // console.log(location.pathname);
+  // am ramas aici --- mai am de lucrat la logica asta pt a-mi arata pt admin ceva si pt user altceva
+  useEffect(() => {
+    if (location.pathname === "/signin" || location.pathname === "/register") {
+      showadminmenuupdate(false);
+    } else {
+      showadminmenuupdate(true);
+      showaguestmenuupdate(true);
+      let username = sessionStorage.getItem("username");
+      if (username === "" || username === null) {
+        usenavigate("/signin");
+      } else if (
+        (username !== "admin1") &
+        (username !== "admin2") &
+        (username !== "admin3") &
+        (username !== "") &
+        (username !== null)
+      ) {
+        displayusernameupdate(username);
+      } else {
+        displayusernameupdate(username);
+      }
+    }
+  }, [location]);
 
   // Define a function to dynamically render different image URLs based on location
   const getImageForLocation = (pathname) => {
@@ -61,10 +100,8 @@ function NavbarBootstrap({ isAdmin, logo }) {
     }
   };
 
-  const location = useLocation();
-  console.log(location.pathname);
   const backgroundImage = getImageForLocation(location.pathname);
-  console.log(location.pathname);
+  // console.log(location.pathname);
 
   return (
     <NavbarWrapper
@@ -95,6 +132,32 @@ function NavbarBootstrap({ isAdmin, logo }) {
 
             {/* AM INLOCUIT TOATE LINK-URILE DIN 'href=' => 'as={Link} to=' 
               PENTRU A NE FOLOSI DE REACT-ROUTER-DOM SI NU DE LINK-URI CLASICE <a> */}
+            {/* // adaugat 12Nov */}
+            {showguestmenu && (
+              <AdminWellcome>
+                Welcome <b>{displayusername}</b>
+              </AdminWellcome>
+            )}
+            {showadminmenu && (
+              <AdminContainer>
+                <AdminWellcome>
+                  Welcome <b>{displayusername}</b>
+                </AdminWellcome>
+
+                <LinkAdmin as={Link} to="/admin">
+                  Menu Admin
+                </LinkAdmin>
+                <LinkAdmin as={Link} to="/admin/add">
+                  Add
+                </LinkAdmin>
+                <Link
+                  to={"/signin"}
+                  // style={{ float: "right" }}
+                >
+                  <LogoutButton>Logout</LogoutButton>
+                </Link>
+              </AdminContainer>
+            )}
             <NavbarLink as={Link} to="/homepage">
               Home
             </NavbarLink>
@@ -110,6 +173,7 @@ function NavbarBootstrap({ isAdmin, logo }) {
             <NavbarLink as={Link} to="/bookatable">
               Book a table
             </NavbarLink>
+
             {/* {rute?.map((ruta, index) => (
               <NavbarLink to={ruta.ruta} key={ruta + index}>
                 {ruta.name}
@@ -136,6 +200,7 @@ function NavbarBootstrap({ isAdmin, logo }) {
                 Register
               </NavDropdown.Item>
             </NavDropdown>
+
             {/* </Nav> */}
           </Navbar.Collapse>
         </NavLinkContainer>
