@@ -4,3 +4,8 @@ Am modificat link-urile din Navbar pentru a folosi React Router (ca sintaxa se p
 Am adus mici schimbari estetice.
 
 De imbunatatit >> Navbar-ul si iconita de meniu // facute breakpoint-uri custom
+
+
+npm install bootstrap react-toastify
+
+in index.js import 'react-toastify/dist/ReactToastify.css';

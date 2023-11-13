@@ -123,3 +123,74 @@ export const OrderonlineButton = styled(Button)`
     transition: background-color 0.5s ease, color 1s ease;
   }
 `;
+
+export const EditButton = styled(Button)`
+  margin: 12px;
+  background: #0c6efd;
+
+  border: solid 1px ${BLACK_COLOR};
+  transition: background-color 0.5s ease, color 0.5s ease;
+
+  color: ${WHITE_COLOR};
+  font-weight: 700;
+
+  width: 12rem;
+  height: 4rem;
+
+  border-radius: 50px;
+
+  &:hover {
+    background: #5499fd;
+    color: ${BLACK_COLOR};
+    border: solid 1px ${BLACK_COLOR};
+    transition: background-color 0.5s ease, color 1s ease;
+  }
+`;
+
+export const DeleteButton = styled(Button)`
+  margin: 12px;
+  background: #cc0000;
+
+  border: solid 1px ${BLACK_COLOR};
+  transition: background-color 0.5s ease, color 0.5s ease;
+
+  color: ${WHITE_COLOR};
+  font-weight: 700;
+
+  width: 12rem;
+  height: 4rem;
+
+  border-radius: 50px;
+
+  &:hover {
+    background: #db4c4c;
+    /* #a30000; */
+    color: ${BLACK_COLOR};
+    border: solid 1px ${BLACK_COLOR};
+    transition: background-color 0.5s ease, color 1s ease;
+  }
+`;
+
+export const AddButton = styled(Button)`
+  margin: 12px;
+  background: #fd9b0c;
+
+  border: solid 1px ${BLACK_COLOR};
+  transition: background-color 0.5s ease, color 0.5s ease;
+
+  color: ${WHITE_COLOR};
+  font-weight: 700;
+
+  width: 12rem;
+  height: 4rem;
+
+  border-radius: 50px;
+
+  &:hover {
+    background: #fdb954;
+    /* #a30000; */
+    color: ${BLACK_COLOR};
+    border: solid 1px ${BLACK_COLOR};
+    transition: background-color 0.5s ease, color 1s ease;
+  }
+`;

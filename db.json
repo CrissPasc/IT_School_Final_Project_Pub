@@ -183,19 +183,32 @@
   ],
   "user": [
     {
-      "id": 1,
+      "id": "adminCris",
       "name": "Cristina",
-      "type": "admin"
+      "email": "admin1@thephoenixpub.com",
+      "password": "admin1",
+      "role": "admin"
     },
     {
-      "id": 2,
+      "id": "adminDaiana",
       "name": "Daiana",
-      "type": "admin"
+      "email": "admin2@thephoenixpub.com",
+      "password": "admin2",
+      "role": "admin"
     },
     {
-      "id": 3,
+      "id": "adminDan",
       "name": "Dan",
-      "type": "admin"
+      "email": "admin3@thephoenixpub.com",
+      "password": "admin3",
+      "role": "admin"
+    },
+    {
+      "id": 4,
+      "name": "Andrei",
+      "email": "andrei@thephoenixpub.com",
+      "password": "andrei",
+      "role": "user"
     }
   ]
 }
