@@ -10,6 +10,7 @@ import Menus from "./components/menu/Menus";
 import Orderonline from "./components/orderonline/Orderonline";
 import { ContorContext } from "./store/Contor/contextContor";
 import { useReducer } from "react";
+import { StyleSheetManager } from 'styled-components';
 import {
   contorReducer,
   initialStateContor,

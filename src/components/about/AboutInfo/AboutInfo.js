@@ -1,52 +1,131 @@
-import React from "react";
-
-import "./AboutInfo.css";
+import React, { useEffect, useRef, useState } from "react";
+import {
+  Section,
+  FirstContainerText,
+  ContainerParagraphs,
+  Container,
+  AboutInfoContent,
+  HeadingSecondary,
+  SpecialWord,
+  DynamicH4,
+  ContainerInfo,
+  SpanP
+} from "./AboutInfoStyled";
+import { StyleSheetManager } from "styled-components"; // Import StyleSheetManager
+import isPropValid from "@emotion/is-prop-valid";
 
 const AboutInfo = () => {
+  const sectionRef = useRef();
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.5, // Adjust this value based on your needs
+    };
+
+    const callback = (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          console.log("Section is visible");
+          setIsVisible(true);
+          observer.unobserve(entry.target);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(callback, options);
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    // Cleanup
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
   return (
-    <div className="section">
-      <div className="container grid-container">
-        <div>
-          <div className="about-info-content">
-            <h2 className="heading-secondary">
-              Phoenyx Restaurant is a culinary gem that aims to elevate
-              gastronomy to new heights. 🍽️✨ With a passion for exquisite
-              flavors and innovative techniques, Phoenyx offers a dining
-              experience that is both refined and unforgettable. <span></span>
-            </h2>
+    <StyleSheetManager shouldForwardProp={(prop) => isPropValid(prop)}>
+      <Section ref={sectionRef}>
+        <Container>
+          {isVisible && (
+            <ContainerInfo className="visible">
+              <AboutInfoContent>
+                <FirstContainerText>
+                  {" "}
+                  Welcome to The Phoenix Pub Nestled in the heart of Orlando,
+                  The Phoenix Pub is not just a restaurant; it's an experience.
+                  As you step through our doors, you embark on a culinary
+                  journey where tradition and innovation collide to create a
+                  dining destination like no other.
+                </FirstContainerText>
+                <HeadingSecondary>
+                  The Phoenix Pub: A Culinary Haven Reborn Nestled in the heart
+                  of Orlando <SpecialWord>The Phoenix Pub</SpecialWord> is a
+                  dining destination like no other, where the warmth of
+                  tradition meets the fiery spirit of reinvention. Our
+                  establishment takes its name from the mythical bird, the
+                  phoenix, symbolizing rebirth and renewal, and that's exactly
+                  what you'll experience when you step inside.
+                </HeadingSecondary>
+                <SpanP>Discover us</SpanP>
+                <ContainerParagraphs>
+                  <p>
+                    Our Story The Phoenix Pub takes its name from the mythical
+                    bird, the phoenix, symbolizing rebirth and renewal. We
+                    embrace these concepts in every aspect of our establishment,
+                    from our warm and inviting ambiance to our carefully curated
+                    menu.
+                  </p>
 
-            <h4>Our mission</h4>
+                  <p>
+                    Culinary Excellence Our mission is to redefine the culinary
+                    landscape by pushing the boundaries of gastronomy. We are
+                    dedicated to creativity, quality ingredients, and impeccable
+                    service. Each dish on our menu is a testament to our
+                    commitment to providing a dining experience that leaves a
+                    lasting impression on every guest.
+                  </p>
 
-            <p>
-              Phoenyx Restaurant's mission is to redefine the culinary landscape
-              by pushing the boundaries of gastronomy. Through their dedication
-              to creativity, quality ingredients, and impeccable service, they
-              strive to create a dining experience that leaves a lasting
-              impression on every guest. 🌟🍽️✨{" "}
-              <span className="special-word"></span>
-            </p>
+                  <p>
+                    A Fusion of Flavors Explore our diverse menu that seamlessly
+                    blends traditional and contemporary flavors. From hearty pub
+                    classics to innovative culinary creations, our dishes are
+                    crafted with passion and precision. Whether you're here for
+                    a casual meal, a special celebration, or one of our vibrant
+                    events, there's something for every palate at The Phoenix
+                    Pub.
+                  </p>
 
-            <blockquote>
-              Sure, Phoenyx Restaurant also offers a convenient takeaway service
-              so you can enjoy their exquisite cuisine in the comfort of your
-              own home. 🥡🏠 Simply place your order and savor their delicious
-              dishes wherever you choose. Bon appétit! 😄🍽️{" "}
-            </blockquote>
+                  <p>
+                    Vibrant Atmosphere The Phoenix Pub is not just a place to
+                    eat; it's a hub of entertainment and excitement. Join us for
+                    live music performances, trivia nights, and other engaging
+                    events. Our vibrant atmosphere ensures that every visit is a
+                    celebration.
+                  </p>
 
-            <h4>Events</h4>
-
-            <p>
-              Of course! Phoenyx Pub is not just your average pub—it's a vibrant
-              hub of entertainment and excitement! 🍻🎉 With an array of events,
-              from live music performances to trivia nights and karaoke parties,
-              Phoenyx Pub guarantees a fantastic time for all. Grab a drink,
-              join in on the fun, and let the good times roll! 🎶🎤🎊
-              <span className="special-word"></span>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
+                  <p>
+                    Join Us Step inside The Phoenix Pub and experience the
+                    rebirth of culinary excellence. Let the warmth of tradition
+                    and the fiery spirit of reinvention guide your dining
+                    adventure. We look forward to serving you and creating
+                    memorable moments at The Phoenix Pub. Cheers to good food,
+                    good times, and the spirit of renewal!
+                  </p>
+                </ContainerParagraphs>
+              </AboutInfoContent>
+            </ContainerInfo>
+          )}
+        </Container>
+      </Section>
+                
+    </StyleSheetManager>
+    
   );
 };
 

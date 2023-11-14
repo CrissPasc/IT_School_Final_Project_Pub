@@ -14,17 +14,17 @@ function Footer() {
             <div className="col-md-3 col-sm-6">
               <ul className="first-list">
                 <li className="list-href">
-                <a class="noDecoration" href="#">
+                <a className="noDecoration" href="#">
                     About us
                   </a>
                 </li>
                 <li>
-                  <a class="noDecoration" href="#">
+                  <a className="noDecoration" href="#">
                     Order Online
                   </a>
                 </li>
                 <li>
-                  <a class="noDecoration" href="#">
+                  <a className="noDecoration" href="#">
                     Book a table here
                   </a>
                 </li>

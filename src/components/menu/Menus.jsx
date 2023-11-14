@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Container, MenuContainer } from "./Menu.style";
 import { Button, Image } from "react-bootstrap";
 import useLog from "../../hooks/useLog";
@@ -6,6 +6,8 @@ import useLog from "../../hooks/useLog";
 import { ruteAdmin } from "../../constants/rute";
 import NavbarBootstrap from "../../common/Navbar/Navbar";
 import CardMenus from "../../common/Card/CardMenus";
+import { useParams } from "react-router";
+
 
 const Menus = () => {
   useLog("Salut", "err");
