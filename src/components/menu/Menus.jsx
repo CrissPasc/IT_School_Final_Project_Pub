@@ -20,6 +20,7 @@ import PizBackgrounds from "./../../media/bckgrd/pizza-bckgrd.png";
 import BeersBackgroundx from "./../../media/bckgrd/beers-bckgrd.png";
 
 import OrderOnlineBackground from "./../../media/bckgrd/delivery-bckgrd.png";
+import Footer from "../../common/Footer/Footer";
 
 const Menus = () => {
   useLog("Salut", "err");
@@ -118,6 +119,7 @@ const Menus = () => {
       <MenuContainer style={{ backgroundImage: `url(${backgroundImage})` }}>
         <CardMenus />
       </MenuContainer>
+      <Footer />
     </Container>
   );
 };

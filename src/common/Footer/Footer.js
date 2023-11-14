@@ -1,9 +1,8 @@
 import React from "react";
 import Newsletter from "./Newsletter";
-import { FooterContainer, FooterH1, FooterH3, FooterH4, FooterLink, FooterP, FooterSection, FooterSocialContainer, FooterSocialIcon, LocationIcon } from "./Footer.style";
-import { Link } from "react-router-dom";
+import { FooterContainer, FooterH1, FooterH4, FooterLink, FooterP, FooterSection, FooterSocialContainer, FooterSocialIcon, LocationIcon } from "./Footer.style";
 
-function Footer() {
+const Footer = () => {
   return (
     <FooterContainer>
       <FooterSection>

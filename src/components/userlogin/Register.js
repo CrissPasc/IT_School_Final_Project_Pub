@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import Footer from "../../common/Footer/Footer";
 
 const Register = () => {
   const [id, idchange] = useState("");
@@ -205,6 +206,7 @@ const Register = () => {
           </div>
         </form>
       </div>
+      <Footer />
     </div>
   );
 };

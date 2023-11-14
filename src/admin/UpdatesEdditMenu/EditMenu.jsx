@@ -3,6 +3,7 @@ import { ruteAdmin } from "../../constants/rute";
 import { ContainerButton, ContainerEdit, EditButton } from "./EditMenu.style";
 import { Button, Form, Alert } from "react-bootstrap";
 import { useParams } from "react-router-dom";
+import Footer from "../../common/Footer/Footer";
 
 const EditMenu = () => {
   const [form, setForm] = useState({
@@ -107,6 +108,7 @@ const EditMenu = () => {
           <EditButton onClick={submit}>Edit Menu</EditButton>
         </ContainerButton>
       </ContainerEdit>
+      <Footer />
     </>
   );
 };

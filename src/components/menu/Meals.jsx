@@ -3,6 +3,7 @@ import useLog from "../../hooks/useLog";
 
 import { ruteAdmin } from "../../constants/rute";
 import CardMeals from "../../common/Card/Cardmeals";
+import Footer from "../../common/Footer/Footer";
 
 const Meals = () => {
   useLog("Salut", "err");
@@ -11,6 +12,7 @@ const Meals = () => {
       <MenuContainer>
         <CardMeals />
       </MenuContainer>
+      <Footer />
     </Container>
   );
 };

@@ -4,6 +4,7 @@ import { AddButton, ContainerAdd, ContainerButton } from "./AddMenu.style";
 import { Button, Form, Alert, Spinner } from "react-bootstrap";
 import { MenuContext } from "../../store/Udates/contextUpdates";
 import { addToMenu, closeMessage } from "../../store/Udates/actionsUpdates";
+import Footer from "../../common/Footer/Footer";
 
 const AddMenu = () => {
   const { stateGlobalMenu, dispatchMenu } = useContext(MenuContext);
@@ -92,6 +93,7 @@ const AddMenu = () => {
           )}
         </ContainerButton>
       </ContainerAdd>
+      <Footer />
     </>
   );
 };

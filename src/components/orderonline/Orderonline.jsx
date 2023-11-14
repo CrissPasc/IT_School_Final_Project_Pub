@@ -99,6 +99,11 @@ const Orderonline = () => {
     totalfinal += Number(item.price); // Accumulate the total price by converting item.price to a number
   });
 
+  const placeOrder = () => {
+    alert(`Your order of $${totalfinal.toFixed(2)} has been placed successfully!`);
+    // Add any additional logic or API calls related to placing the order here
+  };
+
   return (
     <>
       <Container>
@@ -116,9 +121,9 @@ const Orderonline = () => {
         <OrderonlineSectionsContainer>
           {menucard?.map((menu, index) => (
             <OrderonlineSections key={index}>
-              <LinkCustom to={`/menus`}>
+              <Link to={`/orderonline`}>
                 <CheckoutButton>{menu?.section}</CheckoutButton>
-              </LinkCustom>
+              </Link>
             </OrderonlineSections>
           ))}
         </OrderonlineSectionsContainer>
@@ -140,7 +145,7 @@ const Orderonline = () => {
                   Register
                 </NavDropdown.Item>
               </NavDropdown>
-              <h3>The Phoenix Pub</h3>
+              <h3 style={{paddingTop: '40px'}}>The Phoenix Pub</h3>
               <p>Park Lane 123</p>
               <p>Orlando</p>
               <NavDropdown
@@ -204,7 +209,8 @@ const Orderonline = () => {
                   style={{
                     width: "25px",
                     height: "25px",
-                    marginRight: "5px",
+                    marginRight: "15px",
+                    marginLeft: "15px",
                   }}
                 />
               </div>
@@ -248,18 +254,20 @@ const Orderonline = () => {
                   </div>
                 ))}{" "}
               </OrderCalculator>
-              <Total>
+              <Total style={{paddingTop: '20px'}}>
                 <h4>Total</h4>
-                {totalfinal.toFixed(2)} {/* function to add decimal numbers */}
+                $ {totalfinal.toFixed(2)} {/* function to add decimal numbers */}
               </Total>
               <CardTitle></CardTitle>
 
-              <LinkCustom to={`/menus`}>
-                <CheckoutButton>Go to checkout </CheckoutButton>
-              </LinkCustom>
-              <p>Minimum order for delivery is $30.00</p>
-
-              <p>Orders over $50.00 have FREE delivery</p>
+              <div style={{ textAlign: 'center', marginTop: '-20px' }}>
+                <CheckoutButton onClick={placeOrder}>Place order!</CheckoutButton>
+              </div>
+              
+              <div style={{ textAlign: 'center', paddingTop: '20px', fontWeight: 'bold' }}>
+                <p>Minimum order for delivery is $30.00!</p>
+                <p>Orders over $50.00 have FREE delivery!</p>
+              </div>
             </YourOrderContainer>
           </OrderContainer>
         </MenuContainer>

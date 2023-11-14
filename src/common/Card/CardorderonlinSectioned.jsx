@@ -5,10 +5,38 @@ import {
   CardBody,
   CardImage,
   OrderonlineButton,
-  CardsContainer,
 } from "./Card.style";
 import { Link, useParams } from "react-router-dom";
 import { ContorContext } from "../../store/Contor/contextContor";
+import { styled } from "styled-components";
+import { BREAKPOINT_XLARGE } from "../../constants/breakpoints";
+import { StyledH1 } from "../../components/homepage/Homepage.style";
+import { GOLD_COLOR_HEX } from "../../constants/colors";
+
+const CardsContainer = styled.div`
+  padding: 0 30px;
+  // display: grid;
+  // grid-template-columns: 1fr 1fr;
+  // justify-content: center;
+`
+
+const Cards = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  
+  @media only screen and (max-width: ${BREAKPOINT_XLARGE}) {
+    grid-template-columns: 1fr;
+  }
+`
+
+const StyledOrderH1 = styled(StyledH1)`
+  background: rgba(0,0,0,0.4);
+  transition: color 0.2s ease-in-out;
+  border-radius: 30px;
+  &:hover {color: ${GOLD_COLOR_HEX}; transition: color 0.2s ease-in-out;}
+`
 
 const CardOrderonlineSectioned = (usemenu) => {
   const [menuSections, setMenuSections] = useState([]);
@@ -97,8 +125,8 @@ const CardOrderonlineSectioned = (usemenu) => {
 
       {menuSections.map((sectionbd) => (
         <div key={sectionbd.id}>
-          <h1>{sectionbd.section}</h1>
-          <div style={{ display: "flex", flexWrap: "wrap" }}>
+          <StyledOrderH1>{sectionbd.section}</StyledOrderH1>
+          <Cards>
             {menuItems
               .filter((item) => item.section === sectionbd.section)
               .map((menu, index, name) => (
@@ -108,7 +136,7 @@ const CardOrderonlineSectioned = (usemenu) => {
                     <Card.Title>{menu.name}</Card.Title>
                     <Card.Text>{menu.quantity}</Card.Text>
                     <Card.Text>{menu.details}</Card.Text>
-                    <Card.Text>{menu.price}</Card.Text>
+                    <Card.Text>$ {menu.price}</Card.Text>
 
                     {/* <OrderonlineButton onClick={() => handleAddToCart(menu)}> */}
                     <OrderonlineButton onClick={() => combinedHandle(menu)}>
@@ -118,7 +146,7 @@ const CardOrderonlineSectioned = (usemenu) => {
                   </CardBody>
                 </CardContainer>
               ))}
-          </div>
+          </Cards>
         </div>
       ))}
     </CardsContainer>

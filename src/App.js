@@ -84,6 +84,14 @@ function App() {
             }
           ></Route>
 
+          <Route
+            path="/menus"
+            element={
+              <>
+                <Menus />
+              </>
+            }
+          ></Route>
 
           <Route
             path="/menus/:section"
@@ -134,7 +142,10 @@ function App() {
           <Route path="/" element={<Homepage />}></Route>
         </Routes>
 
-        <Footer />
+        {/* <Footer /> */}
+        {/* NU VA MERGE FOOTER-UL PUS AICI, DINTR-UN MOTIV OARECARE AFECTEAZĂ STYLING-UL */}
+        {/* L-AM PUS INDIVIDUAL ÎN FIECARE COMPONENTĂ */}
+
       </ContorContext.Provider>
     </MenuContext.Provider>
   );

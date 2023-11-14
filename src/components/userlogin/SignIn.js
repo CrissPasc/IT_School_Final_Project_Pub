@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import Footer from "../../common/Footer/Footer";
 
 const Signin = () => {
   const [username, usernameupdate] = useState("");
@@ -104,6 +105,7 @@ const Signin = () => {
           </div>
         </form>
       </div>
+      <Footer />
     </div>
   );
 };
