@@ -228,7 +228,7 @@ const Orderonline = () => {
                       {/* <ParagrafOrder>{contorValue}x</ParagrafOrder> */}
                       <ParagrafOrder>{cartItemCounts[el.name]}x</ParagrafOrder>
                       <ParagrafOrder>{el.name}</ParagrafOrder>
-                      <ParagrafOrder>{el.price}</ParagrafOrder>
+                      <ParagrafOrder>= ${el.price}</ParagrafOrder>
                     </div>
 
                     <img
