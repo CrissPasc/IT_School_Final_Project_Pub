@@ -66,6 +66,8 @@ const CardMeals = () => {
           <CardBody>
             <Card.Title>{menu.name}</Card.Title>
             <Card.Text>{menu.description}</Card.Text>
+            <Card.Text>Ingredients: {menu.details}</Card.Text>
+            <Card.Text>{menu.quantity}</Card.Text>
             <Link to={`/orderonline`}>
               {/* de adaugat sa ma duca exact in sectiune!! */}
               <CardButton variant="primary">

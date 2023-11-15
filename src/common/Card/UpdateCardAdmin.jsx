@@ -25,6 +25,8 @@ const UpdateCardAdmin = () => {
 
   const { name } = useParams();
 
+  const { id } = useParams();
+
   const [showModal, setShowModal] = useState(false);
 
   const { stateGlobalMenu, dispatchMenu } = useContext(MenuContext);
@@ -44,7 +46,7 @@ const UpdateCardAdmin = () => {
 
   useEffect(() => {
     if (name) {
-      fetch(`http://localhost:3002/menu/${name}`)
+      fetch(`http://localhost:3002/menu/${name}`) // id??
         .then((response) => response.json())
         .then((meal) => {
           setMealcard(meal);

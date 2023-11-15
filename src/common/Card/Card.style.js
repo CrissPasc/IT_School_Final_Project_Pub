@@ -6,7 +6,10 @@ import {
   WHITE_COLOR,
 } from "../../constants/colors";
 import { Link } from "react-router-dom";
-import { BREAKPOINT_LARGE, BREAKPOINT_XLARGE } from "../../constants/breakpoints";
+import {
+  BREAKPOINT_LARGE,
+  BREAKPOINT_XLARGE,
+} from "../../constants/breakpoints";
 
 export const CardsContainer = styled.div`
   // display: flex;
@@ -75,7 +78,6 @@ export const LinkCustom = styled(Link)`
 `;
 
 export const CardButton = styled(Button)`
-  
   background: linear-gradient(
     0deg,
     rgba(255, 215, 0, 1) 0%,

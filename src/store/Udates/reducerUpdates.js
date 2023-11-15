@@ -61,15 +61,11 @@ export function menuReducer(state, action) {
         ...state,
         isLoadingDelete: true,
       };
-      console.log(
-        localState,
-        "localState",
-        state,
-        "state",
-        action.payload,
-        "action.payload"
-      );
-      // aici imi vine action.payload = sweet calamari burger
+      console.log(localState, "localState");
+      console.log(state, "state");
+      console.log(action, "action");
+      console.log(action.payload, "action.payload");
+      // aici imi vine action.payload = Sweet calamari burger -- adica name si nu id ..
       return localState;
     }
     case "DELETE_MENU_SUCCESS": {
