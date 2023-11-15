@@ -239,6 +239,7 @@ const Orderonline = () => {
                         width: "25px",
                         height: "25px",
                         marginRight: "5px",
+                        cursor: "pointer",
                       }}
                     />
                     <img
@@ -249,6 +250,7 @@ const Orderonline = () => {
                         width: "25px",
                         height: "25px",
                         marginRight: "5px",
+                        cursor: "pointer",
                       }}
                     />
                   </div>
