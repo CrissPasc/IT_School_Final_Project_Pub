@@ -10,12 +10,10 @@ import {
   NavbarMenuIcon,
   NavbarCollapse,
   NavDropdown2,
-
   LogoutButton,
   AdminWellcome,
   LinkAdmin,
   AdminContainer,
-
 } from "./Navbar.style";
 import LogoPic from "./../../media/logo/logo-no-background.png"; // "./logo.png";
 import UserInfoPic from "../../media/icons/user-icon-white.png";
@@ -137,11 +135,11 @@ function NavbarBootstrap({ isAdmin, logo }) {
             {/* AM INLOCUIT TOATE LINK-URILE DIN 'href=' => 'as={Link} to=' 
               PENTRU A NE FOLOSI DE REACT-ROUTER-DOM SI NU DE LINK-URI CLASICE <a> */}
             {/* // adaugat 12Nov */}
-            {showguestmenu && (
+            {/* {showguestmenu && (
               <AdminWellcome>
                 Welcome <b>{displayusername}</b>
               </AdminWellcome>
-            )}
+            )} */}
             {showadminmenu && (
               <AdminContainer>
                 <AdminWellcome>
@@ -203,7 +201,6 @@ function NavbarBootstrap({ isAdmin, logo }) {
               <NavDropdown.Item as={Link} to="/register">
                 Register
               </NavDropdown.Item>
-
             </NavDropdown2>
 
             {/* </Nav> */}
