@@ -92,7 +92,7 @@ const UpdateCardAdmin = () => {
       </Alert>
 
       {menucardfiltered?.map((menu, index) => (
-        <CardContainer key={index} style={{ width: "18rem" }}>
+        <CardContainer key={index}>
           <CardImage variant="top" src={menu?.image} />
           <CardBody>
             <Card.Title>{menu?.name}</Card.Title>

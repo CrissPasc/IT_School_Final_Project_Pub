@@ -266,7 +266,7 @@ const Orderonline = () => {
                 <CheckoutButton onClick={placeOrder}>Place order!</CheckoutButton>
               </div>
               
-              <div style={{ textAlign: 'center', paddingTop: '20px', fontWeight: 'bold' }}>
+              <div style={{ textAlign: 'center', paddingTop: '30px', fontWeight: 'bold' }}>
                 <p>Minimum order for delivery is $30.00!</p>
                 <p>Orders over $50.00 have FREE delivery!</p>
               </div>

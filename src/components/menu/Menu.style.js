@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 import { BREAKPOINT_MOBILE } from "../../constants/breakpoints";
 import MenuBackground from "../../media/images/menu-background.png";
+import { CarouselH1 } from "../../common/Carousel/CarouselSlides.style";
 
 export const Container = styled.div`
   background: url(${MenuBackground});
@@ -32,3 +33,10 @@ export const Test = styled.div`
 export const LinkCostum = styled(Link)`
   padding: 8px;
 `;
+
+export const MenuH1 = styled(CarouselH1)`
+  margin: 0 10vw;
+  padding: 40px;
+  border-radius: 0 0 30px 30px;
+  transition: color 0.2s ease-in-out;
+`

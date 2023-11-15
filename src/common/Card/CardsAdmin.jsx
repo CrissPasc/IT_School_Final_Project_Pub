@@ -58,7 +58,7 @@ const CardsAdmin = () => {
             <Card.Title>{menu?.name}</Card.Title>
             <Card.Text>{menu?.quantity}</Card.Text>
             <Card.Text>{menu?.details}</Card.Text>
-            <Card.Text>{menu?.price}</Card.Text>
+            <Card.Text>$ {menu?.price}</Card.Text>
             <Link to={`/admin/update/${menu?.name}`}>
               <EditButton>Update {menu?.name}</EditButton>
             </Link>

@@ -25,7 +25,9 @@ import { Link } from "react-router-dom";
 
 import NavbarBackground from "./../../media/images/navbar-friends-chatting-pub.jpg";
 import NavbarHome from "./../../media/images/navbar-happy-friends-with-beer-mugs.jpg";
-import NavbarMenu from "./../../media/images/navbar-happy-friends-with-beer-mugs.jpg";
+import NavbarAbout from "./../../media/images/bar-drinks-bartender.jpg";
+import NavbarMenu from "./../../media/images/main-course-fried-chicken-sauce-salad-plate.jpg";
+import NavbarBookTable from "./../../media/images/pizza-table.jpg";
 import NavbarMenuBurgers from "./../../media/images/burgers-three-mini.jpg";
 import NavbarMenuPizzas from "./../../media/images/navbar-happy-friends-with-beer-mugs.jpg";
 import NavbarOrderonline from "./../../media/images/navbar-happy-friends-with-beer-mugs.jpg";
@@ -76,6 +78,8 @@ function NavbarBootstrap({ isAdmin, logo }) {
     switch (pathname) {
       case "/homepage":
         return NavbarHome;
+      case "/about":
+        return NavbarAbout;
       case "/menu":
         return NavbarMenu;
       case "/menus/Burgers":
@@ -96,9 +100,11 @@ function NavbarBootstrap({ isAdmin, logo }) {
         return "https://upload.wikimedia.org/wikipedia/commons/9/91/Pizza-3007395.jpg";
       case "/orderonline":
         return "https://media.timeout.com/images/105491872/image.jpg";
+      case "/bookatable":
+        return NavbarBookTable;
       // Add more cases as needed for different routes
       default:
-        return "https://img.freepik.com/free-photo/medium-shot-happy-friends-with-beer-mugs_23-2148872451.jpg?w=1800&t=st=1698907507~exp=1698908107~hmac=71ed74e301bba47568bb4e56f418f4c85b1c162f61cd71648f96dddd1046f35d";
+        return NavbarHome;
     }
   };
 

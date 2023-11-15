@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import Footer from "../../common/Footer/Footer";
+import { RegisterContainer } from "./Register.style";
 
 const Register = () => {
   const [id, idchange] = useState("");
@@ -66,11 +67,11 @@ const Register = () => {
   };
   return (
     <div>
-      <div className="offset-lg-3 col-lg-6">
-        <form className="container" onSubmit={handlesubmit}>
+      <div className="offset-lg-3 col-lg-6" style={{ marginTop: "100px", marginBottom: "100px" }}>
+        <RegisterContainer className="container" onSubmit={handlesubmit}>
           <div className="card">
             <div className="card-header">
-              <h1>User Registeration</h1>
+              <h2>User Registeration</h2>
             </div>
             <div className="card-body">
               <div className="row">
@@ -193,13 +194,13 @@ const Register = () => {
               <button type="submit" className="btn btn-primary">
                 Register
               </button>{" "}
-              |
+              
               <Link to={"/signin"} className="btn btn-danger">
                 Close
               </Link>
             </div>
           </div>
-        </form>
+        </RegisterContainer>
       </div>
       <Footer />
     </div>

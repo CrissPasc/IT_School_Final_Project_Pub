@@ -2,14 +2,16 @@ import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import styled from "styled-components";
 
-export const SigninContainer = styled.div`
-  max-width: 400px;
-  margin: auto;
+export const SigninContainer = styled.form`
   padding: 20px;
   border: 1px solid #ccc;
-  border-radius: 8px;
+  border-radius: 20px;
   background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+  &:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+    transition: box-shadow 0.3s ease;
+  }
 `;
 
 export const FormGroup = styled.div`

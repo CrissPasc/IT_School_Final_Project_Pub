@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import Footer from "../../common/Footer/Footer";
+import { SigninContainer } from "./SignIn.style";
 
 const Signin = () => {
   const [username, usernameupdate] = useState("");
@@ -36,7 +37,7 @@ const Signin = () => {
             if (resp?.password === password) {
               toast.success("Success");
               sessionStorage.setItem("username", username);
-              usenavigate("/admin");
+              usenavigate("/");
             } else {
               toast.error("Please Enter valid credentials");
             }
@@ -63,9 +64,10 @@ const Signin = () => {
   };
 
   return (
-    <div className="row">
-      <div className="offset-lg-3 col-lg-6" style={{ marginTop: "100px" }}>
-        <form onSubmit={ProceedLogin} className="container">
+    <>
+    <div className="row" style={{margin: "0"}}>
+      <div className="offset-lg-3 col-lg-6" style={{ marginTop: "100px", marginBottom: "100px" }}>
+        <SigninContainer onSubmit={ProceedLogin} className="container">
           <div className="card">
             <div className="card-header">
               <h2>User Login</h2>
@@ -97,16 +99,19 @@ const Signin = () => {
               <button type="submit" className="btn btn-primary">
                 Login
               </button>{" "}
-              |
+              
               <Link className="btn btn-success" to={"/register"}>
                 New User
               </Link>
             </div>
           </div>
-        </form>
+        </SigninContainer>
+ 
       </div>
-      <Footer />
+      
     </div>
+    <Footer />
+    </>
   );
 };
 

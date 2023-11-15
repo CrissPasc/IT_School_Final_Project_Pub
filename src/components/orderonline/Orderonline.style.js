@@ -30,7 +30,16 @@ export const OrderContainer = styled.div`
   padding: 25px;
   background: white;
   border-radius: 20px;
+  // min-height: auto;
   height: 85vh;
+  // max-height: 100%;
+  min-width: 275px;
+
+  display: flex;
+  flex-direction: column;
+  // flex: 1;
+  overflow: auto;
+  
 
   @media only screen and (max-width: ${BREAKPOINT_MEDIUM}) {
     height: 78vh;
@@ -52,7 +61,7 @@ export const MenuContainer = styled.div`
   ////
   //flex-direction: row;
   /* align-items: center; */
-
+  // height: auto;
   display: grid;
   grid-template-columns: 5fr 1fr;
 
@@ -92,7 +101,7 @@ export const OrderonlineSectionsContainer = styled.div`
   flex-direction: row;
   justify-content: space-around;
   padding: 50px 0;
-  background: rgba(0,0,0,0.4);
+  background: rgba(0,0,0,0.6);
   border-radius: 0 0 30px 30px;
 
   @media only screen and (max-width: ${BREAKPOINT_LARGE}) {

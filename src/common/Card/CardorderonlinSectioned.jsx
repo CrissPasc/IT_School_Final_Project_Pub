@@ -32,7 +32,7 @@ const Cards = styled.div`
 `
 
 const StyledOrderH1 = styled(StyledH1)`
-  background: rgba(0,0,0,0.4);
+  background: rgba(0,0,0,0.5);
   transition: color 0.2s ease-in-out;
   border-radius: 30px;
   &:hover {color: ${GOLD_COLOR_HEX}; transition: color 0.2s ease-in-out;}
