@@ -1,0 +1,462 @@
+{
+  "/menusections": {
+    "_config": true,
+    "mock": [
+      {
+        "id": 1,
+        "section": "Starters",
+        "image": "https://hungryhealthyhappy.com/wp-content/uploads/2021/09/The-Ultimate-Prawn-Cocktail-featured-500x500.jpg",
+        "description": "Indulge your palate with our exquisite array of starters meticulously crafted to tantalize your taste buds. At The Phoenix Pub, we take pride in delivering a culinary experience that begins with the perfect starters. Each dish is a symphony of flavors, textures, and aromas, setting the stage for an unforgettable dining journey. "
+      },
+      {
+        "id": 2,
+        "section": "Burgers",
+        "image": "https://www.tastingtable.com/img/gallery/what-makes-restaurant-burgers-taste-different-from-homemade-burgers-upgrade/l-intro-1662064407.jpg",
+        "description": "Have you experienced the magic of our burgers? We take pride in crafting them with a special blend of beef, quickly pressed flat onto a searing hot grill before the fat can escape. This technique maximizes the surface area, allowing the beef to cook rapidly, forming a luscious, heavy brown crust, akin to a perfectly seared steak. This crust locks in the juices, ensuring each bite is a flavor-packed delight."
+      },
+      {
+        "id": 3,
+        "section": "Pizzas",
+        "image": "https://wallpapersmug.com/download/1600x900/b67e3e/pizza-slices-food.jpg",
+        "description": "Experience pizza perfection at our restaurant. Our artisanal pizzas are a taste of Italy right in your neighborhood. Crafted with love and the finest, freshest ingredients, each pizza is a culinary masterpiece. From the classic Margherita with its simplicity to adventurous and creative toppings, our pizzas will transport your taste buds to a world of flavor. Join us for a slice of heaven today."
+      },
+      {
+        "id": 4,
+        "section": "Soups",
+        "image": "https://vaya.in/news/wp-content/uploads/2019/04/soups-for-pregnant-women.jpg",
+        "description": "Delight your taste buds in a symphony of flavors with our delectable soup selection. From rich and creamy bisques to hearty broths brimming with farm-fresh vegetables, our soups are a warm embrace for your senses. Whether you're seeking comfort in a classic tomato soup or a culinary adventure with our exotic spiced creations, our soups are a soul-warming journey through the art of gastronomy. Bon appétit!"
+      },
+      {
+        "id": 5,
+        "section": "Salads",
+        "image": "https://nashvilleedit.com/wp-content/uploads/2021/01/salad-1600x900.jpg",
+        "description": "Dive into a garden of freshness with our exquisite salads. Each vibrant creation is a symphony of colors, textures, and flavors, featuring crisp, locally sourced greens, ripe seasonal ingredients, and house-made dressings that elevate every bite. Whether you crave a classic Caesar or a daring fusion of tastes, our salads are a refreshing journey for your palate. Savor the taste of health and happiness."
+      },
+      {
+        "id": 6,
+        "section": "Drinks",
+        "image": "https://dropinblog.net/34240221/files/featured/non-alcoholic-drinks-to-order-at-a-bar.jpg",
+        "description": "Indulge in our handcrafted cocktails, a symphony of flavors that dance on your palate. From classic martinis to innovative mixology creations, our drink menu is a liquid adventure waiting to be explored. Sip, savor, and let your taste buds revel in the artistry of our expert bartenders. Cheers to unforgettable moments and unforgettable drinks!"
+      },
+      {
+        "id": 7,
+        "section": "Desserts",
+        "image": "https://images.wallpaperscraft.com/image/single/food_sweets_cakes_75172_1600x900.jpg",
+        "description": "Prepare to embark on a sweet journey with our delectable desserts. Each creation is a masterpiece of flavor and presentation, carefully crafted to satisfy your cravings and delight your senses. From rich, velvety chocolate indulgence to light, fruity delights, our desserts are a celebration of culinary artistry. Save room for a sweet ending that will leave you craving for more!"
+      }
+    ],
+    "store": {
+      "_CrudOperation": [
+        {
+          "id": 1,
+          "section": "Starters",
+          "image": "https://hungryhealthyhappy.com/wp-content/uploads/2021/09/The-Ultimate-Prawn-Cocktail-featured-500x500.jpg",
+          "description": "Indulge your palate with our exquisite array of starters meticulously crafted to tantalize your taste buds. At The Phoenix Pub, we take pride in delivering a culinary experience that begins with the perfect starters. Each dish is a symphony of flavors, textures, and aromas, setting the stage for an unforgettable dining journey. "
+        },
+        {
+          "id": 2,
+          "section": "Burgers",
+          "image": "https://www.tastingtable.com/img/gallery/what-makes-restaurant-burgers-taste-different-from-homemade-burgers-upgrade/l-intro-1662064407.jpg",
+          "description": "Have you experienced the magic of our burgers? We take pride in crafting them with a special blend of beef, quickly pressed flat onto a searing hot grill before the fat can escape. This technique maximizes the surface area, allowing the beef to cook rapidly, forming a luscious, heavy brown crust, akin to a perfectly seared steak. This crust locks in the juices, ensuring each bite is a flavor-packed delight."
+        },
+        {
+          "id": 3,
+          "section": "Pizzas",
+          "image": "https://wallpapersmug.com/download/1600x900/b67e3e/pizza-slices-food.jpg",
+          "description": "Experience pizza perfection at our restaurant. Our artisanal pizzas are a taste of Italy right in your neighborhood. Crafted with love and the finest, freshest ingredients, each pizza is a culinary masterpiece. From the classic Margherita with its simplicity to adventurous and creative toppings, our pizzas will transport your taste buds to a world of flavor. Join us for a slice of heaven today."
+        },
+        {
+          "id": 4,
+          "section": "Soups",
+          "image": "https://vaya.in/news/wp-content/uploads/2019/04/soups-for-pregnant-women.jpg",
+          "description": "Delight your taste buds in a symphony of flavors with our delectable soup selection. From rich and creamy bisques to hearty broths brimming with farm-fresh vegetables, our soups are a warm embrace for your senses. Whether you're seeking comfort in a classic tomato soup or a culinary adventure with our exotic spiced creations, our soups are a soul-warming journey through the art of gastronomy. Bon appétit!"
+        },
+        {
+          "id": 5,
+          "section": "Salads",
+          "image": "https://nashvilleedit.com/wp-content/uploads/2021/01/salad-1600x900.jpg",
+          "description": "Dive into a garden of freshness with our exquisite salads. Each vibrant creation is a symphony of colors, textures, and flavors, featuring crisp, locally sourced greens, ripe seasonal ingredients, and house-made dressings that elevate every bite. Whether you crave a classic Caesar or a daring fusion of tastes, our salads are a refreshing journey for your palate. Savor the taste of health and happiness."
+        },
+        {
+          "id": 6,
+          "section": "Drinks",
+          "image": "https://dropinblog.net/34240221/files/featured/non-alcoholic-drinks-to-order-at-a-bar.jpg",
+          "description": "Indulge in our handcrafted cocktails, a symphony of flavors that dance on your palate. From classic martinis to innovative mixology creations, our drink menu is a liquid adventure waiting to be explored. Sip, savor, and let your taste buds revel in the artistry of our expert bartenders. Cheers to unforgettable moments and unforgettable drinks!"
+        },
+        {
+          "id": 7,
+          "section": "Desserts",
+          "image": "https://images.wallpaperscraft.com/image/single/food_sweets_cakes_75172_1600x900.jpg",
+          "description": "Prepare to embark on a sweet journey with our delectable desserts. Each creation is a masterpiece of flavor and presentation, carefully crafted to satisfy your cravings and delight your senses. From rich, velvety chocolate indulgence to light, fruity delights, our desserts are a celebration of culinary artistry. Save room for a sweet ending that will leave you craving for more!"
+        }
+      ]
+    }
+  },
+  "/menu": {
+    "_config": true,
+    "mock": [
+      {
+        "id": "Crispy Calamari Rings",
+        "name": "Crispy Calamari Rings",
+        "section": "Starters",
+        "sectiondescription": "Indulge your palate with our exquisite array of starters meticulously crafted to tantalize your taste buds. At The Phoenix Pub, we take pride in delivering a culinary experience that begins with the perfect starters. Each dish is a symphony of flavors, textures, and aromas, setting the stage for an unforgettable dining journey. ",
+        "image": "https://c.ndtvimg.com/9qq583bo_calamari-rings_625x300_04_September_18.jpg",
+        "description": "Dive into the ocean of flavors with our signature crispy calamari rings. Lightly battered and perfectly fried, these golden rings are served with a zesty homemade marinara sauce for an extra kick.",
+        "price": 12,
+        "quantity": "250gr",
+        "details": "beef patties, Canadian cheddar cheese, mozzarella, beef bacon, guacamole, pineapple, salsa"
+      },
+      {
+        "id": "Caprese Bruschetta",
+        "name": "Caprese Bruschetta",
+        "section": "Starters",
+        "sectiondescription": "Indulge your palate with our exquisite array of starters meticulously crafted to tantalize your taste buds. At The Phoenix Pub, we take pride in delivering a culinary experience that begins with the perfect starters. Each dish is a symphony of flavors, textures, and aromas, setting the stage for an unforgettable dining journey. ",
+        "image": "https://staticcookist.akamaized.net/wp-content/uploads/sites/22/2021/09/beef-burger.jpg",
+        "description": "Experience the classic combination of fresh tomatoes, creamy mozzarella, and aromatic basil on a bed of crisp bruschetta. Drizzled with balsamic glaze, this dish is a true celebration of Italian simplicity.",
+        "price": 12,
+        "quantity": "250gr",
+        "details": "beef patties, Canadian cheddar cheese, mozzarella, beef bacon, guacamole, pineapple, salsa"
+      },
+      {
+        "id": "Asian Fusion Spring Rolls",
+        "name": "Asian Fusion Spring Rolls",
+        "section": "Starters",
+        "sectiondescription": "Indulge your palate with our exquisite array of starters meticulously crafted to tantalize your taste buds. At The Phoenix Pub, we take pride in delivering a culinary experience that begins with the perfect starters. Each dish is a symphony of flavors, textures, and aromas, setting the stage for an unforgettable dining journey. ",
+        "image": "https://staticcookist.akamaized.net/wp-content/uploads/sites/22/2021/09/beef-burger.jpg",
+        "description": "Embark on an adventure with our Asian fusion spring rolls. Crispy on the outside, bursting with flavorful fillings on the inside – a harmonious blend of textures and tastes that will transport you to the streets of Asia.",
+        "price": 12,
+        "quantity": "250gr",
+        "details": "beef patties, Canadian cheddar cheese, mozzarella, beef bacon, guacamole, pineapple, salsa"
+      },
+      {
+        "id": "Beef burger",
+        "name": "Beef burger",
+        "section": "Burgers",
+        "sectiondescription": "Our burgers are made with healthy ingredients...",
+        "image": "https://staticcookist.akamaized.net/wp-content/uploads/sites/22/2021/09/beef-burger.jpg",
+        "description": "Two prime beef patties, Canadian cheddar cheese, crusted mozzarella cheese, beef bacon, guacamole, pineapple, salsa between two grilled cheese buns, chipotle aïoli and BBQ sauce",
+        "price": 12,
+        "quantity": "250gr",
+        "details": "beef patties, Canadian cheddar cheese, mozzarella, beef bacon, guacamole, pineapple, salsa"
+      },
+      {
+        "id": "Chichen burger",
+        "name": "Chichen burger",
+        "section": "Burgers",
+        "image": "https://www.ajinomoto.com.my/sites/default/files/styles/large/public/content/recipe/image/2022-10/Crispy-Chicken-Burger-new.jpg?itok=YcnPgO_Z",
+        "description": "Large fried chicken tender (regular or spicy) crusted mozzarella cheese, beef bacon, tomatoes, lettuce, pickles and chipotle aïoli",
+        "price": 10,
+        "quantity": "250gr",
+        "details": "beef patties, Canadian cheddar cheese, mozzarella, beef bacon, guacamole, pineapple, salsa"
+      },
+      {
+        "id": "Vegan burger",
+        "name": "Vegan burger",
+        "section": "Burgers",
+        "image": "https://biancazapatka.com/wp-content/uploads/2020/05/veganer-bohnen-burger.jpg",
+        "description": "Crusted Portobello Mushroom stuffed with cheese, cheddar cheese, guacamole, sautéed mushroom, roasted peppers, caramelized onion, tomatoes, lettuce, pickles and chipotle aïol",
+        "price": 11,
+        "quantity": "250gr",
+        "details": "beef patties, Canadian cheddar cheese, mozzarella, beef bacon, guacamole, pineapple, salsa"
+      },
+      {
+        "id": "Pizza beef",
+        "name": "Pizza beef",
+        "section": "Pizzas",
+        "image": "",
+        "description": "Our beef burger is made with healthy ingredients...",
+        "price": 10,
+        "quantity": "250gr",
+        "details": "beef patties, Canadian cheddar cheese, mozzarella, beef bacon, guacamole, pineapple, salsa"
+      },
+      {
+        "id": "Pizza chichen",
+        "name": "Pizza chichen",
+        "section": "Pizzas",
+        "image": "",
+        "description": "Our beef burger is made with healthy ingredients...",
+        "price": 10,
+        "quantity": "250gr",
+        "details": "beef patties, Canadian cheddar cheese, mozzarella, beef bacon, guacamole, pineapple, salsa"
+      },
+      {
+        "id": "Pizza vegan",
+        "name": "Pizza vegan",
+        "section": "Pizzas",
+        "image": "",
+        "description": "Our beef burger is made with healthy ingredients...",
+        "price": 10,
+        "quantity": "250gr",
+        "details": "beef patties, Canadian cheddar cheese, mozzarella, beef bacon, guacamole, pineapple, salsa"
+      },
+      {
+        "id": "Beer",
+        "name": "Beer",
+        "section": "Drinks",
+        "image": "",
+        "description": "Our beef burger is made with healthy ingredients...",
+        "price": 15,
+        "quantity": "250ml",
+        "details": "blonde beer, unfiltered, unrefined"
+      },
+      {
+        "id": "Wine",
+        "name": "Wine",
+        "section": "Drinks",
+        "image": "",
+        "description": "Our beef burger is made with healthy ingredients...",
+        "price": 18,
+        "quantity": "250ml",
+        "details": "rose wine"
+      },
+      {
+        "id": "Cosmopolitan Cocktail",
+        "name": "Cosmopolitan Cocktail",
+        "section": "Drinks",
+        "image": "",
+        "description": "The cosmopolitan cocktail, typically referred to as the 'cosmo', gained popularity during the 1990s when it was frequently mentioned on the television show Sex and the City. The combination of vodka, orange liqueur, lime juice, and cranberry juice have made it a timeless classic.",
+        "price": 10,
+        "quantity": "250ml",
+        "details": "vodka, orange liqueur, lime juice, and cranberry juice"
+      },
+      {
+        "id": "Raspberry cheesecake",
+        "name": "Raspberry cheesecake",
+        "section": "Desserts",
+        "image": "",
+        "description": "Gourmet dessert plate raspberry cheesecake mousse indulgence",
+        "price": 10,
+        "quantity": "250gr",
+        "details": "beef patties, Canadian cheddar cheese, mozzarella, beef bacon, guacamole, pineapple, salsa"
+      },
+      {
+        "id": "Homemade brownie with icecream",
+        "name": "Homemade brownie with icecream",
+        "section": "Desserts",
+        "image": "",
+        "description": "Indulgent homemade brownie with chocolate icing and pecans",
+        "price": 10,
+        "quantity": "250gr",
+        "details": "beef patties, Canadian cheddar cheese, mozzarella, beef bacon, guacamole, pineapple, salsa"
+      },
+      {
+        "id": "Carrot cake",
+        "name": "Carrot cake",
+        "section": "Desserts",
+        "image": "",
+        "description": "Delicious carrot cake with cream",
+        "price": 10,
+        "quantity": "250gr",
+        "details": "beef patties, Canadian cheddar cheese, mozzarella, beef bacon, guacamole, pineapple, salsa"
+      }
+    ],
+    "store": {
+      "_CrudOperation": [
+        {
+          "id": "Crispy Calamari Rings",
+          "name": "Crispy Calamari Rings",
+          "section": "Starters",
+          "sectiondescription": "Indulge your palate with our exquisite array of starters meticulously crafted to tantalize your taste buds. At The Phoenix Pub, we take pride in delivering a culinary experience that begins with the perfect starters. Each dish is a symphony of flavors, textures, and aromas, setting the stage for an unforgettable dining journey. ",
+          "image": "https://c.ndtvimg.com/9qq583bo_calamari-rings_625x300_04_September_18.jpg",
+          "description": "Dive into the ocean of flavors with our signature crispy calamari rings. Lightly battered and perfectly fried, these golden rings are served with a zesty homemade marinara sauce for an extra kick.",
+          "price": "12",
+          "quantity": "250gr",
+          "details": "beef patties, Canadian cheddar cheese, mozzarella, beef bacon, guacamole, pineapple, salsa"
+        },
+        {
+          "id": "Caprese Bruschetta",
+          "name": "Caprese Bruschetta",
+          "section": "Starters",
+          "sectiondescription": "Indulge your palate with our exquisite array of starters meticulously crafted to tantalize your taste buds. At The Phoenix Pub, we take pride in delivering a culinary experience that begins with the perfect starters. Each dish is a symphony of flavors, textures, and aromas, setting the stage for an unforgettable dining journey. ",
+          "image": "https://staticcookist.akamaized.net/wp-content/uploads/sites/22/2021/09/beef-burger.jpg",
+          "description": "Experience the classic combination of fresh tomatoes, creamy mozzarella, and aromatic basil on a bed of crisp bruschetta. Drizzled with balsamic glaze, this dish is a true celebration of Italian simplicity.",
+          "price": "12",
+          "quantity": "250gr",
+          "details": "beef patties, Canadian cheddar cheese, mozzarella, beef bacon, guacamole, pineapple, salsa"
+        },
+        {
+          "id": "Asian Fusion Spring Rolls",
+          "name": "Asian Fusion Spring Rolls",
+          "section": "Starters",
+          "sectiondescription": "Indulge your palate with our exquisite array of starters meticulously crafted to tantalize your taste buds. At The Phoenix Pub, we take pride in delivering a culinary experience that begins with the perfect starters. Each dish is a symphony of flavors, textures, and aromas, setting the stage for an unforgettable dining journey. ",
+          "image": "https://staticcookist.akamaized.net/wp-content/uploads/sites/22/2021/09/beef-burger.jpg",
+          "description": "Embark on an adventure with our Asian fusion spring rolls. Crispy on the outside, bursting with flavorful fillings on the inside – a harmonious blend of textures and tastes that will transport you to the streets of Asia.",
+          "price": "12",
+          "quantity": "250gr",
+          "details": "beef patties, Canadian cheddar cheese, mozzarella, beef bacon, guacamole, pineapple, salsa"
+        },
+        {
+          "id": "Beef burger",
+          "name": "Beef burger",
+          "section": "Burgers",
+          "sectiondescription": "Our burgers are made with healthy ingredients...",
+          "image": "https://staticcookist.akamaized.net/wp-content/uploads/sites/22/2021/09/beef-burger.jpg",
+          "description": "Two prime beef patties, Canadian cheddar cheese, crusted mozzarella cheese, beef bacon, guacamole, pineapple, salsa between two grilled cheese buns, chipotle aïoli and BBQ sauce",
+          "price": "12",
+          "quantity": "250gr",
+          "details": "beef patties, Canadian cheddar cheese, mozzarella, beef bacon, guacamole, pineapple, salsa"
+        },
+        {
+          "id": "Chichen burger",
+          "name": "Chichen burger",
+          "section": "Burgers",
+          "image": "https://www.ajinomoto.com.my/sites/default/files/styles/large/public/content/recipe/image/2022-10/Crispy-Chicken-Burger-new.jpg?itok=YcnPgO_Z",
+          "description": "Large fried chicken tender (regular or spicy) crusted mozzarella cheese, beef bacon, tomatoes, lettuce, pickles and chipotle aïoli",
+          "price": "10",
+          "quantity": "250gr",
+          "details": "beef patties, Canadian cheddar cheese, mozzarella, beef bacon, guacamole, pineapple, salsa"
+        },
+        {
+          "id": "Vegan burger",
+          "name": "Vegan burger",
+          "section": "Burgers",
+          "image": "https://biancazapatka.com/wp-content/uploads/2020/05/veganer-bohnen-burger.jpg",
+          "description": "Crusted Portobello Mushroom stuffed with cheese, cheddar cheese, guacamole, sautéed mushroom, roasted peppers, caramelized onion, tomatoes, lettuce, pickles and chipotle aïol",
+          "price": "11",
+          "quantity": "250gr",
+          "details": "beef patties, Canadian cheddar cheese, mozzarella, beef bacon, guacamole, pineapple, salsa"
+        },
+        {
+          "id": "Pizza beef",
+          "name": "Pizza beef",
+          "section": "Pizzas",
+          "image": "",
+          "description": "Our beef burger is made with healthy ingredients...",
+          "price": "10",
+          "quantity": "250gr",
+          "details": "beef patties, Canadian cheddar cheese, mozzarella, beef bacon, guacamole, pineapple, salsa"
+        },
+        {
+          "id": "Pizza chichen",
+          "name": "Pizza chichen",
+          "section": "Pizzas",
+          "image": "",
+          "description": "Our beef burger is made with healthy ingredients...",
+          "price": "10",
+          "quantity": "250gr",
+          "details": "beef patties, Canadian cheddar cheese, mozzarella, beef bacon, guacamole, pineapple, salsa"
+        },
+        {
+          "id": "Pizza vegan",
+          "name": "Pizza vegan",
+          "section": "Pizzas",
+          "image": "",
+          "description": "Our beef burger is made with healthy ingredients...",
+          "price": "10",
+          "quantity": "250gr",
+          "details": "beef patties, Canadian cheddar cheese, mozzarella, beef bacon, guacamole, pineapple, salsa"
+        },
+        {
+          "id": "Beer",
+          "name": "Beer",
+          "section": "Drinks",
+          "image": "",
+          "description": "Our beef burger is made with healthy ingredients...",
+          "price": "10",
+          "quantity": "250ml",
+          "details": "blonde beer, unfiltered, unrefined"
+        },
+        {
+          "id": "Wine",
+          "name": "Wine",
+          "section": "Drinks",
+          "image": "",
+          "description": "Our beef burger is made with healthy ingredients...",
+          "price": "10",
+          "quantity": "250ml",
+          "details": "rose wine"
+        },
+        {
+          "id": "Cosmopolitan Cocktail",
+          "name": "Cosmopolitan Cocktail",
+          "section": "Drinks",
+          "image": "",
+          "description": "The cosmopolitan cocktail, typically referred to as the 'cosmo', gained popularity during the 1990s when it was frequently mentioned on the television show Sex and the City. The combination of vodka, orange liqueur, lime juice, and cranberry juice have made it a timeless classic.",
+          "price": "10",
+          "quantity": "250ml",
+          "details": "vodka, orange liqueur, lime juice, and cranberry juice"
+        },
+        {
+          "id": "Raspberry cheesecake",
+          "name": "Raspberry cheesecake",
+          "section": "Desserts",
+          "image": "",
+          "description": "Gourmet dessert plate raspberry cheesecake mousse indulgence",
+          "price": "10",
+          "quantity": "250gr",
+          "details": "beef patties, Canadian cheddar cheese, mozzarella, beef bacon, guacamole, pineapple, salsa"
+        },
+        {
+          "id": "Homemade brownie with icecream",
+          "name": "Homemade brownie with icecream",
+          "section": "Desserts",
+          "image": "",
+          "description": "Indulgent homemade brownie with chocolate icing and pecans",
+          "price": "10",
+          "quantity": "250gr",
+          "details": "beef patties, Canadian cheddar cheese, mozzarella, beef bacon, guacamole, pineapple, salsa"
+        },
+        {
+          "id": "Carrot cake",
+          "name": "Carrot cake",
+          "section": "Desserts",
+          "image": "",
+          "description": "Delicious carrot cake with cream",
+          "price": "10",
+          "quantity": "250gr",
+          "details": "beef patties, Canadian cheddar cheese, mozzarella, beef bacon, guacamole, pineapple, salsa"
+        }
+      ]
+    }
+  },
+  "/events": [
+    {
+      "id": 1,
+      "name": "Party",
+      "image": "",
+      "description": ""
+    },
+    {
+      "id": 2,
+      "name": "Celebrate",
+      "image": "",
+      "description": ""
+    },
+    {
+      "id": 3,
+      "name": "Sports",
+      "image": "",
+      "description": ""
+    }
+  ],
+  "/user": [
+    {
+      "id": "adminCris",
+      "name": "Cristina",
+      "email": "admin1@thephoenixpub.com",
+      "password": "admin1",
+      "role": "admin"
+    },
+    {
+      "id": "adminDaiana",
+      "name": "Daiana",
+      "email": "admin2@thephoenixpub.com",
+      "password": "admin2",
+      "role": "admin"
+    },
+    {
+      "id": "adminDan",
+      "name": "Dan",
+      "email": "admin3@thephoenixpub.com",
+      "password": "admin3",
+      "role": "admin"
+    },
+    {
+      "id": 4,
+      "name": "Andrei",
+      "email": "andrei@thephoenixpub.com",
+      "password": "andrei",
+      "role": "user"
+    }
+  ]
+}

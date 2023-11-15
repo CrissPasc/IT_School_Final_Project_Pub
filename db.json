@@ -2,36 +2,42 @@
   "menusections": [
     {
       "id": 1,
+      "section": "Starters",
+      "image": "https://yonabeach.com/wp-content/uploads/2023/10/Starters.jpg",
+      "description": "Indulge your palate with our exquisite array of starters meticulously crafted to tantalize your taste buds. At The Phoenix Pub, we take pride in delivering a culinary experience that begins with the perfect starters. Each dish is a symphony of flavors, textures, and aromas, setting the stage for an unforgettable dining journey. "
+    },
+    {
+      "id": 2,
       "section": "Burgers",
       "image": "https://www.tastingtable.com/img/gallery/what-makes-restaurant-burgers-taste-different-from-homemade-burgers-upgrade/l-intro-1662064407.jpg",
       "description": "Have you experienced the magic of our burgers? We take pride in crafting them with a special blend of beef, quickly pressed flat onto a searing hot grill before the fat can escape. This technique maximizes the surface area, allowing the beef to cook rapidly, forming a luscious, heavy brown crust, akin to a perfectly seared steak. This crust locks in the juices, ensuring each bite is a flavor-packed delight."
     },
     {
-      "id": 2,
+      "id": 3,
       "section": "Pizzas",
       "image": "https://wallpapersmug.com/download/1600x900/b67e3e/pizza-slices-food.jpg",
       "description": "Experience pizza perfection at our restaurant. Our artisanal pizzas are a taste of Italy right in your neighborhood. Crafted with love and the finest, freshest ingredients, each pizza is a culinary masterpiece. From the classic Margherita with its simplicity to adventurous and creative toppings, our pizzas will transport your taste buds to a world of flavor. Join us for a slice of heaven today."
     },
     {
-      "id": 3,
+      "id": 4,
       "section": "Soups",
       "image": "https://vaya.in/news/wp-content/uploads/2019/04/soups-for-pregnant-women.jpg",
       "description": "Delight your taste buds in a symphony of flavors with our delectable soup selection. From rich and creamy bisques to hearty broths brimming with farm-fresh vegetables, our soups are a warm embrace for your senses. Whether you're seeking comfort in a classic tomato soup or a culinary adventure with our exotic spiced creations, our soups are a soul-warming journey through the art of gastronomy. Bon appétit!"
     },
     {
-      "id": 4,
+      "id": 5,
       "section": "Salads",
       "image": "https://nashvilleedit.com/wp-content/uploads/2021/01/salad-1600x900.jpg",
       "description": "Dive into a garden of freshness with our exquisite salads. Each vibrant creation is a symphony of colors, textures, and flavors, featuring crisp, locally sourced greens, ripe seasonal ingredients, and house-made dressings that elevate every bite. Whether you crave a classic Caesar or a daring fusion of tastes, our salads are a refreshing journey for your palate. Savor the taste of health and happiness."
     },
     {
-      "id": 5,
+      "id": 6,
       "section": "Drinks",
       "image": "https://dropinblog.net/34240221/files/featured/non-alcoholic-drinks-to-order-at-a-bar.jpg",
       "description": "Indulge in our handcrafted cocktails, a symphony of flavors that dance on your palate. From classic martinis to innovative mixology creations, our drink menu is a liquid adventure waiting to be explored. Sip, savor, and let your taste buds revel in the artistry of our expert bartenders. Cheers to unforgettable moments and unforgettable drinks!"
     },
     {
-      "id": 6,
+      "id": 7,
       "section": "Desserts",
       "image": "https://images.wallpaperscraft.com/image/single/food_sweets_cakes_75172_1600x900.jpg",
       "description": "Prepare to embark on a sweet journey with our delectable desserts. Each creation is a masterpiece of flavor and presentation, carefully crafted to satisfy your cravings and delight your senses. From rich, velvety chocolate indulgence to light, fruity delights, our desserts are a celebration of culinary artistry. Save room for a sweet ending that will leave you craving for more!"
@@ -39,125 +45,218 @@
   ],
   "menu": [
     {
-      "id": 1,
+      "id": "Crispy Calamari Rings",
+      "name": "Crispy Calamari Rings",
+      "section": "Starters",
+      "sectiondescription": "Indulge your palate with our exquisite array of starters meticulously crafted to tantalize your taste buds. At The Phoenix Pub, we take pride in delivering a culinary experience that begins with the perfect starters. Each dish is a symphony of flavors, textures, and aromas, setting the stage for an unforgettable dining journey. ",
+      "image": "https://c.ndtvimg.com/9qq583bo_calamari-rings_625x300_04_September_18.jpg",
+      "description": "Dive into the ocean of flavors with our signature crispy calamari rings. Lightly battered and perfectly fried, these golden rings are served with a zesty homemade marinara sauce for an extra kick.",
+      "price": 11,
+      "quantity": "250gr",
+      "details": "beef patties, Canadian cheddar cheese, mozzarella, beef bacon, guacamole, pineapple, salsa"
+    },
+    {
+      "id": "Caprese Bruschetta",
+      "name": "Caprese Bruschetta",
+      "section": "Starters",
+      "sectiondescription": "Indulge your palate with our exquisite array of starters meticulously crafted to tantalize your taste buds. At The Phoenix Pub, we take pride in delivering a culinary experience that begins with the perfect starters. Each dish is a symphony of flavors, textures, and aromas, setting the stage for an unforgettable dining journey. ",
+      "image": "https://hips.hearstapps.com/thepioneerwoman/wp-content/uploads/2012/01/bruschetta1.jpg",
+      "description": "Experience the classic combination of fresh tomatoes, creamy mozzarella, and aromatic basil on a bed of crisp bruschetta. Drizzled with balsamic glaze, this dish is a true celebration of Italian simplicity.",
+      "price": 7,
+      "quantity": "250gr",
+      "details": "beef patties, Canadian cheddar cheese, mozzarella, beef bacon, guacamole, pineapple, salsa"
+    },
+    {
+      "id": "Prawn Avocado Cocktail",
+      "name": "Prawn Avocado Cocktail",
+      "section": "Starters",
+      "sectiondescription": "A starter that embodies the perfect harmony of flavors and textures. At The Phoenix Pub, we've curated a dish that not only delights the senses but also sets the stage for a memorable dining experience. ",
+      "image": "https://www.royalgreenland.com/globalassets/recipes/prawns/caponespringcampaign20210094.jpg",
+      "description": "Embark on an adventure with our Asian fusion spring rolls. Crispy on the outside, bursting with flavorful fillings on the inside – a harmonious blend of textures and tastes that will transport you to the streets of Asia.",
+      "price": 14,
+      "quantity": "250gr",
+      "details": "large prawns, garlic, ripe avocados, red onion, fresh cilantro, lime juice, cocktail sauce"
+    },
+    {
+      "id": "Beef burger",
       "name": "Beef burger",
       "section": "Burgers",
       "sectiondescription": "Our burgers are made with healthy ingredients...",
       "image": "https://staticcookist.akamaized.net/wp-content/uploads/sites/22/2021/09/beef-burger.jpg",
       "description": "Two prime beef patties, Canadian cheddar cheese, crusted mozzarella cheese, beef bacon, guacamole, pineapple, salsa between two grilled cheese buns, chipotle aïoli and BBQ sauce",
-      "price": "12",
+      "price": 17,
       "quantity": "250gr",
       "details": "beef patties, Canadian cheddar cheese, mozzarella, beef bacon, guacamole, pineapple, salsa"
     },
     {
-      "id": 2,
+      "id": "Chichen burger",
       "name": "Chichen burger",
       "section": "Burgers",
       "image": "https://www.ajinomoto.com.my/sites/default/files/styles/large/public/content/recipe/image/2022-10/Crispy-Chicken-Burger-new.jpg?itok=YcnPgO_Z",
-      "description": "Large fried chicken tender (regular or spicy) crusted mozzarella cheese, beef bacon, tomatoes, lettuce, pickles and chipotle aïoli",
-      "price": "10",
+      "description": "Our Chicken Burger is a delightful culinary creation that combines succulent chicken with an array of flavorful ingredients, nestled between soft burger buns. Grilled to perfection, the tender chicken patty is seasoned with a blend of spices to enhance its taste. This burger is adorned with fresh lettuce, juicy tomato slices, and crispy bacon",
+      "price": 16,
       "quantity": "250gr",
-      "details": "beef patties, Canadian cheddar cheese, mozzarella, beef bacon, guacamole, pineapple, salsa"
+      "details": "fried chicken tender, mozzarella cheese, beef bacon, tomatoes, lettuce, pickles and chipotle aïoli"
     },
     {
-      "id": 3,
+      "id": "Vegan burger",
       "name": "Vegan burger",
       "section": "Burgers",
-      "image": "https://biancazapatka.com/wp-content/uploads/2020/05/veganer-bohnen-burger.jpg",
-      "description": "Crusted Portobello Mushroom stuffed with cheese, cheddar cheese, guacamole, sautéed mushroom, roasted peppers, caramelized onion, tomatoes, lettuce, pickles and chipotle aïol",
-      "price": "11",
+      "image": "https://www.homecookingadventure.com/wp-content/uploads/2022/02/sweet_potato_burger_patties_main-2.jpg",
+      "description": "Indulge in a burst of flavors with our Vegan Burger featuring a Crusted Portobello Mushroom as the star. Stuffed with a savory blend of vegan cheese and cheddar, this burger brings together a medley of delights, including creamy guacamole, sautéed mushrooms, roasted peppers, caramelized onions, fresh tomatoes, crisp lettuce, and zesty pickles. ",
+      "price": 13,
       "quantity": "250gr",
-      "details": "beef patties, Canadian cheddar cheese, mozzarella, beef bacon, guacamole, pineapple, salsa"
+      "details": "Crusted Portobello Mushroom stuffed with cheese, cheddar cheese, guacamole, sautéed mushroom, roasted peppers, caramelized onion, tomatoes, lettuce, pickles and chipotle aïoli"
     },
     {
-      "id": 4,
-      "name": "Pizza beef",
+      "id": "Margherita Pizza",
+      "name": "Margherita Pizza",
       "section": "Pizzas",
-      "image": "",
-      "description": "Our beef burger is made with healthy ingredients...",
-      "price": "10",
-      "quantity": "250gr",
-      "details": "beef patties, Canadian cheddar cheese, mozzarella, beef bacon, guacamole, pineapple, salsa"
+      "image": "https://cinquecentopizzeria.com/wp-content/uploads/2021/09/margherita-pizza.jpg",
+      "description": "A classic Italian favorite, the Margherita pizza is a timeless combination of simple yet exquisite flavors. Experience the perfect harmony of tangy tomato sauce, fresh mozzarella cheese, aromatic basil leaves, and a drizzle of extra-virgin olive oil.",
+      "price": 10,
+      "quantity": "300gr",
+      "details": "pizza dough, tomato sauce, fresh mozzarella cheese, fresh basil leaves, extra-virgin olive oil"
     },
     {
-      "id": 5,
-      "name": "Pizza chichen",
+      "id": "Pepperoni Pizza",
+      "name": "Pepperoni Pizza",
       "section": "Pizzas",
-      "image": "",
-      "description": "Our beef burger is made with healthy ingredients...",
-      "price": "10",
+      "image": "https://www.dogtownpizza.com/wp-content/uploads/2020/01/picking-slice-of-pepperoni-pizza-picture-id1133727757.jpg",
+      "description": "For those who crave a savory and slightly spicy kick, the Pepperoni pizza is a go-to choice. Enjoy a generous layer of zesty tomato sauce, melted mozzarella cheese, and the bold, flavorful charm of thinly sliced pepperoni.",
+      "price": 15,
       "quantity": "250gr",
-      "details": "beef patties, Canadian cheddar cheese, mozzarella, beef bacon, guacamole, pineapple, salsa"
+      "details": "pizza dough, tomato sauce, fresh mozzarella cheese, pepperoni slices"
     },
     {
-      "id": 6,
-      "name": "Pizza vegan",
+      "id": "Mediterranean Veggie Pizza",
+      "name": "Mediterranean Veggie Pizza",
       "section": "Pizzas",
-      "image": "",
-      "description": "Our beef burger is made with healthy ingredients...",
-      "price": "10",
+      "image": "https://www.foodiecrush.com/wp-content/uploads/2022/01/Mediterranean-Pizza-foodiecrush.com-63-480x270.jpg",
+      "description": "Embark on a culinary journey with the Mediterranean Veggie pizza, a celebration of fresh and vibrant flavors. Revel in the goodness of tomato sauce, feta cheese, kalamata olives, artichoke hearts, red onions, and sun-dried tomatoes.",
+      "price": 14,
       "quantity": "250gr",
-      "details": "beef patties, Canadian cheddar cheese, mozzarella, beef bacon, guacamole, pineapple, salsa"
+      "details": "pizza dough, tomato sauce, feta cheese, kalamata olives, artichoke hearts, red onions, sun-dried tomatoes"
     },
     {
-      "id": 7,
-      "name": "Beer",
+      "id": "Tomato Basil Soup",
+      "name": "Tomato Basil Soup",
+      "section": "Soups",
+      "image": "https://thecozyapron.com/wp-content/uploads/2012/02/tomato-basil-soup_thecozyapron_1.jpg",
+      "description": "A classic comfort soup featuring the rich and savory goodness of ripe tomatoes combined with aromatic basil. This timeless duo creates a warm and satisfying bowl perfect for any occasion.",
+      "price": 7,
+      "quantity": "270gr",
+      "details": "ripe tomatoes, fresh basil, onion, garlic, vegetable broth, olive oil"
+    },
+    {
+      "id": "Mushroom Barley Soup",
+      "name": "Mushroom Barley Soup",
+      "section": "Soups",
+      "image": "https://theveglife.com/wp-content/uploads/2018/09/Mushroom-Close.jpg",
+      "description": "A robust soup that combines earthy mushrooms, hearty barley, and flavorful herbs. This soup is a filling and nutritious option, perfect for those seeking a satisfying meal.",
+      "price": 7,
+      "quantity": "270gr",
+      "details": "wild mushrooms, barley, onion, carrots, celery, garlic, vegetable broth"
+    },
+    {
+      "id": "Butternut Squash Soup",
+      "name": "Butternut Squash Soup",
+      "section": "Soups",
+      "image": "https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2018/11/Roasted-Butternut-Squash-Soup-1-2.jpg",
+      "description": "A velvety and sweet soup showcasing the rich flavors of roasted butternut squash, complemented by warm spices. This soup is a delightful autumnal treat.",
+      "price": 7,
+      "quantity": "270gr",
+      "details": "butternut squash, onion, carrots, apple, garlic, coconut milk, vegetable broth"
+    },
+    {
+      "id": "Caprese Salad",
+      "name": "Caprese Salad",
+      "section": "Salads",
+      "image": "https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2019/07/Caprese-Salad-main-1.jpg",
+      "description": "A refreshing and classic Italian salad featuring ripe tomatoes, fresh mozzarella cheese, and basil leaves drizzled with balsamic glaze. This salad is a celebration of simple, high-quality ingredients.",
+      "price": 7,
+      "quantity": "270gr",
+      "details": "ripe tomatoes, fresh mozzarella cheese, fresh basil leaves, balsamic glaze, extra virgin olive oil"
+    },
+    {
+      "id": "Quinoa Salad",
+      "name": "Quinoa Salad",
+      "section": "Salads",
+      "image": "https://thefoodiephysician.com/wp-content/uploads/2017/01/quinoa-with-roasted-vegetables.jpg",
+      "description": "A nutritious and hearty salad featuring fluffy quinoa, roasted vegetables, and a zesty lemon-tahini dressing. Packed with protein and flavor, this salad is a wholesome meal on its own.",
+      "price": 7,
+      "quantity": "270gr",
+      "details": "quinoa, bell peppers, zucchini, cherry tomatoes,  chickpeas, red onion, feta cheese, tahini, garlic"
+    },
+    {
+      "id": "Mango Avocado Salad:",
+      "name": "Mango Avocado Salad:",
+      "section": "Salads",
+      "image": "https://losfoodiesmagazine.com/wp-content/uploads/2022/08/Square-9-Mango-Avocado-Chicken-Salad.jpeg",
+      "description": "A tropical and colorful salad featuring sweet mango, creamy avocado, red onion, and arugula, dressed with a lime-cilantro vinaigrette. This salad is a burst of freshness with a delightful combination of flavors.",
+      "price": 7,
+      "quantity": "270gr",
+      "details": "mango, avocado, red onion, arugula, lime juice, fresh cilantro, olive oil, honey"
+    },
+    {
+      "id": "Blonde Beer",
+      "name": "Blonde Beer",
       "section": "Drinks",
-      "image": "",
-      "description": "Our beef burger is made with healthy ingredients...",
-      "price": "10",
-      "quantity": "250ml",
+      "image": "https://cdn.craftbeer.com/wp-content/uploads/spring035.jpg",
+      "description": "Indulge in the untamed elegance of our Blonde Beer—a libation that transcends convention. Unfiltered and unrefined, this golden elixir captivates with its raw charisma and unbridled flavor. Its clouded radiance mirrors the bold spirit within, promising a journey beyond the ordinary.",
+      "price": 7,
+      "quantity": "350ml",
       "details": "blonde beer, unfiltered, unrefined"
     },
     {
-      "id": 8,
-      "name": "Wine",
+      "id": "Red Wine",
+      "name": "Red Wine",
       "section": "Drinks",
-      "image": "",
-      "description": "Our beef burger is made with healthy ingredients...",
-      "price": "10",
+      "image": "https://www.webstaurantstore.com/images/products/large/575548/2111519.jpg",
+      "description": "Embark on a sensory voyage with our exquisite wine—a tapestry woven from the finest grapes and nurtured by the hands of time. Each glass is a symphony of flavors, a ballet of aromas that unfolds like a secret whispered by the vineyards.",
+      "price": 12,
       "quantity": "250ml",
-      "details": "rose wine"
+      "details": "red wine"
     },
     {
-      "id": 9,
+      "id": "Cosmopolitan Cocktail",
       "name": "Cosmopolitan Cocktail",
       "section": "Drinks",
-      "image": "",
-      "description": "The cosmopolitan cocktail, typically referred to as the 'cosmo', gained popularity during the 1990s when it was frequently mentioned on the television show Sex and the City. The combination of vodka, orange liqueur, lime juice, and cranberry juice have made it a timeless classic.",
-      "price": "10",
+      "image": "https://staticcookist.akamaized.net/wp-content/uploads/sites/22/2021/06/cosmopolitan-cocktail.jpg",
+      "description": "Step into the world of refined indulgence with our Cosmopolitan Cocktail—an icon of sophistication and a symphony of flavors that dance on your palate. This libation is not merely a drink; it's a chic accessory for those who appreciate the finer things in life.",
+      "price": 15,
       "quantity": "250ml",
       "details": "vodka, orange liqueur, lime juice, and cranberry juice"
     },
     {
-      "id": 10,
+      "id": "Raspberry cheesecake",
       "name": "Raspberry cheesecake",
       "section": "Desserts",
-      "image": "",
-      "description": "Gourmet dessert plate raspberry cheesecake mousse indulgence",
-      "price": "10",
-      "quantity": "250gr",
-      "details": "beef patties, Canadian cheddar cheese, mozzarella, beef bacon, guacamole, pineapple, salsa"
+      "image": "https://assets.kraftfoods.com/recipe_images/opendeploy/185344_640x428.jpg",
+      "description": "Indulge in the luxurious harmony of creamy cheesecake crowned with a vibrant burst of sweet and tangy raspberries. This dessert is a delightful symphony of velvety smoothness and fruity freshness, creating a perfect balance of flavors in every decadent bite.",
+      "price": 10,
+      "quantity": "100gr",
+      "details": "Cream cheese, graham cracker crumbs, fresh raspberries, raspberry jam, whipped cream (optional, for serving)"
     },
     {
-      "id": 11,
-      "name": "Homemade brownie with icecream",
+      "id": "Brownie with icecream",
+      "name": "Brownie with icecream",
       "section": "Desserts",
-      "image": "",
-      "description": "Indulgent homemade brownie with chocolate icing and pecans",
-      "price": "10",
-      "quantity": "250gr",
-      "details": "beef patties, Canadian cheddar cheese, mozzarella, beef bacon, guacamole, pineapple, salsa"
+      "image": "https://popmenucloud.com/cdn-cgi/image/width%3D1200%2Cheight%3D1200%2Cfit%3Dscale-down%2Cformat%3Dauto%2Cquality%3D60/tenvpigd/793c58ed-9892-458d-aac9-d603120081e5.jpg",
+      "description": "Picture this: a warm, fudgy brownie, freshly baked to perfection, with a crisp exterior giving way to a rich, gooey center. The chocolatey aroma alone is enough to set your taste buds tingling. Now, add a generous scoop of velvety, premium vanilla ice cream on top. ",
+      "price": 8,
+      "quantity": "80gr",
+      "details": "Homemade brownie, premium vanilla ice cream, chocolate syrup, chopped nuts"
     },
     {
-      "id": 12,
+      "id": "Carrot cake",
       "name": "Carrot cake",
       "section": "Desserts",
-      "image": "",
-      "description": "Delicious carrot cake with cream",
-      "price": "10",
-      "quantity": "250gr",
-      "details": "beef patties, Canadian cheddar cheese, mozzarella, beef bacon, guacamole, pineapple, salsa"
+      "image": "https://www.inspiredtaste.net/wp-content/uploads/2023/08/Homemade-Carrot-Cake-Recipe-Video.jpg",
+      "description": "Carrot cake is a classic dessert known for its moist and flavorful characteristics. This delightful cake is made with fresh carrots, warm spices, and a rich cream cheese frosting.",
+      "price": 9,
+      "quantity": "110gr",
+      "details": "homemade carrot cake, cream cheese frosting, grated carrots, chopped nuts"
     }
   ],
 
